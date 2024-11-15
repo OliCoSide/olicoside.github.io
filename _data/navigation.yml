@@ -20,8 +20,8 @@ main:
 #  - title: "Blog Posts"
 #    url: /year-archive/
     
-#  - title: "CV"
-#    url: /cv/
+  - title: "CV"
+    url: /files/CV_OlivierCote_ENG_vA24.pdf
     
 #  - title: "Guide"
 #    url: /markdown/
