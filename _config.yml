@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Olivier Côté"
 title_separator          : "-"
 name                     : &name "Olivier Côté, ACAS"
-description              : &description "Ph. D. Candidate in Actuarial Science"
+description              : &description "Ph.D. Candidate in Actuarial Science — fairness and discrimination in insurance predictive models"
 url                      : https://olicoside.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "olicoside/olicoside.github.io"
@@ -24,7 +24,7 @@ author:
   avatar           : "profile_picture.jpg"
   name             : "Olivier Côté"
   pronouns         : # example: "she/her"  
-  bio              : "Université Laval"
+  bio              : "Ph.D. Candidate in Actuarial Science, ACAS"
   location         : "Québec, QC, Canada"
   employer         : "Université Laval"
   uri              : # URL
@@ -146,7 +146,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  false # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
 

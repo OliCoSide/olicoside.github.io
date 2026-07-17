@@ -7,4 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-I am pursuing a PhD in Actuarial Science at Université Laval, in Québec (QC, Canada), under the supervision of [Marie-Pier Côté](https://www.fsg.ulaval.ca/corps-professoral/marie-pier-cote) and [Arthur Charpentier](https://freakonometrics.hypotheses.org). My thesis, expected for mid 2027, is titled "A Causal Perspective on Direct and Indirect Discrimination based on Sensitive Characteristics in Insurance Predictive Models". It is performed in collaboration with one of the largest insurance company in Canada. 
+I am a Ph.D. candidate in Actuarial Science at Université Laval (Québec, Canada) and an Associate of the Casualty Actuarial Society (ACAS). I work on fairness and discrimination in insurance predictive models, under the supervision of [Marie-Pier Côté](https://www.fsg.ulaval.ca/corps-professoral/marie-pier-cote) (Université Laval) and [Arthur Charpentier](https://freakonometrics.hypotheses.org) (UQAM). My thesis, expected for mid-2027, takes a causal perspective on direct and indirect discrimination based on sensitive characteristics in insurance predictive models, and is carried out in collaboration with one of the largest P&C insurers in Canada.
+
+My research interests include causal inference, algorithmic fairness, insurance pricing, and the governance of predictive models. My doctoral work is supported by an NSERC Postgraduate Scholarship and the SOA Hickman Scholars Program.
+
+Recent highlights
+======
+* Our paper [A fair price to pay: Exploiting causal graphs for fairness in insurance](/publication/2024-fair-price) (*Journal of Risk and Insurance*, 2025) was a finalist for the American Academy of Actuaries 2025 Award for Research on Bias in Assessing Financial Risk.
+* The Casualty Actuarial Society published [A scalable toolbox for exposing indirect discrimination in insurance rates](/publication/2025-scalable-toolbox) in its Research Paper Series on Bias and Insurance.
+* [Recoverability of market-wide fair insurance premiums under selection bias](/publication/2024-selection) is now published in *Insurance: Mathematics and Economics* (2026).
+* I obtained my ACAS designation from the Casualty Actuarial Society in 2025.
+
+You can find all my papers on the [Publications](/publications/) page, and my recent presentations on the [Talks](/talks/) page.

@@ -3,7 +3,7 @@ title: "A Fair price to pay: exploiting causal graphs for fairness in insurance"
 collection: publications
 category: manuscripts
 permalink: /publication/2024-fair-price
-#excerpt: 'This paper is an introduction to causal graphs'
+excerpt: 'Finalist for the American Academy of Actuaries 2025 Award for Research on Bias in Assessing Financial Risk.'
 date: 2025-02-12
 venue: 'Journal of Risk and Insurance'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
