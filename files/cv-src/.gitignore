@@ -1,0 +1,10 @@
+# LaTeX build artifacts — the deployed CV lives at files/CV_OlivierCote_ENG_prod.pdf
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+CV_latex_OC_20210914.pdf

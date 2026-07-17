@@ -1,0 +1,1212 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+% The MIT License (MIT)
+%
+% Copyright (c) 2019 Jan Küster
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+% THE SOFTWARE.
+% 
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+
+%============================================================================%
+%
+% DOCUMENT DEFINITION
+%
+%============================================================================%
+
+
+
+%we use article class because we want to fully customize the page and don't use a cv template
+\documentclass[10pt]{article} 
+
+\renewcommand{\section}[1]{} % I dont want sections
+\renewcommand{\subsection}[1]{} % I dont want subsections
+
+\usepackage{bibentry}
+\section{Preamble}
+\subsection{packages}
+
+\usepackage{eurosym} % for \euro
+
+\usepackage{fancyhdr} % nom sur le dessus
+\usepackage{lastpage} % numéro de page à la fin (référence)
+
+%----------------------------------------------------------------------------------------
+% ENCODING
+%----------------------------------------------------------------------------------------
+
+% we use utf8 since we want to build from any machine
+\usepackage[utf8]{inputenc}  
+
+%----------------------------------------------------------------------------------------
+% LOGIC
+%----------------------------------------------------------------------------------------
+
+% provides \isempty test
+\usepackage{xstring, xifthen}
+
+%----------------------------------------------------------------------------------------
+% FONT BASICS
+%----------------------------------------------------------------------------------------
+
+% some tex-live fonts - choose your own
+
+%\usepackage[defaultsans]{droidsans}
+%\usepackage[default]{comfortaa}
+%\usepackage{cmbright}
+\usepackage[default]{raleway}
+%\usepackage{fetamont}
+%\usepackage[default]{gillius}
+%\usepackage[light,math]{iwona}
+%\usepackage[thin]{roboto} 
+
+% set font default
+\renewcommand*\familydefault{\sfdefault}  
+\usepackage[T1]{fontenc}
+
+% more font size definitions
+\usepackage{moresize}
+
+%----------------------------------------------------------------------------------------
+% FONT AWESOME ICONS
+%---------------------------------------------------------------------------------------- 
+
+% include the fontawesome icon set
+\usepackage{fontawesome5}
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand{\vcenteredinclude}[1]{\begingroup
+\setbox0=\hbox{\includegraphics{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand*{\vcenteredhbox}[1]{\begingroup
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+
+% icon shortcut
+\newcommand{\icon}[3] {        
+ \makebox(#2, #2){\textcolor{maincol}{\faIcon{#1}}}
+} 
+
+% icon with text shortcut
+\newcommand{\icontext}[4]{       
+ \vcenteredhbox{\icon{#1}{#2}{#3}}  \hspace{2pt}  \parbox{0.9\mpwidth}{\textcolor{#4}{#3}}
+}
+
+% icon with website url
+\newcommand{\iconhref}[5]{       
+    \vcenteredhbox{\icon{#1}{#2}{#5}}  \hspace{2pt} \href{#4}{\textcolor{#5}{#3}}
+}
+
+% icon with email link
+\newcommand{\iconemail}[5]{       
+    \vcenteredhbox{\icon{#1}{#2}{#5}}  \hspace{2pt} \href{mailto:#4}{\textcolor{#5}{#3}}
+}
+
+%----------------------------------------------------------------------------------------
+% PAGE LAYOUT  DEFINITIONS
+%----------------------------------------------------------------------------------------
+\subsection{page layout}
+% page outer frames (debug-only)
+% \usepackage{showframe}  
+
+% we use paracol to display breakable two columns
+\usepackage{paracol}
+
+% define page styles using geometry
+\usepackage[a4paper]{geometry}
+
+% remove all possible margins
+%\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm}
+
+
+% remove all possible margins
+\geometry{top=1cm, bottom=1.50cm, left=1cm, right=1cm, footskip=1cm}
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt} 
+
+% space between header and content
+% \setlength{\headheight}{0pt}
+
+% indentation is zero
+\setlength{\parindent}{0mm}
+
+%----------------------------------------------------------------------------------------
+% TABLE /ARRAY DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+% extended aligning of tabular cells
+\usepackage{array}
+
+% custom column right-align with fixed width
+% use like p{size} but via x{size}
+\newcolumntype{x}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}}%
+
+
+%----------------------------------------------------------------------------------------
+% GRAPHICS DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+%for header image
+\usepackage{graphicx}
+
+% use this for floating figures
+% \usepackage{wrapfig}
+% \usepackage{float}
+% \floatstyle{boxed} 
+% \restylefloat{figure}
+
+%for drawing graphics  
+\usepackage{tikz}    
+\usetikzlibrary{shapes, backgrounds,mindmap, trees}
+
+%----------------------------------------------------------------------------------------
+% Color DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+\subsection{colors}
+\usepackage{transparent}
+\usepackage{color}
+\usepackage{xhfill} % for the line 
+% primary color
+
+%% Bleu sobre (photo fin)
+\definecolor{maincol}{RGB}{79, 102, 135} 
+\definecolor{darkcol}{RGB}{ 54, 67, 73 }
+\definecolor{lightcol}{RGB}{236,238,239}
+
+% \definecolor{maincol}{HTML}{001C30}
+% \definecolor{darkcol}{HTML}{000000}
+% \definecolor{lightcol}{HTML}{E0E0E0}
+
+
+% \usepackage{pagecolor}
+% \definecolor{paper}{HTML}{FEFAF6}
+
+% % dark red
+% \definecolor{maincol}{RGB}{118, 36, 49} 
+% \definecolor{darkcol}{RGB}{ 54, 67, 73 }
+% \definecolor{lightcol}{RGB}{236,238,239}
+
+% %% AMF
+% \definecolor{maincol}{RGB}{213, 162, 8}
+% \definecolor{darkcol}{RGB}{ 54, 67, 73 } % AMF dark
+% \definecolor{lightcol}{RGB}{236,238,239} % AMF pale 
+
+% %% magenta
+% \definecolor{maincol}{RGB}{121, 67, 79}
+% \definecolor{darkcol}{RGB}{ 54, 67, 73 } 
+% \definecolor{lightcol}{RGB}{236,238,239}  
+
+% Package for links, must be the last package used
+% hyperref's bibliography patch breaks the bibentry package (its \@lbibitem
+% bypasses bibentry's neutralized \item -> "Lonely \item" errors); this CV
+% never typesets a bibliography, so opt out of that patch (no-op on old hyperref)
+\makeatletter\def\hyper@nopatch@bib{}\makeatother
+\usepackage[hidelinks]{hyperref}
+
+% returns minipage width minus two times \fboxsep
+% to keep padding included in width calculations
+% can also be used for other boxes / environments
+\newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
+ 
+
+
+%============================================================================%
+%
+% CV COMMANDS
+%
+%============================================================================%
+
+%----------------------------------------------------------------------------------------
+%  CV LIST
+%----------------------------------------------------------------------------------------
+
+% renders a standard latex list but abstracts away the environment definition (begin/end)
+\newcommand{\cvlist}[1] {
+ \begin{itemize}{
+ \itemsep0em 
+ #1}\end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%  CV TEXT
+%----------------------------------------------------------------------------------------
+
+\subsection{CV text}
+
+% base class to wrap any text based stuff here. Renders like a paragraph.
+% Allows complex commands to be passed, too.
+% param 1: *any
+\newcommand{\cvtext}[1] {
+ \begin{tabular*}{1\mpwidth}{p{0.98\mpwidth}}
+  \parbox{1\mpwidth}{#1}
+ \end{tabular*}
+}
+
+%----------------------------------------------------------------------------------------
+% CV SECTION
+%----------------------------------------------------------------------------------------
+\subsection{CV section}
+% Renders a a CV section headline with a nice underline in main color.
+% param 1: section title
+\newcommand{\cvsection}[1] {
+ \vspace{14pt}
+ \cvtext{
+  \textbf{\LARGE{\textcolor{darkcol}{\uppercase{#1}}}}\\[-4pt]
+  \textcolor{maincol}{ \rule{0.15\textwidth}{2pt}}  \\
+    }
+    % \xrfill[0ex]{2pt}[lightcol] %to add at 250
+}
+
+%----------------------------------------------------------------------------------------
+% META SKILL
+%----------------------------------------------------------------------------------------
+
+\subsection{CV skill}
+% Renders a progress-bar to indicate a certain skill in percent.
+% param 1: name of the skill / tech / etc.
+% param 2: level (for example in years)
+% param 3: percent, values range from 0 to 1
+\newcommand{\cvskill}[3] {
+ \begin{tabular*}{1\mpwidth}{p{0.53\mpwidth}  r}
+   \textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2}\\
+ \end{tabular*}%
+ 
+ \hspace{4pt}
+ \begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
+  \fill [lightcol] (0,0) rectangle (1\mpwidth, 0.15);
+  \fill [maincol] (0,0) rectangle (#3\mpwidth, 0.15);
+   \end{tikzpicture}%
+}
+
+
+%----------------------------------------------------------------------------------------
+%  CV EVENT
+%----------------------------------------------------------------------------------------
+\subsection{CV event}
+% Renders a table and a paragraph (cvtext) wrapped in a parbox (to ensure minimum content
+% is glued together when a pagebreak appears).
+% Additional Information can be passed in text or list form (or other environments).
+% the work you did
+% param 1: time-frame i.e. Sep 14 - Jan 15 etc.
+% param 2:  event name (job position etc.)
+% param 3: Customer, Employer, Industry
+% param 4: Short description
+% param 5: work done (optional)
+% param 6: technologies include (optional)
+% param 7: achievements (optional)
+\newcommand{\cvevent}[7] {
+ 
+ % we wrap this part in a parbox, so title and description are not separated on a pagebreak
+ % if you need more control on page breaks, remove the parbox
+ \parbox{\mpwidth}{
+  \begin{tabular*}{1\mpwidth}{p{0.78\mpwidth}  r}
+    \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \colorbox{maincol}{\makebox[0.20\mpwidth]{\textcolor{white}{#1}}} \\
+   \textcolor{maincol}{\textbf{#3}} & \\
+  \end{tabular*}\\[-2pt]
+  \ifthenelse{\isempty{#4}}{}{
+   \cvtext{#4}\\
+  }
+ }
+ 
+ \ifthenelse{\isempty{#5}}{}{
+  \vspace{3pt}
+  \cvtext{#5}
+ }
+ 
+ \ifthenelse{\isempty{#6}}{}{
+  \vspace{3pt}
+  \cvtext{\textbf{Technologies include:}}\\
+  \cvtext{#6}
+ }
+ \ifthenelse{\isempty{#7}}{}{
+  \vspace{-10pt}
+  \cvtext{ \hspace*{0.5cm}\footnotesize \textbf{*Awards included: }#7}
+ }
+ \vspace{2pt}
+}
+
+%----------------------------------------------------------------------------------------
+%  CV META EVENT
+%----------------------------------------------------------------------------------------
+
+\subsection{CV metaevent}
+% Renders a CV event on the sidebar
+% param 1: title
+% param 2: subtitle (optional)
+% param 3: customer, employer, etc,. (optional)
+% param 4: info text (optional)
+\newcommand{\cvmetaevent}[4] {
+ \textcolor{maincol} {\cvtext{\textbf{\begin{flushleft}#1\end{flushleft}}}}
+
+ \ifthenelse{\isempty{#2}}{}{
+ \textcolor{darkcol} {\cvtext{\textbf{#2}} }
+ }
+
+ \ifthenelse{\isempty{#3}}{}{
+  \cvtext{{ \textcolor{darkcol} {#3} }}\\
+ }
+
+ \cvtext{#4}\\[14pt]
+}
+
+%---------------------------------------------------------------------------------------
+% QR CODE
+%----------------------------------------------------------------------------------------
+
+\subsection{Code QR}
+% Renders a qrcode image (centered, relative to the parentwidth)
+% param 1: percent width, from 0 to 1
+\newcommand{\cvqrcode}[1] {
+ \begin{center}
+  \includegraphics[width={#1}\mpwidth]{qrcode.jpg}
+ \end{center}
+}
+
+\section{To do}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Add prix coup de coeur enseignement?
+% Séparer les communications vulgarisation des communications scientifiques
+
+%============================================================================%
+%
+%
+%
+% DOCUMENT CONTENT
+%
+%
+%
+%============================================================================%
+\begin{document}
+
+
+\section{Document}
+% \pagecolor{paper}
+\subsection{biblio}
+
+\nobibliography{biblio}
+\bibliographystyle{apalike}
+
+\subsection{Settings}
+%%% Footer
+\pagestyle{fancy}
+\fancyfoot[L]{\small \textcolor{black!20!lightcol}{Compilation : \today}}
+\fancyfoot[C]{\small  \textcolor{black!20!lightcol}{\thepage \hspace{1pt} of  \pageref{LastPage}}}
+
+
+\columnratio{0.33, 0.33, 0.33} %0.31
+\setlength{\columnsep}{2.2em}
+\setlength{\columnseprule}{4pt}
+\colseprulecolor{lightcol}
+
+%---------------------------------------------------------------------------------------
+% TITLE  HEADER
+%----------------------------------------------------------------------------------------
+\vspace*{-2.25cm}
+ 
+ \section{Header}
+%  \begin {center}
+\fcolorbox{white}{lightcol!50}{\begin{minipage}[c][3cm][c]{1\mpwidth}
+ \begin {center}
+  \HUGE{ \textbf{ \textcolor{darkcol}{ \uppercase{ Olivier Côté, }}}}\LARGE{\textbf{\textcolor{darkcol!80}{\uppercase{ACAS } } } }  \\[-4pt]
+  \textcolor{darkcol}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
+  \large{ \textcolor{darkcol} {PhD Candidate in Actuarial Science, Université Laval} }
+ \end {center}
+\end{minipage}} \\[14pt]
+%  \end {center}
+
+
+
+
+\section{columns}
+\begin{paracol}{3}
+\begin{column}
+
+\subsection{Contact information}
+\cvsection{Contact \\[2pt] information}
+ 
+\icontext{map-marker-alt}{12}{Québec, QC, Canada}{black}\\[6pt]
+% \icontext{phone-alt}{12}{+1 (581)~305-6367}{black}\\[6pt]
+\iconemail{envelope}{12}{olivier.cote.12@ulaval.ca}{olivier.cote.12@ulaval.ca}{black}\\[6pt]
+\iconhref{linkedin}{12}{in/olivier-cote-act}{https://www.linkedin.com/in/olivier-cote-act/}{black}\\[6pt]
+% \iconhref{github}{12}{Olicoside}{https://github.com/OliCoSide}{black}\\[6pt]
+% \iconhref{github}{12}{Olicoside}{https://github.com/OliCoSide}{black}\\[6pt]
+\iconhref{globe}{12}{olicoside.github.io}{https://olicoside.github.io/}{black}
+
+% \vfill\null
+
+%Étudiant gradué en actuariat
+%---------------------------------------------------------------------------------------
+% PROFILE
+%----------------------------------------------------------------------------------------
+% \subsection{Bio}
+% \cvsection{Bio}
+
+% \cvtext{I am a graduate student in actuarial science with excellent programming skills and a natural curiosity for theory.\\
+
+% I am doing research as part of my master's thesis in Actuarial Science with a thesis. My project focuses on the responsible use of predictive models in actuarial pricing when a characteristic is deemed sensitive. This project is done in collaboration with one of the largest general insurance companies in Canada. I will pursue at the PhD starting on september 2023. 
+
+% % , dans un monde où les données massives sont omniprésentes et l'apprentissage automatique est toujours plus prédictif. \\
+
+% % Étant un entraîneur passionné de football depuis plusieurs années, je suis très habitué à travailler en équipe et à faire preuve de leadership pour résoudre des problèmes complexes.\\
+
+% }
+
+
+
+
+\end{column}
+\begin{column}
+%---------------------------------------------------------------------------------------
+% META IMAGE
+%----------------------------------------------------------------------------------------
+% \includegraphics[width=\linewidth]{photo_gala2.jpg} %trimming relative to image size
+
+%---------------------------------------------------------------------------------------
+% META SKILLS
+%----------------------------------------------------------------------------------------
+%\cvqrcode{0.5}
+
+\subsection{Skills}
+\cvsection{Skills}
+
+\cvskill{R} {8 years + } {1} \\[-2pt]
+
+% \cvskill{SAS} {plus de 2 ans} {0.8} \\[-2pt]
+
+% \cvskill{GIT} {plus de 3 ans} {0.6} \\[-2pt]
+
+% \cvskill{Emblem} {plus de 2 ans} {0.6} \\[-2pt]
+
+\cvskill{Python} {3 years +} {0.9} \\[-2pt]
+
+\cvskill{\LaTeX} {6 years +} {1} \\[-2pt]
+
+% \cvskill{Leadership} {} {1} \\[-2pt]
+
+
+% \vfill\null
+% \cvsection{Skills}
+
+% \cvskill{R} {5 years + } {1} \\[-2pt]
+
+% % \cvskill{SAS} {plus de 2 ans} {0.8} \\[-2pt]
+
+% % \cvskill{GIT} {plus de 3 ans} {0.6} \\[-2pt]
+
+% % \cvskill{Emblem} {plus de 2 ans} {0.6} \\[-2pt]
+
+% \cvskill{\LaTeX} {4 years +} {0.8} \\[-2pt]
+
+% \cvskill{Teamwork} {} {1} \\[-2pt]
+
+% \cvskill{Leadership} {} {1} \\[-2pt]
+
+\end{column}
+\begin{column}
+\subsection{Languages}
+\cvsection{Languages}
+
+\cvskill{French} {Mother tongue} {1} \\[-2pt]
+
+\cvskill{English} {Advanced} {0.9} \\[-2pt]
+\end{column}
+\end{paracol} 
+
+
+ \vspace*{-0.2cm}
+\section{Education}
+\cvsection{Education}
+% \cvevent
+% {Starting fall 2023}
+% {PhD in Actuarial Science}
+% {Université Laval or Université du Québec à Montréal}
+% {I am pursuing a PhD in actuarial science starting in the fall of 2023 with the same supervisors. %I plan to collaborate with other researchers internationnaly and with the industry.
+% }{}{}{}
+
+\cvevent
+{2023 - }
+{PhD in Actuarial Science (GPA  : 4.17/4.33)}
+{Université Laval}
+{My thesis is on fairness in insurance in collaboration with one of the largest P\&C insurer in Canada. I am supervised by Prof. Marie-Pier Côté (Université Laval) and Prof. Arthur Charpentier (Université du Québec à Montréal).}{}{}{}
+
+\cvevent
+{2018 - 2023}
+{Bachelor's (GPA  : 4.17/4.33) and Master's degree (GPA  : 4.24/4.33) in Actuarial Science }
+{Université Laval}
+{}{}{}{}
+
+
+% \cvevent
+% {2021 - 2023}
+% {Master's degree in Actuarial Science (GPA  : 4.24/4.33)}
+% {Université Laval}
+% {}{}{}{}
+
+% \cvevent
+% {2018 - 2021}
+% {Bachelor's degree in Actuarial Science (GPA  : 4.17/4.33)}
+% {Université Laval}
+% {}{}{}{}
+
+% \cvevent
+% {2015 - 2017}
+% {Natural Sciences}
+% {Cégep de Lévis}
+% {}{}{}{}
+
+
+
+\section{Research Papers}
+\cvsection{Research Papers}
+
+
+\cvtext{\bibentry{Annual_rev}}
+
+\vspace*{0.25cm}
+
+\cvtext{\bibentry{SelectionBias_2024}} 
+
+\vspace*{0.25cm}
+
+\cvtext{\bibentry{Charpentier/al:2026}} 
+
+
+\vspace*{0.25cm}
+
+\cvtext{\bibentry{A_scalable_toolbox}}
+
+\vspace*{0.25cm}
+
+\cvtext{\bibentry{Charpentier/al:2025_three}} 
+
+\vspace*{0.25cm}
+
+\cvtext{\bibentry{Cote/etal:2024}} 
+
+ \vspace*{-0.25cm}
+
+ \cvlist{ \item Finalist for the \href{https://actuary.org/publication-issue/blog-academy-recognizes-anti-discrimination-paper-with-research-award/}{ American Academy Award for Research 2025}}
+
+ \vspace*{-0.25cm}
+
+
+
+  
+\section{Diversity, Equity, and Inclusion Education}
+\cvsection{Diversity, Equity, and Inclusion Education}
+
+%\vfill\null
+%\cvevent
+% {À venir}
+% {MAS-II}
+% {Casualty Actuarial Society}
+% {Examen \textit{Modern Actuarial Statistics II} de la CAS le 25 octobre 2021}{}{}{}
+
+
+ \vspace*{-0.25cm}
+
+ \cvevent
+ {2025}
+ {Get Comfortable Being Uncomfortable: Dialogue About Favoritism and Fairness}
+ {Canadian Statistical Sciences Institute}
+ {}{}{}{}
+
+ \cvevent
+ {2024}
+ {Let's talk about race and collective responsibility}
+ {Canadian Statistical Sciences Institute}
+ {}{}{}{}
+
+ \cvevent
+ {2023}
+ {Acting as a sentinel for the prevention of suicide}
+ {Centre de prévention du suicide du Québec workshop}
+ {}{}{}{}
+
+\cvevent
+ {2022}
+ {Addressing Conflicts Related to Bias, Privilege, and Identity in the STEM Fields}
+ {CANSSI and Academic Impressions workshop}
+ {}{}{}{}
+
+%---------------------------------------------------------------------------------------
+% WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\newpage 
+
+\section{Professional designations}
+\cvsection{Professional Designations}
+
+%\vfill\null
+%\cvevent
+% {À venir}
+% {MAS-II}
+% {Casualty Actuarial Society}
+% {Examen \textit{Modern Actuarial Statistics II} de la CAS le 25 octobre 2021}{}{}{}
+
+\cvevent
+ {2025}
+ {Associate of the Casualty Actuarial Society (ACAS)}
+ {Casualty Actuarial Society}
+ {}{}{}{}
+
+\cvevent
+ {2025}
+ {Exam 6C}
+ {Casualty Actuarial Society}
+ {}{}{}{}
+
+\cvevent
+ {2025}
+ {Professionalism Workshop}
+ {Canadian Institute of Actuaries}
+ {}{}{}{}
+
+\cvevent
+ {2024}
+ {Online Course 2 }
+ {Casualty Actuarial Society}
+ {}{}{}{}
+% : ``Risk Management and Insurance Operations''
+
+
+\cvevent
+ {2020 - 2022}
+ {MAS-I, MAS-II, Exam 5 and Online Course 1}
+ {Casualty Actuarial Society}
+ {}{}{}{}
+ 
+
+ \cvevent
+ {2019- 2020}
+ {Exam P, FM and IFM }
+ {Society of Actuaries and Canadian Institute of Actuaries (credits)}
+ {}{}{}{}
+%\cvevent
+% {2019}
+% {FM}
+% {Society of Actuaries}
+% {Crédit obtenu auprès de l'ICA à l'été 2019}{}{}{}
+% \vfill\null
+%\cvevent
+% {2019}
+% {P}
+% {Society of Actuaries}
+% {Examen P: Probability de la SOA réussit à l'hiver 2019}{}{}{}
+%
+%\vfill
+
+% \newpage 
+\section{Work experiences}
+\cvsection{WORK EXPERIENCEs}
+
+
+\cvevent
+ {2022 - 2023}
+ {Course lecturer }
+ {Université Laval}
+ {\begin{itemize}
+     \item Linear Models in Actuarial Science (mandatory undergraduate course, 3 credits)
+\begin{itemize}
+    \item Fall 2022, 88 students enrolled
+\end{itemize}
+\item Statistical Learning in Actuarial Science (mandatory undergraduate course, 3 credits)
+\begin{itemize}
+    \item Winter 2023, 54 students enrolled
+\end{itemize}
+ \end{itemize}
+ }{}{}{Faculty of Science and Engineering Teaching Star (2022-2023).}
+%Students left over 93\% positive feedbacks about course planning, pedagogy, teacher and evaluation.
+
+\cvevent
+ {2019 - 2026}
+ {American football coach}
+ {Falcons of Cégep de Lévis}
+ {American football coach for different teams since 2012 (10 years). I am coaching collegiate D2 for Cégep de Lévis since 2019 : 
+ \cvlist{\item Tight ends and Fullbacks coach (2019-2026)  \item Supervisor for a bachelor's degree intern in sports intervention (2023)
+ }}{}{}{Coaching Staff of the year 2023 and 2024. Coaching Staff Sportsmanship Award 2022 (D1) and 2023 (D2).}
+
+% \item Assistant offensive line coach (2019-2021)
+%  \item Assistant offensive coordinator (2022-present)
+ \cvevent
+ {2019 - 2024}
+ {Teaching assistant}
+ {Université Laval}
+ {Teaching assistants on several occasions : \cvlist{
+ \item Evaluator for actuarial student internships (1 time)
+ \item Probabilistic Analysis of Actuarial Risks (3 times) 
+ \item Statistical Learning in Actuarial Science (5 times)
+ \item Linear Models in Actuarial Science (1 time) }}{}{}{}
+ 
+
+
+\cvevent
+ {2019 - 2021}
+ {Actuarial intern}
+ {Desjardins General Insurance Group}
+ {Intern for Property Ratemaking (2019), Business analysis (2020 and 2021), and Research (2021).}{}{}{}
+% Four internships in different teams for Desjardins General Insurance Group. I developed business knowledge, communication skills and data science expertise : 
+
+
+\section{Refereeing}
+\cvsection{Refereeing}
+
+\cvevent
+ {2026 -- present}
+ {Referee}
+ {\textit{European Actuarial Journal}}
+ {}{}{}{}
+
+\cvevent
+ {2026 -- present}
+ {Referee}
+ {\textit{Annals of Actuarial Science}}
+ {}{}{}{}
+
+\cvevent
+ {2024 -- present}
+ {Referee}
+ {\textit{Journal of Risk and Insurance}}
+ {}{}{}{}
+
+
+\newpage
+
+\section{Scholarships and Awards}
+\cvsection{Scholarships and Awards}
+
+\cvevent
+ {2026}
+ {Actuarial Research Conference 2026 Travel Grant}
+ {American Academy of Actuaries}
+ {Travel grant to support conference participation and dissemination of research (\$1500 USD).}{}{}{}
+
+\cvevent
+ {2026}
+ {Student travel grant}
+ {\href{https://crdm.ulaval.ca/2025/10/09/bourse-de-mobilite-etudiante-du-crdm/}{Big Data Research Center}}
+ {Travel grant to support conference participation and dissemination of research (\$2000 CAD).}{}{}{}
+
+\cvevent
+ {2025}
+ {Postgraduate Scholarships -- Doctoral}
+ {Natural Sciences and Engineering Research Council of Canada}
+ {This competitive scholarship that amounts to \$ 120~000 CAD on three years.}{}{}{}
+
+\cvevent
+ {2024, 2025, 2026}
+ {Hickman Scholars Program}
+ {Society of Actuaries}
+ {A competitive international scholarship that amounts to 20~000 USD per year. Every renewal is competitive.}{}{}{}
+
+
+\cvevent
+ {2024}
+ {Doctoral Training Scholarships}
+ {Fonds de recherche du Québec (Nature et techologies)}
+ {This competitive scholarship that amounts to \$ 100~000 CAD on four years.}{}{}{}
+
+
+
+\cvevent
+ {2024}
+ {Project partnership fund}
+ {MITACS}
+ {This fund was negotiated with an industrial partner that amounts to \$ 84~000 CAD on three years.}{}{}{}
+
+
+
+% \cvevent
+%  {2023}
+%  {ESSOR graduate studies Scholarship}
+%  {Pierre Viger Family}
+%  {This competitive scholarship based on leadership, and research potential amounts to 30~000\$ on three years.}{}{}{}
+
+ \cvevent
+ {2023}
+ {Doctorate attraction grant Florent Toureille}
+ {Chaire d'actuariat de l'Université Laval}
+ {This competitive scholarship based on leadership and excellence amounts to \$ 30~000 CAD on three years.}{}{}{}
+
+
+\cvevent
+ {2023}
+ {Leadership and Engagement Scholarship}
+ {Université Laval}
+ {This competitive sports leadership scholarship amounts to \$ 30~000 CAD on three years.}{}{}{}
+
+
+
+\cvevent
+ {2023}
+ {Charles Brindamour Graduate Scholarship for Excellence}
+ {Charles Brindamour (Intact CEO)}
+ {Competitive scholarship based on excellence amounts to \$10~000 CAD.}{}{}{}
+
+
+
+\cvevent
+ {2022}
+ {François-Laviolette Scholarship}
+ {François-Laviolette Scholarship fund}
+ {Competitive scholarship to promoting the development of responsible AI. This award amounts to \$7~500 CAD.}{}{}{}
+ 
+
+
+\cvevent
+ {2021}
+ {Grant of attraction to the Master's}
+ {Chaire d'actuariat de l'Université Laval}
+ {Grant recognizing the research potential for future Master's thesis students, amount of \$15~000 CAD.}{}{}{}
+
+
+
+\cvevent
+ {2021}
+ {CAS Trust Scholarship}
+ {Casualty Actuarial Society}
+ {A highly competitive international scholarship competition that amounts to \$2~500 USD.}{}{}{}
+
+
+
+\cvevent
+ {2021}
+ {Alexander-Graham-Bell Scholarship}
+ {Natural Sciences and Engineering Research Council}
+ {Competition for the 2021-2022 cohort of graduate scholarships that amounts to \$17~500 CAD.}{}{}{}
+
+
+
+\cvevent
+ {2018}
+ {Lieutenant-Governor's Medal}
+ {Cégep de Lévis}
+ {Awarded to a student whose involvement and academic results are distinguishable.}{}{}{}
+
+
+%\cvevent
+% {2015-2017}
+% {Divers prix}
+% {Cégep de Lévis}
+% {J'ai reçu divers honneurs durant mon parcours d'étudiant-athlète avec l'équipe de football du Cégep de Lévis. Notamment, j'ai obtenu le trophée remis au joueur s’étant le plus démarqué sans recevoir d’honneur (2018), j'ai été sélectionné au poste de capitaine (2016 et 2017) et j'ai obtenu le prix d'étudiant-athlète par excellence dans le collégial D1 remis par le réseau des sports étudiants du Québec}{}{}{}
+
+%\cvevent
+% {2016-2017}
+% {Nomination au poste de Capitaine}
+% {Cégep de Lévis}
+% {Le rôle de capitaine vient souligner mon leadership et m'a fourni en opportunité de représenter mon équipe auprès des médias}{}{}{}
+%
+%
+%\cvevent
+% {2014-2018}
+% {Excellence académique}
+% {Réseau des sports étudiants du québec}
+% {Prix d'étudiants-athlètes par excellence reçu en 2014, 2017 et 2018 dans le juvénile D1 et dans le collégial D1}{}{}{}
+
+
+
+%---------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\section{Academic Communications}
+\cvsection{Academic Communications}
+
+
+\cvevent{2026}{Profiling Actuarial Discrimination via causal decomposition}{Actuarial and Financial Mathematics Conference, Brussels (Belgium)}{Poster presenter \textbf{(Audience: academics).}}{}{}{}
+
+\vspace*{-0.05cm}
+
+\cvevent
+ {2026}
+ {Bias in Assessing Financial Risk: Insights from the 2025 Research Award}
+{\href{https://www.actuary.org/event/bias-assessing-financial-risk-insights-2025-research-award}{American Academy of Actuaries}}
+ {Invited panelist as finalist for the 2025 Award for Research on Bias in Assessing Financial Risk. Webinar to 445 actuaries and practitioners. \textbf{(Audience: end-users)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent
+ {2026}
+ {A Causal Perspective on Fairness in Insurance Pricing}
+ {Department of Mathematics, Stockholm University}
+ {Invited seminar talk during research stay \textbf{(Audience: academics)}.}{}{}{}
+
+
+
+\vspace*{-0.05cm}
+
+
+\cvevent{2026}{A Scalable Toolbox for Exposing Indirect Discrimination In Insurance Rates}{ASTIN Bulletin Conference, Zurich (Switzerland)}{Speaker at one of the fairness session at the ASTIN Bulletin conference \textbf{(Audience: academics).}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent
+ {2025}
+ {Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}
+ {Department of Statistics, University of Toronto}
+ {Invited seminar during research visit. \textbf{(Audience: academics)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent
+ {2025}
+ {Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}
+ {Casualty Actuarial Society Canada Connect Day, Toronto (Canada) \& Annual Meeting, Austin (United States)}
+ {Presenter to over 120 actuaries and policymakers at each event. \textbf{(Audience: end-users)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent
+ {2025}
+ {Two invited presentations at the 60th Actuarial Research Conference}
+ {American Academy of Actuaries panel \& Casualty Actuarial Society session, Toronto (Canada)}
+ {Guest panelist and presenter (with Marie-Pier and Arthur) to audiences from actuarial organizations, academia, industry, and policymakers. \textbf{(Audience: decision-makers)}}{}{}{}
+
+% \cvevent{2025}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{Université du Québec à Montréal (UQÀM), Montréal (Canada)}{Guest presenter to over 30 scholars and students. \textbf{(Audience: academics)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent{2025}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), Liverpool (U.K.)}{Presenter to over 60 young researchers from academia. \textbf{(Audience: academics)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent
+ {2025}
+ {Une boîte à outils pour dévoiler la discrimination indirecte dans les tarifs d'assurance}
+ {Chaire ACTIONS \& Milliman R\&D, Paris (France)}
+ {Guest co-presenter (with Arthur) to audiences from academia and industry. \textbf{(Audience: general)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent{2024}{Perspective causale sur les discriminations dans les modèles prédictifs en assurance}{Institut intelligence et données}{Guest presenter to over 100 people from academia. \textbf{(Audience: academics)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{27th International Congress on Insurance: Mathematics and Economics}{Academic presentation in Chicago, IL, United States \textbf{(Audience: academics)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{Workshop on fairness and discrimination in insurance}{Guest presenter to over 60 people from academia, practitioners and regulators. \textbf{(Audience: general)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Autorité des marchés financiers}{Presentation to decision-makers at Québec's financial autority. \textbf{(Audience: decision-makers)}}{}{}{}
+
+
+% \cvevent{2024}{The Fairness in Insurance Enigma: Exploring the Maze of Regulation}{7th Ontario-Québec Workshop in Insurance Mathematics}{Poster in an event where over 70 academics were present. \textbf{(Audience: academics)}}{}{}{}
+
+
+% \cvevent{2023}{Équité et discrimination en assurance générales}{Desjardins groupe assurances générales}{Presentation to $\approx 40$ actuaries and data scientists \textbf{(Audience: End-users)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent{2023}{Équité et discrimination en assurance générales}{Intact Financial Corporation}{Presentation to CEO, CLO and CDO of Intact Financial Corporation. \textbf{(Audience: decision-makers)}}{}{}{}
+
+
+\vspace*{-0.05cm}
+
+\cvevent{2023}{Causal inference and Fairness in Insurance Pricing}{Insurance Data Science Conference}{Presenter for \href{https://insurancedatascience.org/}{Insurance Data Science Conference \faExternalLink*} in London (UK). \textbf{(Audience: Academics)}}{}{}{}
+
+
+
+% \cvevent{2023}{Équité en assurance : Comment éviter la discrimination injustifiée? }{Casualty insurance mathematics II}{Guest presenter on fairness in insurance in front of 80 undergraduate students willing to learn more about fairness in insurance.}{}{}{}
+
+% \cvevent{2023}{Équité et discrimination en assurance générales}{Desjardins groupe assurances générales}{Presentation to $\approx 40$ actuaries \textbf{(Audience: end-users)}}{}{}{}
+
+
+
+% \cvevent
+% {2022}
+% {Fairness in Insurance : Overview of discrimination-free models}
+% {Quantact Summerday 2022}
+% {Guest presenter in Concordia University. \textbf{(Audience: academics)}}{}{}{}
+
+% \cvevent
+% {2022}
+% {Équité en assurance : revue des modèles non discriminatoires}
+% {Workshop on Fairness and Discrimination in Insurance}
+% {Guest presenter to over 50 people from academia and industry \textbf{(Audience: general)}}{}{}{}
+
+\newpage
+
+\section{Public Outreach}
+\cvsection{Public Outreach}
+
+\cvevent{2023-2026}{L'avenir à travers une boule de cristal mathématique : Le travail d'un actuaire}{Cégep de Lévis}{Guest presenter for CEGEP students. \textbf{(Audience: Students)}}{}{}{}
+
+\cvevent{2024}{Pour une intelligence artificielle équitable en assurance}{Université Laval News}{I collaborated for a  \href{https://nouvelles.ulaval.ca/2024/05/17/pour-une-intelligence-artificielle-equitable-en-assurance-a:0fa1aae9-47cd-478a-a61e-4ea4d441533f}{scientific communication article \faExternalLink*}. \textbf{(Audience: General Public)}}{}{}{}
+
+\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Institut Intelligence et données}{4th research competition on data intelligence. $\approx$ 50 graduate students \textbf{(Audience: general)}}{}{}{}
+
+\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Institut de valorisation des données}{\href{https://www.youtube.com/watch?v=MSz1W8Ri_y4&list=PLnI094tgrXpwdY1U0eYSuRv3-IzdtnG0C&index=7}{I presented my research \faExternalLink*} during IVADO Digital Future Day 2024. Over 250 people. \textbf{(Audience: general)}}{}{}{}
+
+
+
+% \cvevent{2023}{Discrimination injustifiée en assurance générale: une perspective causale}{Faculty of Science and Engineering}{Presentation during the \textit{Research Day in Science and Engineering} \textbf{(Audience: General)}}{}{}{}
+
+
+
+\cvevent{2023}{L'IA pour calculer le prix de votre assurance auto: poétique ou pas éthique?}{Big Data Research Center}{Presentation during the event \textit{lightning talks 180} \textbf{(Audience: General)}}{}{}{Public's choice award}
+
+
+
+\cvevent{2023}{Artificial intelligence to prevent unfair discrimination in auto insurance}{IVADO}{I authored an 800-word  \href{https://ivado.ca/en/research-projects/prevent-unfair-discrimination-in-auto-insurance/}{scientific communication article \faExternalLink*}. \textbf{(Audience: General)}}{}{}{}
+
+
+
+
+% \cvevent
+%  {2022}
+%  {How to improve fairness in insurance? Towards more responsible pricing}
+%  {Actulab 2022}
+%  {Problem-solving workshops. \textbf{(Audience: End-users)}}{}{}{\textit{Coup de coeur Entrepreunariat ULaval} award (1000 CAD)}
+
+
+
+% \cvevent
+% {2022}
+% {Gala of Excellence}
+% {Pointe-Lévy High School}
+% {Guest of honor for the Student-Athlete Excellence Gala. \textbf{(Audience: Students)}}{}{}{}
+
+% \section{Other academic contributions}
+% \cvsection{Other academic contributions}
+
+% \cvevent{In    development}{\href{https://github.com/OliCoSide/actuarialmetrics}{\texttt{actuarialmetrics} \faExternalLink*}}{\texttt{R} package }{I am developing an \texttt{R} package to improve the accessibility and the quality of \texttt{R} implementation for traditional actuarial metrics and visualization. }{}{}{}
+
+% \cvevent{2022}{Pedagogic material for a graduate course at Université Laval}{Advanced risk theory models (ACT-7102)}{I gathered the projects of all students registered in the graduate course ACT-7102 with me in \href{https://github.com/OliCoSide/ACT7102-H22}{this GitHub repository \faExternalLink*}. }{}{}{}
+
+% \cvevent{2022}{Pedagogic material for a graduate course at Université Laval}{Special Subject III (ACT-7008)}{I gathered the projects of all students registered in the graduate course ACT-7008 with me in \href{https://github.com/OliCoSide/ACT7008-H22}{this GitHub repository \faExternalLink*}. }{}{}{}
+
+% ajoute rle lien pedagogic material 
+
+%---------------------------------------------------------------------------------------
+% Commitment/engagement 
+%----------------------------------------------------------------------------------------
+
+\vspace*{-0.35cm}
+
+\section{Committees}
+\cvsection{Committees}
+
+ \cvevent
+ {2025 - present}
+ {Institut Intelligence et Données, Université Laval}
+ {Voting member of the Committee}
+ {}{}{}{}
+
+ \cvevent
+ {2022 - present}
+ {Actuarial Science Graduate Program Committee of Université Laval}
+ {Voting member of the Committee}
+ {}{}{}{}
+ \cvevent
+ {2022 - 2025}
+ {Big Data Research Center of Université Laval}
+ {Student voting member of the Committee}
+ {}{}{}{}
+
+ \cvevent
+ {2021 - 2024}
+ {Actuarial Science Student Investment Fund of Université Laval}
+ {Voting member of the committee}
+ {}{}{}{}
+
+ % \cvevent
+ % {2020 - 2021}
+ % {Actuarial Undergraduate Student Association of Université Laval}
+ % {Vice President of Finance}
+ % {}{}{}{}
+ 
+
+%---------------------------------------------------------------------------------------
+% Research afiliation
+%----------------------------------------------------------------------------------------
+
+
+\vspace*{-0.35cm}
+
+\section{Research affiliations}
+\cvsection{Research affiliations}
+\cvevent
+ {2021 - present}
+ {Institut Intelligence et Données}
+ {Université Laval}
+ {}{}{}{}
+
+ \cvevent
+ {2021 - present}
+ {Big Data Research Center}
+ {Université Laval}
+ {}{}{}{}
+
+ \cvevent
+ {2021 - present}
+ {Quantact research laboratory}
+ {Université de Montréal}{}{}{}{}
+
+   \cvevent
+ {2021 - present}
+ {Centre de recherches mathématiques}
+ {Université de Montréal}
+ {}{}{}{}
+
+
+%---------------------------------------------------------------------------------------
+% Examens Professionnels
+%----------------------------------------------------------------------------------------
+
+
+\vspace*{-0.35cm}
+
+\section{Other}
+\cvsection{Other}
+
+ \cvevent{2025}{Roundtable on raising awareness about youth bullying}{\href{https://www.youtube.com/watch?v=PsvMgb9Yje8}{Mammouth hebdo - Téléquébec \faExternalLink* }}{}{}{}{}
+
+ \cvevent{2022 - 2023}{Actuarial School representative at the open house}{Faculty of Science and Engineering}{\cvlist{\item Winter 2023 ( $\approx$ 30 visits from students accompanied by their parents) \item Fall 2022 ( $\approx$ 50 visits from students accompanied by their parents) }}{}{}{}
+
+% \cvevent{1997 - present}{Casual athlete}{Various sports}{}{\cvtext{\textbf{Achievements included : }}\cvlist{\item Bench press : 385 pounds for 1 rep (2023), 345 pounds for 3 reps (2017), 225 pounds for 25 reps (2023) \item Back squat : 495 pounds for 1 rep (2017), 475 pounds for 3 reps (2017) \item Front squat : 315 pounds for 1 rep (2023), 275 pounds for 3 reps (2023)
+% \item Clean and jerk : 275 pounds for 1 rep (2023), 245 for 3 reps (2023) \item Running : half marathon in 109 minutes (2024), 10K in 46 minutes (2025), 5K in 22 minutes (2025)}}{}{}
+
+% \cvevent{2009 - 2018}{American Football Player}{Various canadian teams}{I played for many teams at many positions. Most of my success was as an offensive lineman, playing center. \href{https://www.hudl.com/video/3/1323974/5a0b57fc19b03d12c81f8b50}{Here is my final year's highlight \faExternalLink*}.}{\cvtext{\textbf{Achievements included : }}\cvlist{ \item Winner of the Quebec Provincial Championship (\href{https://youtu.be/g1qSffdE0Jo}{2012 \faExternalLink*}, 2013 and \href{https://youtu.be/z80j69YReqU}{2014 \faExternalLink*}) \item All-start team as an offensive lineman in Juvenile D1 (2014) \item Academic Excellence Award for the Quebec Student Sports Network (2014, 2015 and 2016) \item Captain of the D1 Falcons of Cégep de Lévis (2016-2017) \item Player in the Shadows - awarded to the most outstanding awardless player of the D1 Falcons (2017) \item Most total yards (5342) and rushing yards (3565) by an offense in collegiate D1  (\href{https://youtu.be/ankXHpMXg_o}{2017 \faExternalLink*} , still record holders)}}{}{}
+
+% \item Offensive lineman of the year for Pointe-Lévy high school (2012) \item All-star team as an offensive lineman in Cadet D2 (2012)
+
+\end{document}
+

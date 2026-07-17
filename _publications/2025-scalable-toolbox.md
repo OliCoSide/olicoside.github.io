@@ -7,7 +7,7 @@ excerpt: 'Published by the Casualty Actuarial Society in its Research Paper Seri
 date: 2025-10-23
 venue: 'Casualty Actuarial Society Research Paper Series on Bias and Insurance'
 paperurl: 'https://www.casact.org/sites/default/files/2025-10/_A_Scalable_toolbox_working_paper.pdf'
-citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2025). A scalable toolbox for exposing indirect discrimination in insurance rates. Casualty Actuarial Society Research Paper Series on Bias and Insurance.'
+citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A scalable toolbox for exposing indirect discrimination in insurance rates. CAS Research Paper Series on Bias and Insurance.'
 ---
 
 A practical, scalable toolbox for actuaries to detect, quantify, and diagnose potential indirect discrimination in insurance pricing, whether or not the sensitive attribute is used in the rating model. See also the <a href="https://www.casact.org/article/cas-releases-new-toolbox-identifying-potential-bias-insurance-rates">CAS release announcement</a>.
@@ -19,7 +19,7 @@ author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
 title = {A scalable toolbox for exposing indirect discrimination in insurance rates},
 institution = {Casualty Actuarial Society},
 type = {Research Paper Series on Bias and Insurance},
-year = {2025},
+year = {2026},
 url = {https://www.casact.org/sites/default/files/2025-10/_A_Scalable_toolbox_working_paper.pdf}
 }</code></pre>
 </div>

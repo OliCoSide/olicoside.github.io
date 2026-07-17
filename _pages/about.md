@@ -13,9 +13,10 @@ My research interests include causal inference, algorithmic fairness, insurance 
 
 Recent highlights
 ======
-* Our paper [A fair price to pay: Exploiting causal graphs for fairness in insurance](/publication/2024-fair-price) (*Journal of Risk and Insurance*, 2025) was a finalist for the American Academy of Actuaries 2025 Award for Research on Bias in Assessing Financial Risk.
+* [Recoverability of market-wide fair insurance premiums under selection bias](/publication/2024-selection) is published in *Insurance: Mathematics and Economics* (2026).
+* [A statistical perspective on fairness in insurance pricing](/publication/2026-statistical-perspective) is forthcoming.
 * The Casualty Actuarial Society published [A scalable toolbox for exposing indirect discrimination in insurance rates](/publication/2025-scalable-toolbox) in its Research Paper Series on Bias and Insurance.
-* [Recoverability of market-wide fair insurance premiums under selection bias](/publication/2024-selection) is now published in *Insurance: Mathematics and Economics* (2026).
+* [A fair price to pay: Exploiting causal graphs for fairness in insurance](/publication/2024-fair-price) (*Journal of Risk and Insurance*, 2025) was a finalist for the American Academy of Actuaries 2025 Award for Research.
 * I obtained my ACAS designation from the Casualty Actuarial Society in 2025.
 
 You can find all my papers on the [Publications](/publications/) page, and my recent presentations on the [Talks](/talks/) page.

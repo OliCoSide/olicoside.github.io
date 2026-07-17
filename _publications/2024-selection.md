@@ -7,7 +7,7 @@ excerpt: 'Previously circulated as "Selection Bias in Insurance: Why Portfolio-S
 date: 2026-07-01
 venue: 'Insurance: Mathematics and Economics'
 paperurl: 'https://doi.org/10.1016/j.insmatheco.2026.103268'
-citation: 'Côté, M.-P., Côté, O., & Charpentier, A. (2026). Recoverability of market-wide fair insurance premiums under selection bias. Insurance: Mathematics and Economics. https://doi.org/10.1016/j.insmatheco.2026.103268'
+citation: 'Côté, M.-P., Côté, O., & Charpentier, A. (2026). Recoverability of market-wide fair insurance premiums under selection bias. Insurance: Mathematics and Economics, 129, 103268. https://doi.org/10.1016/j.insmatheco.2026.103268'
 ---
 
 An earlier version circulated as "Selection Bias in Insurance: Why Portfolio-Specific Fairness Fails to Extend Market-Wide", available on <a href="https://dx.doi.org/10.2139/ssrn.5018749">SSRN</a>.
@@ -18,7 +18,10 @@ An earlier version circulated as "Selection Bias in Insurance: Why Portfolio-Spe
 author = {Côté, Marie-Pier and Côté, Olivier and Charpentier, Arthur},
 title = {Recoverability of market-wide fair insurance premiums under selection bias},
 journal = {Insurance: Mathematics and Economics},
+volume = {129},
+pages = {103268},
 year = {2026},
-doi = {10.1016/j.insmatheco.2026.103268}
+doi = {10.1016/j.insmatheco.2026.103268},
+url = {https://www.sciencedirect.com/science/article/pii/S0167668726000582}
 }</code></pre>
 </div>

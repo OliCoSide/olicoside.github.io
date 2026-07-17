@@ -70,7 +70,7 @@ Teaching
 
 Service
 ======
-* Referee, *Journal of Risk and Insurance* (2024 – present) and *Annals of Actuarial Science* (2026 – present)
+* Referee, *Journal of Risk and Insurance* (2024 – present), *Annals of Actuarial Science* (2026 – present), and *European Actuarial Journal* (2026 – present)
 * Voting member, Institut intelligence et données committee, Université Laval, 2025 – present
 * Voting member, Actuarial Science Graduate Program Committee, Université Laval, 2022 – present
 * Student voting member, Big Data Research Center, Université Laval, 2022 – 2025
