@@ -29,4 +29,4 @@ bibtex: |
   }
 ---
 
-Detect, quantify, and diagnose indirect discrimination in insurance rates, with or without the sensitive attribute. See the <a href="https://www.casact.org/article/cas-releases-new-toolbox-identifying-potential-bias-insurance-rates">CAS announcement</a>.
+Detect, quantify, and diagnose indirect discrimination in insurance rates, with or without the sensitive attribute. See the <a href="https://www.casact.org/article/cas-releases-new-toolbox-identifying-potential-bias-insurance-rates">CAS announcement</a>, and explore the full set of results in the <a href="https://olicoside.github.io/Scalable_toolbox_online_supplement/">online supplement</a>.
