@@ -12,15 +12,15 @@ supplement:
   label: "Online supplement"
 talks:
   - url: /talks/2026-01-15-ASTIN
-    label: "ASTIN 2026"
+    label: "1st ASTIN Bulletin Conference, ETH Zürich"
   - url: /talks/2025-11-10-CAS-annual
-    label: "CAS Annual 2025"
+    label: "Casualty Actuarial Society Annual Meeting"
   - url: /talks/2025-12-05-CAS-canada
-    label: "CAS Canada 2025"
+    label: "Casualty Actuarial Society Canada Connection"
   - url: /talks/2025-12-01-UofT
-    label: "Toronto 2025"
+    label: "Department of Statistics, University of Toronto"
   - url: /talks/2026-03-01-Stockholm
-    label: "Stockholm 2026"
+    label: "Department of Mathematics, Stockholm University"
 bibtex: |
   @techreport{Cote/etal:2025toolbox,
   author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
