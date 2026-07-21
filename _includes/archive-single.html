@@ -42,8 +42,9 @@
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-          {% if post.talks %}
+          {% if post.talks or post.supplement %}
           <p class="talk-pills">
+            {% if post.supplement %}<a class="pill pill--supplement" href="{{ post.supplement.url }}"><i class="fas fa-chart-column" aria-hidden="true"></i> {{ post.supplement.label | default: "Online supplement" }}</a>{% endif %}
             {% for t in post.talks %}<a class="pill" href="{{ base_path }}{{ t.url }}"><i class="fas fa-microphone-lines" aria-hidden="true"></i> {{ t.label }}</a>{% endfor %}
           </p>
           {% endif %}

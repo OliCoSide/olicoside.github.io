@@ -7,6 +7,9 @@ date: 2025-10-23
 venue: 'Casualty Actuarial Society Research Paper Series on Bias and Insurance'
 paperurl: 'https://www.casact.org/sites/default/files/2025-10/_A_Scalable_toolbox_working_paper.pdf'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A scalable toolbox for exposing indirect discrimination in insurance rates. CAS Research Paper Series on Bias and Insurance.'
+supplement:
+  url: https://olicoside.github.io/Scalable_toolbox_online_supplement/
+  label: "Online supplement"
 talks:
   - url: /talks/2026-01-15-ASTIN
     label: "ASTIN 2026"
