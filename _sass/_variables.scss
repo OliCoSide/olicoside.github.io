@@ -65,20 +65,22 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
-/* custom design tokens */
-$accent-color               : #0e7490; // deep teal — links, buttons, details
-$accent-color-dark          : #155e75;
-$accent-color-light         : #e0f2f7;
-$ink                        : #1e293b; // near-black slate for headings
-$muted                      : #64748b;
-$surface                    : #f8fafc;
-$card-border                : #e2e8f0;
+/* custom design tokens — japandi: warm paper, muted pine, hairline borders */
+$accent-color               : #4e7a6f; // muted pine — links, buttons, details
+$accent-color-dark          : #3a5d54;
+$accent-color-light         : #e9f0ec;
+$clay                       : #b98a6e; // warm clay — rare secondary accent
+$ink                        : #2e2c28; // warm charcoal for headings
+$muted                      : #8b8578;
+$surface                    : #f4f1ea; // warm sand surface (footer, wells)
+$paper                      : #faf9f6; // warm paper page background
+$card-border                : #e7e2d9;
 
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
+$body-color                 : $paper;
+$background-color           : $paper;
+$code-background-color      : #f4f1ea;
 $code-background-color-dark : $light-gray;
-$text-color                 : #334155;
+$text-color                 : #45413a;
 $border-color               : $card-border;
 
 $primary-color              : #40484e;
