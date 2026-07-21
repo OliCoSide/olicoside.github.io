@@ -527,6 +527,10 @@ img {
       display: none;
     }
 
+    &::marker {
+      content: none;
+    }
+
     &:hover {
       color: $accent-color-dark;
       border-color: rgba($accent-color, 0.45);
