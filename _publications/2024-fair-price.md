@@ -10,11 +10,11 @@ paperurl: 'https://doi.org/10.1111/jori.12503'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2025). A fair price to pay: Exploiting causal graphs for fairness in insurance. Journal of Risk and Insurance, 92, 33–75. https://doi.org/10.1111/jori.12503'
 talks:
   - url: /talks/2024-05-16-jeda
-    label: "Fairness Workshop 2024"
+    label: "Workshop on fairness and discrimination in insurance"
   - url: /talks/2026-01-29-AAA-webinar
-    label: "AAA Webinar 2026"
+    label: "American Academy of Actuaries (webinar)"
   - url: /talks/2026-03-01-Stockholm
-    label: "Stockholm 2026"
+    label: "Department of Mathematics, Stockholm University"
 bibtex: |
   @article{Cote/etal:2024,
   author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
