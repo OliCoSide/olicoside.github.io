@@ -1,0 +1,16 @@
+# LinkedIn posts featured on /linkedin/
+#
+# To add a post: on LinkedIn, open the post's ⋯ menu → "Copy link to post",
+# then add an entry at the TOP of this list (newest first):
+#
+#   - url: "https://www.linkedin.com/posts/olivier-cote-act_..." # paste the copied link
+#     note: "optional short caption shown under the embed"
+#
+# The activity ID is extracted automatically from the URL.
+# If a post uses a different URL format, you can set the embed directly:
+#
+#   - embed: "https://www.linkedin.com/embed/feed/update/urn:li:activity:1234567890123456789"
+#
+# Only public posts render for visitors who are not logged into LinkedIn.
+
+posts: []
