@@ -38,8 +38,9 @@ layout: default
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-          {% if page.talks %}
+          {% if page.talks or page.supplement %}
           <p class="talk-pills">
+            {% if page.supplement %}<a class="pill pill--supplement" href="{{ page.supplement.url }}"><i class="fas fa-chart-column" aria-hidden="true"></i> {{ page.supplement.label | default: "Online supplement" }}</a>{% endif %}
             {% for t in page.talks %}<a class="pill" href="{{ base_path }}{{ t.url }}"><i class="fas fa-microphone-lines" aria-hidden="true"></i> {{ t.label }}</a>{% endfor %}
           </p>
           {% endif %}

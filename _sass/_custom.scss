@@ -494,6 +494,22 @@ img {
   }
 }
 
+/* supplement pill — warm ochre, so it stands apart from the pine talk pills */
+$supplement-color: #a0703c;
+$supplement-color-dark: #7c5227;
+$supplement-color-light: #f5ede1;
+
+.pill--supplement {
+  color: $supplement-color-dark;
+  background: $supplement-color-light;
+  border-color: rgba($supplement-color, 0.3);
+
+  &:hover {
+    background: $supplement-color;
+    border-color: $supplement-color;
+  }
+}
+
 /*
    BibTeX — collapsible pill on every paper (list cards and paper pages)
    ========================================================================== */
