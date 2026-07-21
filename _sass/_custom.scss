@@ -1,0 +1,273 @@
+/* ==========================================================================
+   CUSTOM DESIGN LAYER — polished refresh (2026)
+   Loaded last so it overrides the theme defaults.
+   ========================================================================== */
+
+/*
+   Global typography & texture
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+::selection {
+  background: $accent-color-light;
+  color: $accent-color-dark;
+}
+
+h1, h2, h3, h4 {
+  color: $ink;
+  letter-spacing: -0.01em;
+}
+
+/* content links: accent color with a refined underline */
+.page__content a:not(.btn),
+.author__urls a,
+.archive a {
+  color: $accent-color;
+  text-decoration-color: rgba($accent-color, 0.35);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease-in-out, text-decoration-color 0.15s ease-in-out;
+
+  &:hover {
+    color: $accent-color-dark;
+    text-decoration-color: $accent-color-dark;
+  }
+}
+
+/*
+   Masthead & navigation
+   ========================================================================== */
+
+.masthead {
+  border-bottom: 1px solid $card-border;
+  background: rgba(255, 255, 255, 0.95);
+
+  .masthead__menu-item--lg a {
+    font-family: $lora;
+    font-weight: 700;
+    font-size: 1.15em;
+    color: $ink;
+  }
+
+  .greedy-nav a {
+    transition: color 0.15s ease-in-out;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+/*
+   Page titles & section headings
+   ========================================================================== */
+
+.page__title {
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.page__content {
+
+  h1 {
+    position: relative;
+    margin-top: 1.6em;
+    padding-bottom: 0.35em;
+    font-size: $type-size-3;
+    border-bottom: 1px solid $card-border;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 48px;
+      height: 3px;
+      border-radius: 3px;
+      background: $accent-color;
+    }
+  }
+
+  h2 {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 36px;
+      height: 3px;
+      border-radius: 3px;
+      background: $accent-color;
+    }
+  }
+}
+
+/*
+   Sidebar / author profile
+   ========================================================================== */
+
+.author__avatar img {
+  padding: 0;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px rgba($accent-color, 0.45), 0 6px 18px rgba(30, 41, 59, 0.14);
+
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+    border: 3px solid #fff;
+  }
+}
+
+.sidebar .author__name {
+  font-family: $lora;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: $ink;
+}
+
+.author__bio {
+  color: $muted;
+}
+
+.author__urls {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+/*
+   Archive lists (publications, talks, teaching) as cards
+   ========================================================================== */
+
+.list__item .archive__item {
+  margin-bottom: 1em;
+  padding: 1.05em 1.25em;
+  background: #fff;
+  border: 1px solid $card-border;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(30, 41, 59, 0.04);
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba($accent-color, 0.45);
+    box-shadow: 0 6px 18px rgba(30, 41, 59, 0.1);
+  }
+
+  .archive__item-title {
+    margin-top: 0;
+    font-family: $lora;
+    font-weight: 600;
+    font-size: 1.12em;
+
+    a {
+      color: $ink;
+      text-decoration: none;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  p {
+    margin-top: 0.35em;
+    margin-bottom: 0.25em;
+    color: $muted;
+    font-size: $type-size-6;
+  }
+
+  .archive__item-excerpt {
+    color: $text-color;
+    font-size: $type-size-6;
+  }
+}
+
+/* keep the plain look inside the online CV lists */
+.archive__item:hover .archive__item-title {
+  text-decoration: none;
+}
+
+.archive__subtitle {
+  color: $muted;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: $type-size-6;
+}
+
+/*
+   Buttons
+   ========================================================================== */
+
+.btn {
+  border-radius: 999px;
+  padding: 0.6em 1.25em;
+  font-weight: 600;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 41, 59, 0.18);
+  }
+}
+
+/*
+   Footer
+   ========================================================================== */
+
+.page__footer {
+  background: $surface;
+  border-top: 1px solid $card-border;
+  color: $muted;
+
+  footer {
+    margin-top: 1.5em;
+  }
+
+  a {
+    color: $muted;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+/*
+   Misc polish
+   ========================================================================== */
+
+blockquote {
+  border-left: 3px solid $accent-color;
+  font-style: normal;
+  color: $muted;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: $card-border;
+}
+
+table {
+  border-radius: $border-radius;
+  overflow: hidden;
+}

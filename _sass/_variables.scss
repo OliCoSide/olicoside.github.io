@@ -28,8 +28,12 @@ $bodoni                     : "Bodoni MT", serif;
 $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 
-$global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
+/* webfonts (loaded in _includes/head.html) */
+$inter                      : "Inter", $sans-serif;
+$lora                       : "Lora", Georgia, serif;
+
+$global-font-family         : $inter;
+$header-font-family         : $lora;
 $caption-font-family        : $serif;
 
 /* type scale */
@@ -61,18 +65,27 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
+/* custom design tokens */
+$accent-color               : #0e7490; // deep teal — links, buttons, details
+$accent-color-dark          : #155e75;
+$accent-color-light         : #e0f2f7;
+$ink                        : #1e293b; // near-black slate for headings
+$muted                      : #64748b;
+$surface                    : #f8fafc;
+$card-border                : #e2e8f0;
+
 $body-color                 : #fff;
 $background-color           : #fff;
 $code-background-color      : #fafafa;
 $code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+$text-color                 : #334155;
+$border-color               : $card-border;
 
-$primary-color              : #7a8288;
+$primary-color              : #40484e;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
-$info-color                 : #52adc8;
+$info-color                 : $accent-color;
 
 /* brands */
 $behance-color              : #1769FF;
@@ -158,7 +171,7 @@ $susy: (
    Other
    ========================================================================== */
 
-$border-radius              : 4px;
+$border-radius              : 8px;
 $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
 $navicon-width              : 28px;
 $navicon-height             : 4px;
