@@ -449,6 +449,87 @@ img {
 }
 
 /*
+   Talk pills on publications
+   ========================================================================== */
+
+.talk-pills {
+  margin-top: 0.55em !important;
+  margin-bottom: 0 !important;
+  line-height: 2;
+}
+
+.pill {
+  display: inline-block;
+  margin: 0 0.35em 0.15em 0;
+  padding: 0.14em 0.75em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: $accent-color-dark;
+  background: $accent-color-light;
+  border: 1px solid rgba($accent-color, 0.25);
+  border-radius: 999px;
+  text-decoration: none !important;
+  transition: background-color 0.2s $ease-out-soft, color 0.2s $ease-out-soft,
+    border-color 0.2s $ease-out-soft, transform 0.2s $ease-out-soft;
+
+  i {
+    font-size: 0.85em;
+    margin-right: 0.25em;
+    opacity: 0.75;
+  }
+
+  &:hover {
+    color: #fff !important;
+    background: $accent-color;
+    border-color: $accent-color;
+    transform: translateY(-1px);
+  }
+}
+
+/*
+   BibTeX blocks
+   ========================================================================== */
+
+.bibtex {
+  position: relative;
+  margin-top: 1.25em;
+
+  pre {
+    margin: 0;
+    padding: 1em 1.1em;
+    background: $surface;
+    border: 1px solid $card-border;
+    border-radius: $border-radius;
+    font-size: 0.72em;
+    line-height: 1.55;
+    overflow-x: auto;
+  }
+}
+
+.bibtex-copy {
+  position: absolute;
+  top: 0.6em;
+  right: 0.6em;
+  padding: 0.25em 0.9em;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: $accent-color-dark;
+  background: #fff;
+  border: 1px solid $card-border;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s $ease-out-soft, color 0.2s $ease-out-soft,
+    border-color 0.2s $ease-out-soft;
+
+  &:hover {
+    color: #fff;
+    background: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+/*
    LinkedIn posts grid (/linkedin/)
    ========================================================================== */
 

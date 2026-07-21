@@ -3,17 +3,27 @@ title: "A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rat
 collection: publications
 category: manuscripts
 permalink: /publication/2025-scalable-toolbox
-excerpt: 'Published by the Casualty Actuarial Society in its Research Paper Series on Bias and Insurance.'
 date: 2025-10-23
 venue: 'Casualty Actuarial Society Research Paper Series on Bias and Insurance'
 paperurl: 'https://www.casact.org/sites/default/files/2025-10/_A_Scalable_toolbox_working_paper.pdf'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A scalable toolbox for exposing indirect discrimination in insurance rates. CAS Research Paper Series on Bias and Insurance.'
+talks:
+  - url: /talks/2026-01-15-ASTIN
+    label: "ASTIN 2026"
+  - url: /talks/2025-11-10-CAS-annual
+    label: "CAS Annual 2025"
+  - url: /talks/2025-12-05-CAS-canada
+    label: "CAS Canada 2025"
+  - url: /talks/2025-12-01-UofT
+    label: "Toronto 2025"
+  - url: /talks/2026-03-01-Stockholm
+    label: "Stockholm 2026"
 ---
 
-A practical, scalable toolbox for actuaries to detect, quantify, and diagnose potential indirect discrimination in insurance pricing, whether or not the sensitive attribute is used in the rating model. See also the <a href="https://www.casact.org/article/cas-releases-new-toolbox-identifying-potential-bias-insurance-rates">CAS release announcement</a>.
+Detect, quantify, and diagnose indirect discrimination in insurance rates, with or without the sensitive attribute. See the <a href="https://www.casact.org/article/cas-releases-new-toolbox-identifying-potential-bias-insurance-rates">CAS announcement</a>.
 
-<div style="position: relative;">
-  <button onclick="navigator.clipboard.writeText(document.getElementById('bibtex-entry').innerText)" style="position: absolute; right: 0; top: 0; font-size: 0.75em;">copy</button>
+<div class="bibtex">
+  <button class="bibtex-copy" onclick="navigator.clipboard.writeText(document.getElementById('bibtex-entry').innerText)">copy</button>
   <pre><code id="bibtex-entry">@techreport{Cote/etal:2025toolbox,
 author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
 title = {A scalable toolbox for exposing indirect discrimination in insurance rates},

@@ -1,18 +1,24 @@
 ---
-title: "A Fair price to pay: exploiting causal graphs for fairness in insurance"
+title: "A Fair Price to Pay: Exploiting Causal Graphs for Fairness in Insurance"
 collection: publications
 category: manuscripts
 permalink: /publication/2024-fair-price
-excerpt: 'Finalist for the American Academy of Actuaries 2025 Award for Research on Bias in Assessing Financial Risk.'
+excerpt: 'Finalist for the 2025 American Academy of Actuaries Award for Research.'
 date: 2025-02-12
 venue: 'Journal of Risk and Insurance'
-#slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://doi.org/10.1111/jori.12503'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2025). A fair price to pay: Exploiting causal graphs for fairness in insurance. Journal of Risk and Insurance, 92, 33–75. https://doi.org/10.1111/jori.12503'
+talks:
+  - url: /talks/2024-05-16-jeda
+    label: "Fairness Workshop 2024"
+  - url: /talks/2026-01-29-AAA-webinar
+    label: "AAA Webinar 2026"
+  - url: /talks/2026-03-01-Stockholm
+    label: "Stockholm 2026"
 ---
 
-<div style="position: relative;">
-  <button onclick="navigator.clipboard.writeText(document.getElementById('bibtex-entry').innerText)" style="position: absolute; right: 0; top: 0; font-size: 0.75em;">copy</button>
+<div class="bibtex">
+  <button class="bibtex-copy" onclick="navigator.clipboard.writeText(document.getElementById('bibtex-entry').innerText)">copy</button>
   <pre><code id="bibtex-entry">@article{Cote/etal:2024,
 author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
 title = {A fair price to pay: Exploiting causal graphs for fairness in insurance},
