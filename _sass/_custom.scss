@@ -1,0 +1,472 @@
+/* ==========================================================================
+   CUSTOM DESIGN LAYER — japandi refresh (2026)
+   Warm paper, muted pine accent, hairline borders, quiet micro-animations.
+   Loaded last so it overrides the theme defaults.
+   ========================================================================== */
+
+/* natural, unhurried easing used everywhere */
+$ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+/*
+   Motion foundations
+   ========================================================================== */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bar-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/*
+   Global typography & texture
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+::selection {
+  background: mix(#fff, $clay, 72%);
+  color: $ink;
+}
+
+h1, h2, h3, h4 {
+  color: $ink;
+  letter-spacing: -0.01em;
+}
+
+h1, h2 {
+  scroll-margin-top: 90px;
+}
+
+/* content links: pine accent with a refined underline */
+.page__content a:not(.btn),
+.author__urls a,
+.archive a {
+  color: $accent-color;
+  text-decoration-color: rgba($accent-color, 0.35);
+  text-underline-offset: 3px;
+  transition: color 0.2s $ease-out-soft, text-decoration-color 0.2s $ease-out-soft;
+
+  &:hover {
+    color: $accent-color-dark;
+    text-decoration-color: $accent-color-dark;
+  }
+}
+
+/* calm, visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid $accent-color;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* accessibility: skip link (hidden until focused) */
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 16px;
+  z-index: 100;
+  padding: 0.5em 1em;
+  background: $ink;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: top 0.25s $ease-out-soft;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+/* thin, warm scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #cfc9bd transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfc9bd;
+  border-radius: 8px;
+  border: 3px solid $paper;
+
+  &:hover {
+    background: $muted;
+  }
+}
+
+/*
+   Masthead & navigation
+   ========================================================================== */
+
+.masthead {
+  border-bottom: 1px solid $card-border;
+  background: rgba(250, 249, 246, 0.94);
+  animation: fade-in 0.5s $ease-out-soft both;
+
+  .masthead__menu-item--lg a {
+    font-family: $lora;
+    font-weight: 700;
+    font-size: 1.15em;
+    color: $ink;
+  }
+
+  /* quiet underline that slides in from the left */
+  .greedy-nav .visible-links a {
+    position: relative;
+    transition: color 0.2s $ease-out-soft;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 0.9em;
+      height: 2px;
+      border-radius: 2px;
+      background: $accent-color;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.28s $ease-out-soft;
+    }
+
+    &:hover {
+      color: $accent-color-dark;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  /* no underline under the site name */
+  .masthead__menu-item--lg a::after {
+    display: none;
+  }
+}
+
+/*
+   Quiet entrance on page load
+   ========================================================================== */
+
+.page__inner-wrap > header,
+.archive > .page__title {
+  animation: fade-up 0.55s $ease-out-soft both;
+}
+
+.page__content,
+.archive > *:not(.page__title) {
+  animation: fade-up 0.6s $ease-out-soft 0.08s both;
+}
+
+.sidebar > div {
+  animation: fade-up 0.6s $ease-out-soft 0.05s both;
+}
+
+/*
+   Page titles & section headings
+   ========================================================================== */
+
+.page__title {
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.page__content {
+
+  h1 {
+    position: relative;
+    margin-top: 1.6em;
+    padding-bottom: 0.35em;
+    font-size: $type-size-3;
+    border-bottom: 1px solid $card-border;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 48px;
+      height: 3px;
+      border-radius: 3px;
+      background: $accent-color;
+      transform-origin: left center;
+      animation: bar-grow 0.9s $ease-out-soft 0.35s both;
+    }
+  }
+
+  h2 {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 36px;
+      height: 3px;
+      border-radius: 3px;
+      background: $accent-color;
+      transform-origin: left center;
+      animation: bar-grow 0.9s $ease-out-soft 0.35s both;
+    }
+  }
+}
+
+/*
+   Sidebar / author profile
+   ========================================================================== */
+
+.author__avatar img {
+  padding: 0;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px rgba($accent-color, 0.4), 0 6px 18px rgba(46, 44, 40, 0.12);
+  transition: transform 0.35s $ease-out-soft, box-shadow 0.35s $ease-out-soft;
+
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+    border: 3px solid #fff;
+  }
+
+  &:hover {
+    transform: scale(1.02) rotate(-0.5deg);
+    box-shadow: 0 0 0 2px rgba($accent-color, 0.6), 0 10px 26px rgba(46, 44, 40, 0.16);
+  }
+}
+
+.sidebar .author__name {
+  font-family: $lora;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: $ink;
+}
+
+.author__bio {
+  color: $muted;
+}
+
+.author__urls {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+/*
+   Archive lists (publications, talks, teaching) as quiet cards
+   ========================================================================== */
+
+.list__item .archive__item {
+  position: relative;
+  margin-bottom: 1em;
+  padding: 1.05em 1.25em;
+  background: #fff;
+  border: 1px solid $card-border;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(46, 44, 40, 0.04);
+  overflow: hidden;
+  transition: transform 0.25s $ease-out-soft, box-shadow 0.25s $ease-out-soft,
+    border-color 0.25s $ease-out-soft;
+
+  /* hairline pine accent that unfolds on hover */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: $accent-color;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 0.3s $ease-out-soft;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba($accent-color, 0.45);
+    box-shadow: 0 8px 22px rgba(46, 44, 40, 0.09);
+
+    &::before {
+      transform: scaleY(1);
+    }
+  }
+
+  .archive__item-title {
+    margin-top: 0;
+    font-family: $lora;
+    font-weight: 600;
+    font-size: 1.12em;
+
+    a {
+      color: $ink;
+      text-decoration: none;
+      transition: color 0.2s $ease-out-soft;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  p {
+    margin-top: 0.35em;
+    margin-bottom: 0.25em;
+    color: $muted;
+    font-size: $type-size-6;
+  }
+
+  .archive__item-excerpt {
+    color: $text-color;
+    font-size: $type-size-6;
+  }
+}
+
+/* scroll-reveal (enabled by a tiny script in footer/custom.html; no-JS safe) */
+html.reveal-on .list__item {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s $ease-out-soft, transform 0.6s $ease-out-soft;
+
+  &.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.archive__item:hover .archive__item-title {
+  text-decoration: none;
+}
+
+.archive__subtitle {
+  color: $muted;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: $type-size-6;
+}
+
+/*
+   Buttons
+   ========================================================================== */
+
+.btn {
+  border-radius: 999px;
+  padding: 0.6em 1.25em;
+  font-weight: 600;
+  transition: transform 0.2s $ease-out-soft, box-shadow 0.2s $ease-out-soft,
+    background-color 0.2s $ease-out-soft;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(46, 44, 40, 0.16);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(46, 44, 40, 0.12);
+  }
+}
+
+/*
+   Footer
+   ========================================================================== */
+
+.page__footer {
+  background: $surface;
+  border-top: 1px solid $card-border;
+  color: $muted;
+
+  footer {
+    margin-top: 1.5em;
+  }
+
+  a {
+    color: $muted;
+    transition: color 0.2s $ease-out-soft;
+
+    &:hover {
+      color: $accent-color-dark;
+    }
+  }
+}
+
+/*
+   Misc polish
+   ========================================================================== */
+
+blockquote {
+  border-left: 3px solid $accent-color;
+  font-style: normal;
+  color: $muted;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: $card-border;
+}
+
+table {
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+img {
+  border-radius: 4px;
+}
+
+/*
+   Respect reduced-motion preferences — stillness is also japandi
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html.reveal-on .list__item {
+    opacity: 1;
+    transform: none;
+  }
+}
