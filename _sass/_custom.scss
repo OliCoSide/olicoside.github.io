@@ -448,7 +448,7 @@ img {
   border-radius: 4px;
 }
 
-/
+/*
    Talk pills on publications
    ========================================================================== */
 
@@ -527,47 +527,6 @@ img {
     background: $accent-color;
     border-color: $accent-color;
   }
-}
-
-/*
-   LinkedIn posts grid (/linkedin/)
-   ========================================================================== */
-
-.linkedin-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.25em;
-  margin-top: 1.5em;
-}
-
-.linkedin-grid__item {
-  background: #fff;
-  border: 1px solid $card-border;
-  border-radius: 10px;
-  padding: 0.6em;
-  box-shadow: 0 1px 2px rgba(46, 44, 40, 0.04);
-  transition: transform 0.25s $ease-out-soft, box-shadow 0.25s $ease-out-soft,
-    border-color 0.25s $ease-out-soft;
-
-  &:hover {
-    transform: translateY(-2px);
-    border-color: rgba($accent-color, 0.45);
-    box-shadow: 0 8px 22px rgba(46, 44, 40, 0.09);
-  }
-
-  iframe {
-    display: block;
-    width: 100%;
-    height: 540px;
-    border: 0;
-    border-radius: 6px;
-  }
-}
-
-.linkedin-grid__note {
-  margin: 0.5em 0.3em 0.2em;
-  color: $muted;
-  font-size: $type-size-6;
 }
 
 /*
