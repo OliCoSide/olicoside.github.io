@@ -1,0 +1,9 @@
+{% if include.entry %}
+<details class="bibtex">
+  <summary><i class="fas fa-quote-right" aria-hidden="true"></i> BibTeX</summary>
+  <div class="bibtex__box">
+    <button class="bibtex-copy" onclick="navigator.clipboard.writeText(this.parentElement.querySelector('code').innerText);this.textContent='copied';setTimeout(function(b){b.textContent='copy'},1200,this)">copy</button>
+    <pre><code>{{ include.entry | strip | xml_escape }}</code></pre>
+  </div>
+</details>
+{% endif %}

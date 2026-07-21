@@ -18,18 +18,15 @@ talks:
     label: "Toronto 2025"
   - url: /talks/2026-03-01-Stockholm
     label: "Stockholm 2026"
+bibtex: |
+  @techreport{Cote/etal:2025toolbox,
+  author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
+  title = {A scalable toolbox for exposing indirect discrimination in insurance rates},
+  institution = {Casualty Actuarial Society},
+  type = {Research Paper Series on Bias and Insurance},
+  year = {2026},
+  url = {https://www.casact.org/sites/default/files/2025-10/_A_Scalable_toolbox_working_paper.pdf}
+  }
 ---
 
 Detect, quantify, and diagnose indirect discrimination in insurance rates, with or without the sensitive attribute. See the <a href="https://www.casact.org/article/cas-releases-new-toolbox-identifying-potential-bias-insurance-rates">CAS announcement</a>.
-
-<div class="bibtex">
-  <button class="bibtex-copy" onclick="navigator.clipboard.writeText(document.getElementById('bibtex-entry').innerText)">copy</button>
-  <pre><code id="bibtex-entry">@techreport{Cote/etal:2025toolbox,
-author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
-title = {A scalable toolbox for exposing indirect discrimination in insurance rates},
-institution = {Casualty Actuarial Society},
-type = {Research Paper Series on Bias and Insurance},
-year = {2026},
-url = {https://www.casact.org/sites/default/files/2025-10/_A_Scalable_toolbox_working_paper.pdf}
-}</code></pre>
-</div>

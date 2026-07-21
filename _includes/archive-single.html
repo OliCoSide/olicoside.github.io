@@ -71,5 +71,7 @@
       <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% endif %}
 
+    {% if post.bibtex %}{% include bibtex.html entry=post.bibtex %}{% endif %}
+
   </article>
 </div>

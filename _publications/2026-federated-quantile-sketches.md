@@ -8,16 +8,13 @@ date: 2026-02-21
 venue: 'arXiv preprint (under review)'
 paperurl: 'https://arxiv.org/abs/2602.18870'
 citation: 'Charpentier, A., Fernandes Machado, A., Côté, O., & Hu, F. (2026). Federated measurement of demographic disparities from quantile sketches. arXiv:2602.18870.'
+bibtex: |
+  @misc{Charpentier/etal:2026federated,
+  author = {Charpentier, Arthur and Fernandes Machado, Agathe and Côté, Olivier and Hu, François},
+  title = {Federated measurement of demographic disparities from quantile sketches},
+  year = {2026},
+  eprint = {2602.18870},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2602.18870}
+  }
 ---
-
-<div class="bibtex">
-  <button class="bibtex-copy" onclick="navigator.clipboard.writeText(document.getElementById('bibtex-entry').innerText)">copy</button>
-  <pre><code id="bibtex-entry">@misc{Charpentier/etal:2026federated,
-author = {Charpentier, Arthur and Fernandes Machado, Agathe and Côté, Olivier and Hu, François},
-title = {Federated measurement of demographic disparities from quantile sketches},
-year = {2026},
-eprint = {2602.18870},
-archivePrefix = {arXiv},
-url = {https://arxiv.org/abs/2602.18870}
-}</code></pre>
-</div>
