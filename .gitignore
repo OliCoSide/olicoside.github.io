@@ -12,5 +12,5 @@ Gemfile.lock
 node_modules
 package-lock.json
 
-# Local working notes for Claude Code — never published
-CLAUDE.md
+# CLAUDE.md is committed but excluded from the Jekyll build (see _config.yml),
+# so it is never published on the live site.
