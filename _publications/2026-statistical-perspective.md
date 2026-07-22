@@ -10,7 +10,7 @@ talks:
   - url: /talks/2026-05-29-AAIARD
     label: "Association des actuaires en IARD du Québec (AAIARD), 2026"
 industry_talks:
-  - "Promutuel"
+  - "Promutuel Assurance"
 bibtex: |
   @unpublished{Cote/etal:2026statistical,
   author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},

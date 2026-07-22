@@ -11,25 +11,25 @@ award:
   label: "Finalist, AAA 2025 Award for Research"
   url: https://actuary.org/publication-issue/blog-academy-recognizes-anti-discrimination-paper-with-research-award/
 talks:
-  - url: /talks/2024-03-01-AMF
-    label: "Autorité des marchés financiers, 2024"
-  - url: /talks/2024-05-16-jeda
-    label: "Workshop on fairness and discrimination in insurance, 2024"
-  - url: /talks/2024-07-10-IME
-    label: "IMEC, 2024"
-  - url: /talks/2025-05-13-CNAM
-    label: "Chaire ACTIONS, 2025"
-  - url: /talks/2025-07-29-ARC1
-    label: "ARC (CAS invited session), 2025"
-  - url: /talks/2025-07-30-ARC2
-    label: "ARC (AAA invited panel), 2025"
-  - url: /talks/2026-01-28-Stockholm
-    label: "Department of Mathematics, Stockholm University, 2026"
   - url: /talks/2026-01-29-AAA-webinar
     label: "AAA (webinar), 2026"
+  - url: /talks/2026-01-28-Stockholm
+    label: "Department of Mathematics, Stockholm University, 2026"
+  - url: /talks/2025-07-30-ARC2
+    label: "ARC (AAA invited panel), 2025"
+  - url: /talks/2025-07-29-ARC1
+    label: "ARC (CAS invited session), 2025"
+  - url: /talks/2025-05-13-CNAM
+    label: "Chaire ACTIONS, 2025"
+  - url: /talks/2024-07-10-IME
+    label: "IMEC, 2024"
+  - url: /talks/2024-05-16-jeda
+    label: "Workshop on fairness and discrimination in insurance, 2024"
+  - url: /talks/2024-03-01-AMF
+    label: "Autorité des marchés financiers, 2024"
 industry_talks:
-  - "Milliman R&D"
-  - "Intact"
+  - "Milliman Paris"
+  - "Intact Financial Corporation"
 bibtex: |
   @article{Cote/etal:2024,
   author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
