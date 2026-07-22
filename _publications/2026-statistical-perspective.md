@@ -6,6 +6,7 @@ permalink: /publication/2026-statistical-perspective
 date: 2026-07-15
 venue: 'Forthcoming'
 venue_prefix: none
+authors: 'Olivier Côté, Marie-Pier Côté, and Arthur Charpentier'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A statistical perspective on fairness in insurance pricing. Forthcoming.'
 talks:
   - url: /talks/2026-07-22-ARC-AAA

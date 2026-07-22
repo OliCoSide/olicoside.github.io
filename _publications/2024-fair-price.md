@@ -6,6 +6,7 @@ permalink: /publication/2024-fair-price
 date: 2025-02-12
 venue: 'Journal of Risk and Insurance'
 paperurl: 'https://doi.org/10.1111/jori.12503'
+authors: 'Olivier Côté, Marie-Pier Côté, and Arthur Charpentier'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2025). A fair price to pay: Exploiting causal graphs for fairness in insurance. Journal of Risk and Insurance, 92, 33–75. https://doi.org/10.1111/jori.12503'
 award:
   label: "Finalist, AAA 2025 Award for Research"
