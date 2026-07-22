@@ -465,6 +465,59 @@ img {
   line-height: 2;
 }
 
+/* collapsible talks group — same recipe as the BibTeX pill, but open by
+   default (no-JS safe: <details open> needs no script) */
+.talks-fold {
+  margin-top: 0.15em;
+
+  summary {
+    display: inline-block;
+    padding: 0.14em 0.75em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+    color: $muted;
+    background: $surface;
+    border: 1px solid $card-border;
+    border-radius: 999px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: background-color 0.2s $ease-out-soft, color 0.2s $ease-out-soft,
+      border-color 0.2s $ease-out-soft;
+
+    i {
+      font-size: 0.85em;
+      margin-right: 0.25em;
+      opacity: 0.75;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::marker {
+      content: none;
+    }
+
+    &:hover {
+      color: $accent-color-dark;
+      border-color: rgba($accent-color, 0.45);
+      background: $accent-color-light;
+    }
+  }
+
+  &[open] > summary {
+    color: $accent-color-dark;
+    border-color: rgba($accent-color, 0.35);
+  }
+
+  .talks-fold__list {
+    margin-top: 0.25em;
+  }
+}
+
 .pill {
   display: inline-block;
   margin: 0 0.35em 0.15em 0;
