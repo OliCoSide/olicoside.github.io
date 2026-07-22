@@ -11,6 +11,8 @@ supplement:
   url: https://olicoside.github.io/Scalable_toolbox_online_supplement/
   label: "Online supplement"
 talks:
+  - url: /talks/2026-07-22-ARC-AAA
+    label: "ARC (AAA invited session), 2026"
   - url: /talks/2026-05-29-AAIARD
     label: "Association des actuaires en IARD du Québec (AAIARD), 2026"
   - url: /talks/2026-01-28-Stockholm
