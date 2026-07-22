@@ -30,6 +30,7 @@ talks:
 industry_talks:
   - "Milliman Paris"
   - "Intact Financial Corporation"
+  - "Desjardins Groupe d'assurances générales"
 bibtex: |
   @article{Cote/etal:2024,
   author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
