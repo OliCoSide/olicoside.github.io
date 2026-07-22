@@ -22,6 +22,6 @@ bibtex: |
   }
 ---
 
-A governance trilemma: insurance pricing cannot fully deliver actuarial adequacy, solidarity, and causal legitimacy all at once.
+Every premium is a normative choice: price fairness is governed by a trilemma between actuarial adequacy, solidarity, and causal legitimacy, and we build the governance architecture (scorecard, causal due diligence, comply-or-explain oversight) to manage it as such.
 
 Previously "A Three-Pillar Governance Framework for Fair Insurance Pricing".

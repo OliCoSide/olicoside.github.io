@@ -20,4 +20,4 @@ bibtex: |
   }
 ---
 
-What statistics has to say about fairness in insurance pricing: formal definitions, estimation, and the trade-offs that follow.
+A guided tour of unfairness mitigation in insurance pricing, from autocalibration to discrimination-free pricing and optimal transport, and of the statistical challenges in implementing antidiscrimination regulation.
