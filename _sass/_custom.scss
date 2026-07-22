@@ -554,13 +554,40 @@ $supplement-color-dark: #96412f;
 $supplement-color-light: #fbe7e0;
 
 .pill--supplement {
-  color: $supplement-color-dark;
+  color: $supplement-color-dark !important; /* beat the theme's link color */
   background: $supplement-color-light;
   border-color: rgba($supplement-color, 0.4);
 
   &:hover {
+    color: #fff !important;
     background: $supplement-color;
     border-color: $supplement-color;
+  }
+}
+
+/* award pill — soft ivory/gold, quietly celebratory */
+$award-color: #c2a14a;
+$award-color-dark: #7e6420;
+$award-color-light: #faf4de;
+
+.pill--award {
+  color: $award-color-dark !important;
+  background: $award-color-light;
+  border-color: rgba($award-color, 0.45);
+
+  i {
+    color: $award-color;
+    opacity: 1;
+  }
+
+  &:hover {
+    color: #fff !important;
+    background: $award-color;
+    border-color: $award-color;
+
+    i {
+      color: #fff;
+    }
   }
 }
 

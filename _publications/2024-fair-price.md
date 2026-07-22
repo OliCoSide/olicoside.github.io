@@ -3,12 +3,18 @@ title: "A Fair Price to Pay: Exploiting Causal Graphs for Fairness in Insurance"
 collection: publications
 category: manuscripts
 permalink: /publication/2024-fair-price
-excerpt: 'Finalist for the 2025 American Academy of Actuaries Award for Research.'
 date: 2025-02-12
 venue: 'Journal of Risk and Insurance'
 paperurl: 'https://doi.org/10.1111/jori.12503'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2025). A fair price to pay: Exploiting causal graphs for fairness in insurance. Journal of Risk and Insurance, 92, 33–75. https://doi.org/10.1111/jori.12503'
+award:
+  label: "Finalist — American Academy of Actuaries 2025 Award for Research"
+  url: https://actuary.org/publication-issue/blog-academy-recognizes-anti-discrimination-paper-with-research-award/
 talks:
+  - url: /talks/2023-10-25-intact
+    label: "Intact Financial Corporation"
+  - url: /talks/2024-03-01-AMF
+    label: "Autorité des marchés financiers"
   - url: /talks/2024-05-16-jeda
     label: "Workshop on fairness and discrimination in insurance"
   - url: /talks/2024-07-10-IME
@@ -33,3 +39,5 @@ bibtex: |
   eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/jori.12503}
   }
 ---
+
+Causal graphs make discrimination pathways explicit, giving insurers a principled way to price without direct or indirect discrimination.

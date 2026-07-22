@@ -3,7 +3,6 @@ title: "Recoverability of Market-Wide Fair Insurance Premiums under Selection Bi
 collection: publications
 category: manuscripts
 permalink: /publication/2024-selection
-excerpt: 'Previously "Selection Bias in Insurance: Why Portfolio-Specific Fairness Fails to Extend Market-Wide".'
 date: 2026-07-01
 venue: 'Insurance: Mathematics and Economics'
 paperurl: 'https://doi.org/10.1016/j.insmatheco.2026.103268'
@@ -23,5 +22,7 @@ bibtex: |
   url = {https://www.sciencedirect.com/science/article/pii/S0167668726000582}
   }
 ---
+
+When and how market-wide fair premiums can be recovered from a single insurer's portfolio, despite selection bias.
 
 Earlier version on <a href="https://dx.doi.org/10.2139/ssrn.5018749">SSRN</a> as "Selection Bias in Insurance: Why Portfolio-Specific Fairness Fails to Extend Market-Wide".

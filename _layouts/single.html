@@ -38,9 +38,10 @@ layout: default
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-          {% if page.talks or page.supplement %}
+          {% if page.talks or page.supplement or page.award %}
           <div class="talk-pills">
-            {% if page.supplement %}<a class="pill pill--supplement" href="{{ page.supplement.url }}"><i class="fas fa-chart-column" aria-hidden="true"></i> {{ page.supplement.label | default: "Online supplement" }}</a>{% endif %}
+            {% if page.award %}<a class="pill pill--award" href="{{ page.award.url }}"><i class="fas fa-star" aria-hidden="true"></i> {{ page.award.label }}</a>{% endif %}
+            {% if page.supplement %}<a class="pill pill--supplement" href="{{ page.supplement.url }}"><i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i> {{ page.supplement.label | default: "Online supplement" }}</a>{% endif %}
             {% if page.talks %}
             <details class="talks-fold" open>
               <summary><i class="fas fa-microphone-lines" aria-hidden="true"></i> Talks ({{ page.talks | size }})</summary>

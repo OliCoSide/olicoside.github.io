@@ -42,9 +42,10 @@
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-          {% if post.talks or post.supplement %}
+          {% if post.talks or post.supplement or post.award %}
           <div class="talk-pills">
-            {% if post.supplement %}<a class="pill pill--supplement" href="{{ post.supplement.url }}"><i class="fas fa-chart-column" aria-hidden="true"></i> {{ post.supplement.label | default: "Online supplement" }}</a>{% endif %}
+            {% if post.award %}<a class="pill pill--award" href="{{ post.award.url }}"><i class="fas fa-star" aria-hidden="true"></i> {{ post.award.label }}</a>{% endif %}
+            {% if post.supplement %}<a class="pill pill--supplement" href="{{ post.supplement.url }}"><i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i> {{ post.supplement.label | default: "Online supplement" }}</a>{% endif %}
             {% if post.talks %}
             <details class="talks-fold" open>
               <summary><i class="fas fa-microphone-lines" aria-hidden="true"></i> Talks ({{ post.talks | size }})</summary>
