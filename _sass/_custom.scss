@@ -616,6 +616,7 @@ $award-color-light: #faf4de;
   color: $muted !important;
   background: #ebe7dc;
   border-color: #ddd7c9;
+  border-radius: 8px; /* the company list wraps; full pill corners clip it */
   cursor: default;
 
   &:hover {
