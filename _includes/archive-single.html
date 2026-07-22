@@ -42,15 +42,17 @@
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-          {% if post.talks or post.supplement or post.award %}
+          {% if post.talks or post.supplement or post.award or post.industry_talks %}
           <div class="talk-pills">
             {% if post.award %}<a class="pill pill--award" href="{{ post.award.url }}"><i class="fas fa-star" aria-hidden="true"></i> {{ post.award.label }}</a>{% endif %}
             {% if post.supplement %}<a class="pill pill--supplement" href="{{ post.supplement.url }}"><i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i> {{ post.supplement.label | default: "Online supplement" }}</a>{% endif %}
-            {% if post.talks %}
+            {% if post.talks or post.industry_talks %}
+            {% assign talk_total = post.talks | size %}{% if post.industry_talks %}{% assign talk_total = talk_total | plus: post.industry_talks %}{% endif %}
             <details class="talks-fold" open>
-              <summary><i class="fas fa-microphone-lines" aria-hidden="true"></i> Talks ({{ post.talks | size }})</summary>
+              <summary><i class="fas fa-microphone-lines" aria-hidden="true"></i> Talks ({{ talk_total }})</summary>
               <div class="talks-fold__list">
                 {% for t in post.talks %}<a class="pill" href="{{ base_path }}{{ t.url }}"><i class="fas fa-microphone-lines" aria-hidden="true"></i> {{ t.label }}</a>{% endfor %}
+                {% if post.industry_talks %}<span class="pill pill--industry"><i class="fas fa-building" aria-hidden="true"></i> {{ post.industry_talks }} industry presentation{% if post.industry_talks > 1 %}s{% endif %}</span>{% endif %}
               </div>
             </details>
             {% endif %}

@@ -11,20 +11,23 @@ award:
   label: "Finalist — American Academy of Actuaries 2025 Award for Research"
   url: https://actuary.org/publication-issue/blog-academy-recognizes-anti-discrimination-paper-with-research-award/
 talks:
-  - url: /talks/2023-10-25-intact
-    label: "Intact Financial Corporation"
   - url: /talks/2024-03-01-AMF
     label: "Autorité des marchés financiers"
   - url: /talks/2024-05-16-jeda
     label: "Workshop on fairness and discrimination in insurance"
   - url: /talks/2024-07-10-IME
     label: "Insurance: Mathematics and Economics"
+  - url: /talks/2025-05-13-CNAM
+    label: "Chaire ACTIONS"
+  - url: /talks/2025-07-29-ARC1
+    label: "60th Actuarial Research Conference (CAS invited session)"
   - url: /talks/2025-07-30-ARC2
     label: "60th Actuarial Research Conference (AAA invited panel)"
+  - url: /talks/2026-01-28-Stockholm
+    label: "Department of Mathematics, Stockholm University"
   - url: /talks/2026-01-29-AAA-webinar
     label: "American Academy of Actuaries (webinar)"
-  - url: /talks/2026-03-01-Stockholm
-    label: "Department of Mathematics, Stockholm University"
+industry_talks: 2
 bibtex: |
   @article{Cote/etal:2024,
   author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
