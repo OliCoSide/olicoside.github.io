@@ -11,6 +11,10 @@ citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2025). A fair price to 
 talks:
   - url: /talks/2024-05-16-jeda
     label: "Workshop on fairness and discrimination in insurance"
+  - url: /talks/2024-07-10-IME
+    label: "Insurance: Mathematics and Economics"
+  - url: /talks/2025-07-30-ARC2
+    label: "60th Actuarial Research Conference (AAA invited panel)"
   - url: /talks/2026-01-29-AAA-webinar
     label: "American Academy of Actuaries (webinar)"
   - url: /talks/2026-03-01-Stockholm
