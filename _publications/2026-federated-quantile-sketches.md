@@ -3,7 +3,6 @@ title: "Federated Measurement of Demographic Disparities from Quantile Sketches"
 collection: publications
 category: manuscripts
 permalink: /publication/2026-federated-quantile-sketches
-excerpt: 'One-shot auditing of demographic parity across data silos, without sharing raw data.'
 date: 2026-02-21
 venue: 'arXiv preprint (under review)'
 paperurl: 'https://arxiv.org/abs/2602.18870'
@@ -18,3 +17,5 @@ bibtex: |
   url = {https://arxiv.org/abs/2602.18870}
   }
 ---
+
+One-shot auditing of demographic parity across data silos, without sharing raw data.

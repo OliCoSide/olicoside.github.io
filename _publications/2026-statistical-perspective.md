@@ -14,3 +14,5 @@ bibtex: |
   note = {Forthcoming}
   }
 ---
+
+What statistics has to say about fairness in insurance pricing: formal definitions, estimation, and the trade-offs that follow.
