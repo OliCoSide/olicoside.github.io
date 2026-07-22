@@ -478,6 +478,7 @@ img {
   summary {
     display: flex;
     align-items: center;
+    gap: 0.45em;
     font-size: 0.66rem;
     font-weight: 600;
     letter-spacing: 0.09em;
@@ -488,6 +489,11 @@ img {
     list-style: none;
     user-select: none;
     transition: color 0.2s $ease-out-soft;
+
+    > i:first-child {
+      font-size: 1.05em;
+      opacity: 0.55;
+    }
 
     &::-webkit-details-marker {
       display: none;
