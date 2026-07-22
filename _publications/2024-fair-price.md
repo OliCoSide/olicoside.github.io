@@ -45,4 +45,4 @@ bibtex: |
   }
 ---
 
-Causal graphs make discrimination pathways explicit, giving insurers a principled way to price without direct or indirect discrimination.
+A causal graph tailored for insurance gives formal definitions of direct and indirect discrimination, and sorts fair pricing methodologies into five families by the fairness properties they can deliver.

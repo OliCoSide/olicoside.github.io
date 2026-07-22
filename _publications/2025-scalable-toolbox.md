@@ -5,7 +5,7 @@ category: manuscripts
 permalink: /publication/2025-scalable-toolbox
 date: 2025-10-23
 venue: 'Casualty Actuarial Society Research Paper Series on Bias and Insurance'
-paperurl: 'https://www.casact.org/sites/default/files/2025-10/_A_Scalable_toolbox_working_paper.pdf'
+paperurl: 'https://www.casact.org/sites/default/files/2026-03/Scalable_Toolbox_for_Exposing_Indirect_Discrimination_Research_Paper.pdf'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A scalable toolbox for exposing indirect discrimination in insurance rates. CAS Research Paper Series on Bias and Insurance.'
 supplement:
   url: https://olicoside.github.io/Scalable_toolbox_online_supplement/
@@ -43,8 +43,8 @@ bibtex: |
   institution = {Casualty Actuarial Society},
   type = {Research Paper Series on Bias and Insurance},
   year = {2026},
-  url = {https://www.casact.org/sites/default/files/2025-10/_A_Scalable_toolbox_working_paper.pdf}
+  url = {https://www.casact.org/sites/default/files/2026-03/Scalable_Toolbox_for_Exposing_Indirect_Discrimination_Research_Paper.pdf}
   }
 ---
 
-Detect, quantify, and diagnose indirect discrimination in insurance rates, with or without the sensitive attribute. See the <a href="https://www.casact.org/article/cas-releases-new-toolbox-identifying-potential-bias-insurance-rates">CAS announcement</a>.
+Proxy effects and unfair biases in insurance rates, quantified in the terms actuaries need: dollars and people, along the three core fairness dimensions of actuarial fairness, solidarity, and causality. See the <a href="https://www.casact.org/article/cas-releases-new-toolbox-identifying-potential-bias-insurance-rates">CAS announcement</a>.
