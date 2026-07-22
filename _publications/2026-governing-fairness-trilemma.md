@@ -5,6 +5,7 @@ category: manuscripts
 permalink: /publication/2026-governing-fairness-trilemma
 date: 2026-02-12
 venue: 'Under revision'
+venue_prefix: none
 citation: 'Charpentier, A., Côté, O., & Côté, M.-P. (2025). Governing fairness in insurance pricing: the trilemma of actuarial adequacy, solidarity and causal legitimacy. Under revision.'
 talks:
   - url: /talks/2026-07-22-ARC-AAA

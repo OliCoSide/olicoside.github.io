@@ -5,8 +5,11 @@ category: manuscripts
 permalink: /publication/2026-statistical-perspective
 date: 2026-07-15
 venue: 'Forthcoming'
+venue_prefix: none
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A statistical perspective on fairness in insurance pricing. Forthcoming.'
 talks:
+  - url: /talks/2026-07-22-ARC-AAA
+    label: "ARC (AAA invited session), 2026"
   - url: /talks/2026-05-29-AAIARD
     label: "Association des actuaires en IARD du Québec (AAIARD), 2026"
 industry_talks:

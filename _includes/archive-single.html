@@ -41,7 +41,8 @@
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
-          <p>{% if post.paperurl %}<a href="{{ post.paperurl }}">Published in <i>{{ post.venue }}</i></a>{% else %}Published in <i>{{ post.venue }}</i>{% endif %}, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% capture publine %}{% if post.venue_prefix == "none" %}{% elsif post.venue_prefix %}{{ post.venue_prefix }} {% else %}Published in {% endif %}<i>{{ post.venue }}</i>{% endcapture %}
+          <p>{% if post.paperurl %}<a href="{{ post.paperurl }}">{{ publine }}</a>{% else %}{{ publine }}{% endif %}, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% if post.award or post.supplement %}
           <div class="talk-pills">
             {% if post.award %}<a class="pill pill--award" href="{{ post.award.url }}"><i class="fas fa-star" aria-hidden="true"></i> {{ post.award.label }}</a>{% endif %}
