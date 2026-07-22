@@ -29,6 +29,8 @@ talks:
     label: "1st ASTIN Bulletin Conference, ETH Zürich"
   - url: /talks/2026-01-28-Stockholm
     label: "Department of Mathematics, Stockholm University"
+  - url: /talks/2026-05-29-AAIARD
+    label: "Association des actuaires IARD (AAIARD)"
 industry_talks: 4
 bibtex: |
   @techreport{Cote/etal:2025toolbox,
