@@ -12,6 +12,8 @@ talks:
     label: "Department of Mathematics, Stockholm University, 2026"
   - url: /talks/2025-07-29-ARC1
     label: "ARC (CAS invited session), 2025"
+  - url: /talks/2024-10-11-causaux
+    label: "Institut intelligence et données, 2024"
 bibtex: |
   @article{Cote/etal:2026recoverability,
   author = {Côté, Marie-Pier and Côté, Olivier and Charpentier, Arthur},

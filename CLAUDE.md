@@ -41,7 +41,7 @@ When these working papers get a page in `_publications/`, add the matching talk 
 - **"Causal decomposition" paper** (*Profiling Actuarial Discrimination via Causal Decomposition*): AFM 2026 poster (`2026-02-02-AFM`), CRDM (`2026-05-15-CRDM`), STATQAM (`2026-05-26-STATQAM`), 29th IME Congress Seoul (`2026-07-02-IME-Seoul`).
 - **"Confounding bias" paper**: STATQAM (`2026-05-26-STATQAM`) — that seminar covered both working papers.
 
-Hidden talks (extensionless files in `_talks/`, invisible to Jekyll) still awaiting an explicit assignment: `2022-05-15-jeda`, `2022-08-01-Summerday`, `2023-06-15-IDS`, `2024-01-29-IVADO`, `2024-02-01-WIM`, `2024-10-11-causaux`. `2023-10-25-intact` stays hidden on purpose: private company talks have no talk page; they are listed by company name in the `industry_talks` front-matter list on publications (see `_includes/archive-single.html`).
+Hidden talks (extensionless files in `_talks/`, invisible to Jekyll) still awaiting an explicit assignment: `2022-05-15-jeda`, `2022-08-01-Summerday`, `2023-06-15-IDS`, `2024-01-29-IVADO`, `2024-02-01-WIM`. `2023-10-25-intact` stays hidden on purpose: private company talks have no talk page; they are listed by company name in the `industry_talks` front-matter list on publications (see `_includes/archive-single.html`).
 
 ## Updating the CV — keep three places in sync
 
