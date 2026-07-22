@@ -465,33 +465,29 @@ img {
   line-height: 2;
 }
 
-/* collapsible talks group — same recipe as the BibTeX pill, but open by
-   default (no-JS safe: <details open> needs no script) */
+/* collapsible talks region — a quiet sand-toned box, one shade deeper than
+   the card, with a pale small-caps label and a pivoting chevron. Open by
+   default (no-JS safe: <details open> needs no script). */
 .talks-fold {
-  margin-top: 0.15em;
+  margin-top: 0.5em;
+  padding: 0.45em 0.8em 0.55em;
+  background: $surface;
+  border: 1px solid $card-border;
+  border-radius: 12px;
 
   summary {
-    display: inline-block;
-    padding: 0.14em 0.75em;
-    font-size: 0.72rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.66rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
     line-height: 1.8;
     color: $muted;
-    background: $surface;
-    border: 1px solid $card-border;
-    border-radius: 999px;
     cursor: pointer;
     list-style: none;
     user-select: none;
-    transition: background-color 0.2s $ease-out-soft, color 0.2s $ease-out-soft,
-      border-color 0.2s $ease-out-soft;
-
-    i {
-      font-size: 0.85em;
-      margin-right: 0.25em;
-      opacity: 0.75;
-    }
+    transition: color 0.2s $ease-out-soft;
 
     &::-webkit-details-marker {
       display: none;
@@ -503,18 +499,28 @@ img {
 
     &:hover {
       color: $accent-color-dark;
-      border-color: rgba($accent-color, 0.45);
-      background: $accent-color-light;
     }
   }
 
-  &[open] > summary {
-    color: $accent-color-dark;
-    border-color: rgba($accent-color, 0.35);
+  .talks-fold__chevron {
+    margin-left: auto;
+    font-size: 0.9rem;
+    opacity: 0.55;
+    transition: transform 0.25s $ease-out-soft;
+  }
+
+  &[open] .talks-fold__chevron {
+    transform: rotate(180deg);
   }
 
   .talks-fold__list {
-    margin-top: 0.25em;
+    margin-top: 0.35em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .talks-fold .talks-fold__chevron {
+    transition: none;
   }
 }
 
@@ -547,11 +553,11 @@ img {
   }
 }
 
-/* supplement pill — dusty terracotta, the classic pairing with muted pine:
-   clearly distinct from the sage talk pills, still soft and pastel */
-$supplement-color: #c26e5a;
-$supplement-color-dark: #96412f;
-$supplement-color-light: #fbe7e0;
+/* supplement pill — powdery clay-rose, the soft counterpart to muted pine:
+   distinct from the sage talk pills without ever reading "red" */
+$supplement-color: #bb8a7b;
+$supplement-color-dark: #8a5d4e;
+$supplement-color-light: #f8ede8;
 
 .pill--supplement {
   color: $supplement-color-dark !important; /* beat the theme's link color */
@@ -595,14 +601,14 @@ $award-color-light: #faf4de;
    link, so it keeps still on hover */
 .pill--industry {
   color: $muted !important;
-  background: #f1efe9;
-  border-color: $card-border;
+  background: #ebe7dc;
+  border-color: #ddd7c9;
   cursor: default;
 
   &:hover {
     color: $muted !important;
-    background: #f1efe9;
-    border-color: $card-border;
+    background: #ebe7dc;
+    border-color: #ddd7c9;
     transform: none;
   }
 }
