@@ -455,6 +455,13 @@ img {
   border-radius: 4px;
 }
 
+/* author line on publications: quiet, right under the title */
+.paper-authors {
+  margin: 0.15em 0 0 !important;
+  font-size: 0.86em;
+  color: $muted;
+}
+
 /*
    Talk pills on publications
    ========================================================================== */

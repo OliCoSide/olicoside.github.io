@@ -7,6 +7,7 @@ date: 2026-02-21
 venue: 'arXiv (under review)'
 venue_prefix: 'Available at'
 paperurl: 'https://arxiv.org/abs/2602.18870'
+authors: 'Arthur Charpentier, Agathe Fernandes Machado, Olivier Côté, and François Hu'
 citation: 'Charpentier, A., Fernandes Machado, A., Côté, O., & Hu, F. (2026). Federated measurement of demographic disparities from quantile sketches. arXiv:2602.18870.'
 bibtex: |
   @misc{Charpentier/etal:2026federated,
