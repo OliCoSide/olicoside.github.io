@@ -41,7 +41,7 @@
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
-          {% if post.authors %}<p class="paper-authors">{{ post.authors }}</p>{% endif %}
+          {% if post.authors %}<p class="paper-authors">{{ post.authors | replace: "Olivier Côté", "<strong>Olivier Côté</strong>" }}</p>{% endif %}
           {% capture publine %}{% if post.venue_prefix == "none" %}{% elsif post.venue_prefix %}{{ post.venue_prefix }} {% else %}Published in {% endif %}<i>{{ post.venue }}</i>{% endcapture %}
           <p>{% if post.paperurl %}<a href="{{ post.paperurl }}">{{ publine }}</a>{% else %}{{ publine }}{% endif %}, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% if post.award or post.supplement %}
