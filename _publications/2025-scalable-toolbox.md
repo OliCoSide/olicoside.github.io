@@ -3,7 +3,7 @@ title: "A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rat
 collection: publications
 category: manuscripts
 permalink: /publication/2025-scalable-toolbox
-date: 2025-10-23
+date: 2026-03-01
 venue: 'Casualty Actuarial Society Research Paper Series on Bias and Insurance'
 paperurl: 'https://www.casact.org/sites/default/files/2026-03/Scalable_Toolbox_for_Exposing_Indirect_Discrimination_Research_Paper.pdf'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A scalable toolbox for exposing indirect discrimination in insurance rates. CAS Research Paper Series on Bias and Insurance.'
