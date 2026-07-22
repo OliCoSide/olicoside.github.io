@@ -37,7 +37,8 @@ layout: default
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
-          <p>{% if page.paperurl %}<a href="{{ page.paperurl }}">Published in <i>{{ page.venue }}</i></a>{% else %}Published in <i>{{ page.venue }}</i>{% endif %}, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% capture publine %}{% if page.venue_prefix == "none" %}{% elsif page.venue_prefix %}{{ page.venue_prefix }} {% else %}Published in {% endif %}<i>{{ page.venue }}</i>{% endcapture %}
+          <p>{% if page.paperurl %}<a href="{{ page.paperurl }}">{{ publine }}</a>{% else %}{{ publine }}{% endif %}, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% if page.award or page.supplement %}
           <div class="talk-pills">
             {% if page.award %}<a class="pill pill--award" href="{{ page.award.url }}"><i class="fas fa-star" aria-hidden="true"></i> {{ page.award.label }}</a>{% endif %}
