@@ -8,7 +8,9 @@ venue: 'Insurance: Mathematics and Economics'
 paperurl: 'https://doi.org/10.1016/j.insmatheco.2026.103268'
 citation: 'Côté, M.-P., Côté, O., & Charpentier, A. (2026). Recoverability of market-wide fair insurance premiums under selection bias. Insurance: Mathematics and Economics, 129, 103268. https://doi.org/10.1016/j.insmatheco.2026.103268'
 talks:
-  - url: /talks/2026-03-01-Stockholm
+  - url: /talks/2025-07-29-ARC1
+    label: "60th Actuarial Research Conference (CAS invited session)"
+  - url: /talks/2026-01-28-Stockholm
     label: "Department of Mathematics, Stockholm University"
 bibtex: |
   @article{Cote/etal:2026recoverability,

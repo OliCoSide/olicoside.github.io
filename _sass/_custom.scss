@@ -591,6 +591,22 @@ $award-color-light: #faf4de;
   }
 }
 
+/* industry pill — pale grey tally of private company presentations; not a
+   link, so it keeps still on hover */
+.pill--industry {
+  color: $muted !important;
+  background: #f1efe9;
+  border-color: $card-border;
+  cursor: default;
+
+  &:hover {
+    color: $muted !important;
+    background: #f1efe9;
+    border-color: $card-border;
+    transform: none;
+  }
+}
+
 /*
    BibTeX — collapsible pill on every paper (list cards and paper pages)
    ========================================================================== */
