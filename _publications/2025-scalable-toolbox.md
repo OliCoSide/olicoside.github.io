@@ -30,7 +30,7 @@ talks:
   - url: /talks/2026-01-28-Stockholm
     label: "Department of Mathematics, Stockholm University, 2026"
   - url: /talks/2026-05-29-AAIARD
-    label: "Association des actuaires IARD (AAIARD), 2026"
+    label: "Association des actuaires en IARD du Québec (AAIARD), 2026"
 industry_talks:
   - "Milliman R&D"
   - "Desjardins"

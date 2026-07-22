@@ -8,7 +8,7 @@ venue: 'Forthcoming'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A statistical perspective on fairness in insurance pricing. Forthcoming.'
 talks:
   - url: /talks/2026-05-29-AAIARD
-    label: "Association des actuaires IARD (AAIARD), 2026"
+    label: "Association des actuaires en IARD du Québec (AAIARD), 2026"
 industry_talks:
   - "Promutuel"
 bibtex: |
