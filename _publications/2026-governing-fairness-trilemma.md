@@ -8,8 +8,9 @@ venue: 'Under revision'
 citation: 'Charpentier, A., Côté, O., & Côté, M.-P. (2025). Governing fairness in insurance pricing: the trilemma of actuarial adequacy, solidarity and causal legitimacy. Under revision.'
 talks:
   - url: /talks/2026-05-29-AAIARD
-    label: "Association des actuaires IARD (AAIARD)"
-industry_talks: 1
+    label: "Association des actuaires IARD (AAIARD), 2026"
+industry_talks:
+  - "Promutuel"
 bibtex: |
   @unpublished{Charpentier/etal:2025governance,
   author = {Charpentier, Arthur and Côté, Olivier and Côté, Marie-Pier},

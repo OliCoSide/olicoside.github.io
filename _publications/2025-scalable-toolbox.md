@@ -12,26 +12,30 @@ supplement:
   label: "Online supplement"
 talks:
   - url: /talks/2025-05-13-CNAM
-    label: "Chaire ACTIONS"
+    label: "Chaire ACTIONS, 2025"
   - url: /talks/2025-05-20-PARTY
-    label: "Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY)"
+    label: "Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), 2025"
   - url: /talks/2025-07-23-UQAM
-    label: "Université du Québec à Montréal"
+    label: "Université du Québec à Montréal, 2025"
   - url: /talks/2025-07-29-ARC1
-    label: "60th Actuarial Research Conference (CAS invited session)"
+    label: "ARC (CAS invited session), 2025"
   - url: /talks/2025-11-10-CAS-annual
-    label: "Casualty Actuarial Society Annual Meeting"
+    label: "CAS Annual Meeting, 2025"
   - url: /talks/2025-12-01-UofT
-    label: "Department of Statistics, University of Toronto"
+    label: "Department of Statistics, University of Toronto, 2025"
   - url: /talks/2025-12-05-CAS-canada
-    label: "Casualty Actuarial Society Canada Connect Day"
+    label: "CAS Canada Connect Day, 2025"
   - url: /talks/2026-01-15-ASTIN
-    label: "1st ASTIN Bulletin Conference, ETH Zürich"
+    label: "1st ASTIN Bulletin Conference, ETH Zürich, 2026"
   - url: /talks/2026-01-28-Stockholm
-    label: "Department of Mathematics, Stockholm University"
+    label: "Department of Mathematics, Stockholm University, 2026"
   - url: /talks/2026-05-29-AAIARD
-    label: "Association des actuaires IARD (AAIARD)"
-industry_talks: 4
+    label: "Association des actuaires IARD (AAIARD), 2026"
+industry_talks:
+  - "Milliman R&D"
+  - "Desjardins"
+  - "TD Insurance"
+  - "Promutuel"
 bibtex: |
   @techreport{Cote/etal:2025toolbox,
   author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
