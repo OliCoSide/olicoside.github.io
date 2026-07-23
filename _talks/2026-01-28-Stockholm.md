@@ -8,4 +8,4 @@ date: 2026-01-28
 location: "Stockholm, Sweden"
 ---
 
-Invited seminar talk during a research stay.
+Invited seminar during a research stay, covering the causal perspective on fairness in insurance pricing, to an academic audience.

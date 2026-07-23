@@ -8,4 +8,4 @@ date: 2026-01-29
 location: "Online"
 ---
 
-Invited panelist as a finalist for the 2025 Award for Research on Bias in Assessing Financial Risk. Webinar attended by 445 actuaries and practitioners.
+Invited panelist as a finalist for the 2025 Award for Research on Bias in Assessing Financial Risk, recognizing *A fair price to pay*. Webinar attended by 445 actuaries and practitioners.
