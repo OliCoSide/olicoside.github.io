@@ -455,6 +455,46 @@ img {
   border-radius: 4px;
 }
 
+/* event organization boxes: upcoming in pine tint, past in sand */
+.events-box {
+  margin-bottom: 1.4em;
+  padding: 0.8em 1.1em 0.9em;
+  border: 1px solid $card-border;
+  border-radius: 12px;
+
+  .events-box__label {
+    margin: 0 0 0.5em;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $muted;
+    border-bottom: none;
+  }
+
+  .events-box__entry {
+    margin-bottom: 0.7em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .events-box__title {
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+.events-box--upcoming {
+  background: $accent-color-light;
+  border-color: rgba($accent-color, 0.3);
+}
+
+.events-box--past {
+  background: $surface;
+}
+
 /* author line on publications: quiet, right under the title */
 .paper-authors {
   margin: 0.15em 0 0 !important;

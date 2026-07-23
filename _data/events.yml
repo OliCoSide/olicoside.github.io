@@ -1,0 +1,16 @@
+# Participation in the organization of events.
+# Fill in the two lists; the /events/ page renders upcoming and past
+# in separate boxes. Fields: title (required), role, date (shown as-is),
+# location, url (optional, makes the title a link).
+upcoming: []
+#  - title: "Workshop on ..."
+#    role: "Co-organizer"
+#    date: "May 2027"
+#    location: "Québec, QC, Canada"
+#    url: https://example.com
+
+past: []
+#  - title: "Séminaire ..."
+#    role: "Organizer"
+#    date: "October 2025"
+#    location: "Québec, QC, Canada"
