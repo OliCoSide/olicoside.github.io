@@ -8,4 +8,4 @@ date: 2025-11-10
 location: "Austin, TX, United States"
 ---
 
-Presentation to over 120 actuaries and policymakers.
+Presentation of fairness in actuarial pricing, from principle to practice, to over 120 actuaries and policymakers.
