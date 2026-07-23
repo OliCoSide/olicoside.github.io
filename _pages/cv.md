@@ -46,7 +46,7 @@ Selected scholarships and awards
 ======
 * Travel grant, NSERC General Fund ($1,300 CAD), 2026
 * Actuarial Research Conference 2026 Travel Grant, American Academy of Actuaries ($1,500 USD), 2026
-* NSERC Postgraduate Scholarship – Doctoral ($120,000 CAD), 2025
+* NSERC Canada Graduate Research Scholarship – Doctoral ($120,000 CAD), 2025
 * Hickman Scholars Program, Society of Actuaries (20,000 USD/year), 2024 – present
 * FRQNT Doctoral Training Scholarship ($100,000 CAD), 2024
 * MITACS project partnership fund ($84,000 CAD), 2024
