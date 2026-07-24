@@ -46,7 +46,7 @@
           <p>{% if post.paperurl %}<a href="{{ post.paperurl }}">{{ publine }}</a>{% else %}{{ publine }}{% endif %}, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% if post.award or post.supplement %}
           <div class="talk-pills">
-            {% if post.award %}<a class="pill pill--award" href="{{ post.award.url }}"><i class="fas fa-star" aria-hidden="true"></i> {{ post.award.label }}</a>{% endif %}
+            {% if post.award %}{% if post.award.url %}<a class="pill pill--award" href="{{ post.award.url }}"><i class="fas fa-star" aria-hidden="true"></i> {{ post.award.label }}</a>{% else %}<span class="pill pill--award"><i class="fas fa-star" aria-hidden="true"></i> {{ post.award.label }}</span>{% endif %}{% endif %}
             {% if post.supplement %}<a class="pill pill--supplement" href="{{ post.supplement.url }}"><i class="fas fa-book-open" aria-hidden="true"></i> {{ post.supplement.label | default: "Online supplement" }}</a>{% endif %}
           </div>
           {% endif %}
