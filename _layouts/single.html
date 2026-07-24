@@ -42,7 +42,7 @@ layout: default
           <p>{% if page.paperurl %}<a href="{{ page.paperurl }}">{{ publine }}</a>{% else %}{{ publine }}{% endif %}, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% if page.award or page.supplement %}
           <div class="talk-pills">
-            {% if page.award %}<a class="pill pill--award" href="{{ page.award.url }}"><i class="fas fa-star" aria-hidden="true"></i> {{ page.award.label }}</a>{% endif %}
+            {% if page.award %}{% if page.award.url %}<a class="pill pill--award" href="{{ page.award.url }}"><i class="fas fa-star" aria-hidden="true"></i> {{ page.award.label }}</a>{% else %}<span class="pill pill--award"><i class="fas fa-star" aria-hidden="true"></i> {{ page.award.label }}</span>{% endif %}{% endif %}
             {% if page.supplement %}<a class="pill pill--supplement" href="{{ page.supplement.url }}"><i class="fas fa-book-open" aria-hidden="true"></i> {{ page.supplement.label | default: "Online supplement" }}</a>{% endif %}
           </div>
           {% endif %}
