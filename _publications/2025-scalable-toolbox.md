@@ -10,6 +10,7 @@ authors: 'Olivier Côté, Marie-Pier Côté, and Arthur Charpentier'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A scalable toolbox for exposing indirect discrimination in insurance rates. CAS Research Paper Series on Bias and Insurance.'
 award:
   label: "Winner, AAA 2026 Award for Research"
+  url: https://actuary.org/ph-d-candidate-olivier-cote-receives-2026-american-academy-of-actuaries-research-award/
 supplement:
   url: https://olicoside.github.io/Scalable_toolbox_online_supplement/
   label: "Online supplement"
