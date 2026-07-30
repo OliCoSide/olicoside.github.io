@@ -15,6 +15,8 @@ supplement:
   url: https://olicoside.github.io/Scalable_toolbox_online_supplement/
   label: "Online supplement"
 talks:
+  - url: /talks/2026-07-30-CAS-webinar
+    label: "CAS (webinar), 2026"
   - url: /talks/2026-07-22-ARC-AAA
     label: "ARC (AAA invited session), 2026"
   - url: /talks/2026-05-29-AAIARD
