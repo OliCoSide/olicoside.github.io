@@ -498,23 +498,69 @@ img {
 /* paste-ready bio: plain text that wraps in full, never scrolls sideways */
 .bio-fold {
   max-width: 100%;
+  margin: 2.2em 0 2.4em;
 }
 
 .bio-box {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-top: 0.5em;
-  padding: 0.9em 1em;
+  margin-top: 0.55em;
+  padding: 0.9em 1.1em 1em;
   background: #fff;
   border: 1px solid $card-border;
   border-radius: $border-radius;
   animation: fade-up 0.35s $ease-out-soft both;
 }
 
+/* language switch: radios drive it, so it works with JavaScript off */
+.bio-lang-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bio-box__lang {
+  display: flex;
+  gap: 0.3em;
+  margin-bottom: 0.7em;
+}
+
+.bio-lang {
+  padding: 0.1em 0.7em;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: $muted;
+  background: $surface;
+  border: 1px solid $card-border;
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s $ease-out-soft, color 0.2s $ease-out-soft,
+    border-color 0.2s $ease-out-soft;
+
+  &:hover {
+    color: $accent-color-dark;
+    border-color: rgba($accent-color, 0.45);
+  }
+}
+
+#bio-lang-en:checked ~ .bio-box__lang label[for="bio-lang-en"],
+#bio-lang-fr:checked ~ .bio-box__lang label[for="bio-lang-fr"] {
+  color: $accent-color-dark;
+  background: $accent-color-light;
+  border-color: rgba($accent-color, 0.45);
+}
+
+#bio-lang-en:checked ~ .bio-text--fr,
+#bio-lang-fr:checked ~ .bio-text--en {
+  display: none;
+}
+
 .bio-box__text {
   width: 100%;
-  margin: 0 0 0.7em !important;
+  margin: 0 0 0.8em !important;
   font-size: 0.82rem;
   line-height: 1.7;
   color: $ink;
