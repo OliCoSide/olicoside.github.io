@@ -1,14 +1,39 @@
 <details class="talks-fold bio-fold">
   <summary><i class="fas fa-pencil" aria-hidden="true"></i><span class="talks-fold__label">Paste-ready bio</span><i class="fas fa-angle-down talks-fold__chevron" aria-hidden="true"></i></summary>
   <div class="bio-box">
-    <input type="radio" name="bio-lang" id="bio-lang-en" class="bio-lang-input" checked>
-    <input type="radio" name="bio-lang" id="bio-lang-fr" class="bio-lang-input">
     <div class="bio-box__lang">
-      <label for="bio-lang-en" class="bio-lang">EN</label>
-      <label for="bio-lang-fr" class="bio-lang">FR</label>
+      <button type="button" class="bio-lang is-active" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="bio-lang" data-lang="fr" aria-pressed="false">FR</button>
     </div>
-    <p class="bio-box__text bio-text--en">Olivier Côté is a Ph.D. candidate at the École d'actuariat of Université Laval, in Québec, under the supervision of Marie-Pier Côté and Arthur Charpentier. He holds a master's degree in actuarial science from Université Laval and is an Associate of the Casualty Actuarial Society. His research on fairness and discrimination in insurance pricing won the American Academy of Actuaries 2026 Award for Research. He has received numerous prestigious scholarships for his academic excellence and his leadership, among them the Hickman Scholarship of the Society of Actuaries and the doctoral scholarship of the Natural Sciences and Engineering Research Council of Canada. His thesis is carried out in collaboration with one of the largest insurance companies in Canada.</p>
-    <p class="bio-box__text bio-text--fr">Olivier Côté est candidat au doctorat à l'École d'actuariat de l'Université Laval, à Québec, sous la direction de Marie-Pier Côté et d'Arthur Charpentier. Il détient une maîtrise en actuariat de l'Université Laval et le titre d'associé de la Casualty Actuarial Society. Ses travaux sur l'équité et la discrimination en tarification d'assurance lui ont valu le prix de recherche 2026 de l'American Academy of Actuaries. Il a reçu de nombreuses bourses prestigieuses pour son excellence académique et son leadership, dont la bourse Hickman de la Society of Actuaries et la bourse doctorale du Conseil de recherches en sciences naturelles et en génie du Canada. Sa thèse est réalisée en collaboration avec l'une des plus grandes compagnies d'assurance au Canada.</p>
-    <button class="bio-copy" onclick="var t=Array.prototype.slice.call(this.parentElement.querySelectorAll('.bio-box__text')).filter(function(e){return e.offsetParent!==null})[0];navigator.clipboard.writeText(t.innerText);this.textContent='copied';setTimeout(function(b){b.textContent='copy'},1200,this)">copy</button>
+    <p class="bio-box__text" data-lang="en">Olivier Côté is a Ph.D. candidate at the École d'actuariat of Université Laval, in Québec, under the supervision of Marie-Pier Côté and Arthur Charpentier. He holds a master's degree in actuarial science from Université Laval and is an Associate of the Casualty Actuarial Society. His research on fairness and discrimination in insurance pricing won the American Academy of Actuaries 2026 Award for Research. He has received numerous prestigious scholarships for his academic excellence and his leadership, among them the Hickman Scholarship of the Society of Actuaries and the doctoral scholarship of the Natural Sciences and Engineering Research Council of Canada. His thesis is carried out in collaboration with one of the largest insurance companies in Canada.</p>
+    <p class="bio-box__text" data-lang="fr" hidden>Olivier Côté est candidat au doctorat à l'École d'actuariat de l'Université Laval, à Québec, sous la direction de Marie-Pier Côté et d'Arthur Charpentier. Il détient une maîtrise en actuariat de l'Université Laval et le titre d'associé de la Casualty Actuarial Society. Ses travaux sur l'équité et la discrimination en tarification d'assurance lui ont valu le prix de recherche 2026 de l'American Academy of Actuaries. Il a reçu de nombreuses bourses prestigieuses pour son excellence académique et son leadership, dont la bourse Hickman de la Society of Actuaries et la bourse doctorale du Conseil de recherches en sciences naturelles et en génie du Canada. Sa thèse est réalisée en collaboration avec l'une des plus grandes compagnies d'assurance au Canada.</p>
+    <button type="button" class="bio-copy">copy</button>
+    <script>
+      (function () {
+        var box = document.currentScript.parentElement;
+        box.addEventListener('click', function (event) {
+          var picker = event.target.closest('.bio-lang');
+          if (picker) {
+            var want = picker.getAttribute('data-lang');
+            box.querySelectorAll('.bio-lang').forEach(function (b) {
+              var on = b.getAttribute('data-lang') === want;
+              b.classList.toggle('is-active', on);
+              b.setAttribute('aria-pressed', on ? 'true' : 'false');
+            });
+            box.querySelectorAll('.bio-box__text').forEach(function (p) {
+              p.hidden = p.getAttribute('data-lang') !== want;
+            });
+            return;
+          }
+          var copier = event.target.closest('.bio-copy');
+          if (copier) {
+            var shown = box.querySelector('.bio-box__text:not([hidden])');
+            navigator.clipboard.writeText(shown.innerText);
+            copier.textContent = 'copied';
+            setTimeout(function () { copier.textContent = 'copy'; }, 1200);
+          }
+        });
+      })();
+    </script>
   </div>
 </details>
