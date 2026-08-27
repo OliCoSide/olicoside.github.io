@@ -9,7 +9,7 @@ redirect_from:
 
 I am a Ph.D. candidate in Actuarial Science at Université Laval (Québec, Canada) and an Associate of the Casualty Actuarial Society (ACAS). I work on fairness and discrimination in insurance predictive models, under the supervision of [Marie-Pier Côté](https://www.fsg.ulaval.ca/corps-professoral/marie-pier-cote) (Université Laval) and [Arthur Charpentier](https://freakonometrics.hypotheses.org) (UQAM). My thesis, expected for mid-2027, takes a causal perspective on direct and indirect discrimination based on sensitive characteristics in insurance predictive models, and is carried out in collaboration with one of the largest P&C insurers in Canada.
 
-My research interests include causal inference, algorithmic fairness, insurance pricing, and the governance of predictive models. My doctoral work is supported by an NSERC Canada Graduate Research Scholarship and the SOA Hickman Scholars Program.
+My research interests include causal inference, algorithmic fairness, insurance pricing, and the governance of predictive models. My doctoral work is supported by an NSERC Canada Graduate Research Scholarship, the SOA Hickman Scholars Program, the Fonds de recherche du Québec, Mitacs, and the Chaire d'actuariat de l'Université Laval.
 
 <a href="https://www.linkedin.com/in/olivier-cote-act/recent-activity/all/" class="btn btn--linkedin"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Follow my posts on LinkedIn</a>
 
