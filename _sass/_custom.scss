@@ -495,6 +495,51 @@ img {
   background: $surface;
 }
 
+/* paste-ready bio: plain text that wraps in full, never scrolls sideways */
+.bio-fold {
+  max-width: 100%;
+}
+
+.bio-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 0.5em;
+  padding: 0.9em 1em;
+  background: #fff;
+  border: 1px solid $card-border;
+  border-radius: $border-radius;
+  animation: fade-up 0.35s $ease-out-soft both;
+}
+
+.bio-box__text {
+  width: 100%;
+  margin: 0 0 0.7em !important;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: $ink;
+  overflow-wrap: break-word;
+}
+
+.bio-copy {
+  padding: 0.25em 0.9em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: $accent-color-dark;
+  background: $surface;
+  border: 1px solid $card-border;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s $ease-out-soft, color 0.2s $ease-out-soft,
+    border-color 0.2s $ease-out-soft;
+
+  &:hover {
+    color: #fff;
+    background: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
 /* author line on publications: quiet, right under the title */
 .paper-authors {
   margin: 0.15em 0 0 !important;
