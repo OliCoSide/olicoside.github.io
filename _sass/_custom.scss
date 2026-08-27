@@ -290,9 +290,18 @@ html {
    Archive lists (publications, talks, teaching) as quiet cards
    ========================================================================== */
 
-/* breathing room between intro text and the first card */
-.archive p + .list__item {
-  margin-top: 2.5em;
+/* Breathing room between the intro line and the first card. The intro is a
+   div.wordwrap, not a <p>, so a `p + .list__item` rule never matched it and
+   the two sat flush against each other. Space the intro itself, and keep the
+   sibling rules for pages whose intro really is a paragraph. Adjacent margins
+   collapse, so the gap stays one measure rather than two stacked. */
+.archive .wordwrap {
+  margin-bottom: 2.8em;
+}
+
+.archive p + .list__item,
+.archive .wordwrap + .list__item {
+  margin-top: 2.8em;
 }
 
 .list__item .archive__item {
