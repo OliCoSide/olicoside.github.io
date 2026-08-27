@@ -11,6 +11,8 @@ I am a Ph.D. candidate in Actuarial Science at Université Laval (Québec, Canad
 
 My research interests include causal inference, algorithmic fairness, insurance pricing, and the governance of predictive models. My doctoral work is supported by an NSERC Canada Graduate Research Scholarship, the SOA Hickman Scholars Program, the Fonds de recherche du Québec, Mitacs, the Chaire d'actuariat de l'Université Laval, and the Leadership and Engagement Scholarship of Université Laval.
 
+{% include bio.html %}
+
 <a href="https://www.linkedin.com/in/olivier-cote-act/recent-activity/all/" class="btn btn--linkedin"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Follow my posts on LinkedIn</a>
 
 Recent highlights
