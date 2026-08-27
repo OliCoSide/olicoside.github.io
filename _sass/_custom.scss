@@ -513,38 +513,67 @@ img {
   animation: fade-up 0.35s $ease-out-soft both;
 }
 
-/* language switch. The `hidden` attribute on the inactive paragraph does the
-   real work, so the toggle survives a stale or missing stylesheet. */
-.bio-box__lang {
-  display: flex;
-  gap: 0.3em;
-  margin-bottom: 0.7em;
-}
-
-.bio-lang {
-  padding: 0.1em 0.7em;
-  font-family: inherit;
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: $muted;
+/* language switch: one segmented track with a thumb that slides between the
+   two labels, so it reads as a single control in two positions rather than
+   two buttons. The `hidden` attribute on the inactive paragraph does the real
+   work, so the toggle survives a stale or missing stylesheet. */
+.bio-switch {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 0.8em;
+  padding: 3px;
   background: $surface;
   border: 1px solid $card-border;
   border-radius: 999px;
+}
+
+.bio-switch__thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  height: calc(100% - 6px);
+  background: #fff;
+  border: 1px solid rgba($accent-color, 0.28);
+  border-radius: 999px;
+  box-shadow: 0 1px 3px rgba(46, 44, 40, 0.09);
+  transition: transform 0.34s $ease-out-soft;
+}
+
+.bio-switch[data-active="fr"] .bio-switch__thumb {
+  transform: translateX(100%);
+}
+
+.bio-lang {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 auto;
+  min-width: 3.1em;
+  padding: 0.24em 0.8em;
+  font-family: inherit;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: $muted;
+  background: none;
+  border: 0;
+  border-radius: 999px;
   cursor: pointer;
   user-select: none;
-  transition: background-color 0.2s $ease-out-soft, color 0.2s $ease-out-soft,
-    border-color 0.2s $ease-out-soft;
+  transition: color 0.25s $ease-out-soft;
 
   &:hover {
     color: $accent-color-dark;
-    border-color: rgba($accent-color, 0.45);
   }
 
   &.is-active {
     color: $accent-color-dark;
-    background: $accent-color-light;
-    border-color: rgba($accent-color, 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bio-switch__thumb {
+    transition: none;
   }
 }
 
@@ -570,6 +599,12 @@ img {
     border-color 0.2s $ease-out-soft;
 
   &:hover {
+    color: #fff;
+    background: $accent-color;
+    border-color: $accent-color;
+  }
+
+  &.is-copied {
     color: #fff;
     background: $accent-color;
     border-color: $accent-color;

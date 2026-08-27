@@ -1,7 +1,8 @@
 <details class="talks-fold bio-fold">
-  <summary><i class="fas fa-pencil" aria-hidden="true"></i><span class="talks-fold__label">Copy-paste ready bio</span><i class="fas fa-angle-down talks-fold__chevron" aria-hidden="true"></i></summary>
+  <summary><i class="fas fa-address-card" aria-hidden="true"></i><span class="talks-fold__label">Copy-paste ready bio</span><i class="fas fa-angle-down talks-fold__chevron" aria-hidden="true"></i></summary>
   <div class="bio-box">
-    <div class="bio-box__lang">
+    <div class="bio-switch" data-active="en" role="group" aria-label="Bio language">
+      <span class="bio-switch__thumb" aria-hidden="true"></span>
       <button type="button" class="bio-lang is-active" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" class="bio-lang" data-lang="fr" aria-pressed="false">FR</button>
     </div>
@@ -23,6 +24,7 @@
             box.querySelectorAll('.bio-box__text').forEach(function (p) {
               p.hidden = p.getAttribute('data-lang') !== want;
             });
+            box.querySelector('.bio-switch').setAttribute('data-active', want);
             return;
           }
           var copier = event.target.closest('.bio-copy');
@@ -30,7 +32,11 @@
             var shown = box.querySelector('.bio-box__text:not([hidden])');
             navigator.clipboard.writeText(shown.innerText);
             copier.textContent = 'copied';
-            setTimeout(function () { copier.textContent = 'copy'; }, 1200);
+            copier.classList.add('is-copied');
+            setTimeout(function () {
+              copier.textContent = 'copy';
+              copier.classList.remove('is-copied');
+            }, 1400);
           }
         });
       })();
