@@ -513,13 +513,8 @@ img {
   animation: fade-up 0.35s $ease-out-soft both;
 }
 
-/* language switch: radios drive it, so it works with JavaScript off */
-.bio-lang-input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
+/* language switch. The `hidden` attribute on the inactive paragraph does the
+   real work, so the toggle survives a stale or missing stylesheet. */
 .bio-box__lang {
   display: flex;
   gap: 0.3em;
@@ -528,6 +523,7 @@ img {
 
 .bio-lang {
   padding: 0.1em 0.7em;
+  font-family: inherit;
   font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -544,18 +540,12 @@ img {
     color: $accent-color-dark;
     border-color: rgba($accent-color, 0.45);
   }
-}
 
-#bio-lang-en:checked ~ .bio-box__lang label[for="bio-lang-en"],
-#bio-lang-fr:checked ~ .bio-box__lang label[for="bio-lang-fr"] {
-  color: $accent-color-dark;
-  background: $accent-color-light;
-  border-color: rgba($accent-color, 0.45);
-}
-
-#bio-lang-en:checked ~ .bio-text--fr,
-#bio-lang-fr:checked ~ .bio-text--en {
-  display: none;
+  &.is-active {
+    color: $accent-color-dark;
+    background: $accent-color-light;
+    border-color: rgba($accent-color, 0.45);
+  }
 }
 
 .bio-box__text {
