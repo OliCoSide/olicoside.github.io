@@ -23,6 +23,13 @@ Professional designations
 ======
 * Associate of the Casualty Actuarial Society (ACAS), 2025
 
+Diversity, equity, and inclusion education
+======
+* Get Comfortable Being Uncomfortable: Dialogue About Favoritism and Fairness, Canadian Statistical Sciences Institute, 2025
+* Let's talk about race and collective responsibility, Canadian Statistical Sciences Institute, 2024
+* Acting as a sentinel for the prevention of suicide, Centre de prévention du suicide du Québec, 2023
+* Addressing Conflicts Related to Bias, Privilege, and Identity in the STEM Fields, CANSSI and Academic Impressions, 2022
+
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
@@ -46,6 +53,7 @@ Selected scholarships and awards
 ======
 * Travel grant, NSERC General Fund ($1,300 CAD), 2026
 * Actuarial Research Conference 2026 Travel Grant, American Academy of Actuaries ($1,500 USD), 2026
+* Student travel grant, Big Data Research Center ($2,000 CAD), 2026
 * NSERC Canada Graduate Research Scholarship – Doctoral ($120,000 CAD), 2025
 * Hickman Scholars Program, Society of Actuaries (20,000 USD/year), 2024 – present
 * FRQNT Doctoral Training Scholarship ($100,000 CAD), 2024
@@ -55,6 +63,7 @@ Selected scholarships and awards
 * Charles Brindamour Graduate Scholarship for Excellence ($10,000 CAD), 2023
 * François-Laviolette Scholarship for responsible AI ($7,500 CAD), 2022
 * CAS Trust Scholarship, Casualty Actuarial Society (2,500 USD), 2021
+* Grant of attraction to the Master's, Chaire d'actuariat de l'Université Laval ($15,000 CAD), 2021
 * NSERC Alexander Graham Bell Canada Graduate Scholarship ($17,500 CAD), 2021
 * Lieutenant-Governor's Medal, Cégep de Lévis, 2018
 

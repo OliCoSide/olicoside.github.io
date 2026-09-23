@@ -18,14 +18,14 @@ Personal academic website of Olivier Côté (Ph.D. candidate in Actuarial Scienc
 
 Content lives in Jekyll **collections**, one markdown file per item, rendered by list pages in `_pages/`:
 
-- `_publications/` → `/publications/` — front matter fields: `title`, `collection: publications`, `category` (e.g. `manuscripts`), `permalink`, `excerpt`, `date`, `venue`, `citation`, and `bibtex` (a literal BibTeX block). The `bibtex` field powers the copyable "BibTeX" pill rendered by `_includes/bibtex.html` on both list cards (`_includes/archive-single.html`) and item pages (`_layouts/single.html`). Every publication should have it.
+- `_publications/` → `/publications/` — front matter fields: `title`, `collection: publications`, `category` (e.g. `manuscripts`), `permalink`, `excerpt`, `date`, `venue`, `venue_prefix`, `citation`, and `bibtex` (a literal BibTeX block). The `bibtex` field powers the copyable "BibTeX" pill rendered by `_includes/bibtex.html` on both list cards (`_includes/archive-single.html`) and item pages (`_layouts/single.html`). Every publication should have it. Use `venue_prefix` for status (e.g. `In press at`, `Accepted at`); omit it for published work ("Published in"); set `none` only when the venue string already includes the verb.
 - `_talks/` → `/talks/` — uses the `talk` layout.
 - `_teaching/` → `/teaching/`.
 
 Other key pieces:
 
 - `_pages/about.md` is the homepage; `_pages/cv.md` is the online CV.
-- `_data/navigation.yml` controls the top navbar (order and entries). The "CV" navbar entry links directly to the PDF, not to `/cv/`.
+- `_data/navigation.yml` controls the top navbar (order and entries). The "CV" navbar entry links directly to the PDF, not to `/cv/`. Talks are in the navbar.
 - `_config.yml` holds site-wide identity (name, bio, social links → sidebar via `_includes/author-profile.html`).
 - `_includes/footer/custom.html` holds the site's custom footer: Sitemap/Stats links, the GoatCounter analytics snippet (privacy-friendly, cookie-free; site code `olicoside`), and the scroll-reveal script for list cards.
 - `markdown_generator/` contains optional Jupyter/Python tooling that generates publication/talk markdown files from TSVs — not part of the build.
@@ -41,7 +41,7 @@ When these working papers get a page in `_publications/`, add the matching talk 
 - **"Causal decomposition" paper** (*Profiling Actuarial Discrimination via Causal Decomposition*): AFM 2026 poster (`2026-02-02-AFM`), CRDM (`2026-05-15-CRDM`), STATQAM (`2026-05-26-STATQAM`), 29th IME Congress Seoul (`2026-07-02-IME-Seoul`).
 - **"Confounding bias" paper**: STATQAM (`2026-05-26-STATQAM`) — that seminar covered both working papers.
 
-Hidden talks (extensionless files in `_talks/`, invisible to Jekyll) still awaiting an explicit assignment: `2022-05-15-jeda`, `2022-08-01-Summerday`, `2023-06-15-IDS`, `2024-01-29-IVADO`, `2024-02-01-WIM`. `2023-10-25-intact` stays hidden on purpose: private company talks have no talk page; they are listed by company name in the `industry_talks` front-matter list on publications (see `_includes/archive-single.html`).
+Extensionless files in `_talks/` are **published** by Jekyll — use `published: false` to hide a talk. `2023-10-25-intact` stays hidden on purpose (`published: false`): private company talks have no public talk page; they are listed by company name in the `industry_talks` front-matter list on publications (see `_includes/archive-single.html`).
 
 ## Updating the CV — keep three places in sync
 

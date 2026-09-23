@@ -4,10 +4,10 @@ collection: publications
 category: manuscripts
 permalink: /publication/2026-governing-fairness-trilemma
 date: 2026-02-12
-venue: 'Under revision'
-venue_prefix: none
+venue: 'Journal of Business Ethics'
+venue_prefix: Accepted at
 authors: 'Arthur Charpentier, Olivier Côté, and Marie-Pier Côté'
-citation: 'Charpentier, A., Côté, O., & Côté, M.-P. (2025). Governing fairness in insurance pricing: the trilemma of actuarial adequacy, solidarity and causal legitimacy. Under revision.'
+citation: 'Charpentier, A., Côté, O., & Côté, M.-P. (2026). Governing fairness in insurance pricing: the trilemma of actuarial adequacy, solidarity and causal legitimacy. Journal of Business Ethics. Accepted.'
 talks:
   - url: /talks/2026-07-30-CAS-webinar
     label: "CAS (webinar), 2026"
@@ -18,11 +18,12 @@ talks:
 industry_talks:
   - "Promutuel Assurance"
 bibtex: |
-  @unpublished{Charpentier/etal:2025governance,
+  @article{Charpentier/etal:2026governance,
   author = {Charpentier, Arthur and Côté, Olivier and Côté, Marie-Pier},
   title = {Governing fairness in insurance pricing: the trilemma of actuarial adequacy, solidarity and causal legitimacy},
-  note = {Under revision},
-  year = {2025}
+  journal = {Journal of Business Ethics},
+  year = {2026},
+  note = {Accepted}
   }
 ---
 

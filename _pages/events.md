@@ -3,6 +3,7 @@ layout: archive
 title: "Event organization"
 permalink: /events/
 author_profile: true
+sitemap: false
 ---
 
 {% include base_path %}

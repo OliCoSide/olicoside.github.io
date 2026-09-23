@@ -24,6 +24,8 @@ talks:
     label: "ARC (CAS invited session), 2025"
   - url: /talks/2025-05-13-CNAM
     label: "Chaire ACTIONS, 2025"
+  - url: /talks/2025-05-12-Milliman
+    label: "Milliman R&D, 2025"
   - url: /talks/2024-10-11-causaux
     label: "Institut intelligence et données, 2024"
   - url: /talks/2024-07-10-IME
@@ -32,8 +34,9 @@ talks:
     label: "Workshop on fairness and discrimination in insurance, 2024"
   - url: /talks/2024-03-01-AMF
     label: "Autorité des marchés financiers, 2024"
+  - url: /talks/2023-06-15-IDS
+    label: "Insurance Data Science Conference, 2023"
 industry_talks:
-  - "Milliman Paris"
   - "Intact Financial Corporation"
   - "Desjardins Groupe d'assurances générales"
 bibtex: |
@@ -45,7 +48,7 @@ bibtex: |
   pages = {33-75},
   year = {2025},
   keywords = {bias, causal inference, directed acyclic graph, discrimination, disparate impact, fairness criteria, score},
-  doi = {https://doi.org/10.1111/jori.12503},
+  doi = {10.1111/jori.12503},
   url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/jori.12503},
   eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/jori.12503}
   }

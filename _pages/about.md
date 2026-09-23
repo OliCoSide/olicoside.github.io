@@ -2,6 +2,7 @@
 permalink: /
 title: "About me"
 author_profile: true
+description: "Ph.D. candidate in Actuarial Science at Université Laval, working on fairness and discrimination in insurance predictive models."
 redirect_from: 
   - /about/
   - /about.html
@@ -11,14 +12,15 @@ I am a Ph.D. candidate in Actuarial Science at Université Laval (Québec, Canad
 
 My research interests include causal inference, algorithmic fairness, insurance pricing, and the governance of predictive models. My doctoral work is supported by an NSERC Canada Graduate Research Scholarship, the SOA Hickman Scholars Program, the Fonds de recherche du Québec, Mitacs, the Chaire d'actuariat de l'Université Laval, and the Leadership and Engagement Scholarship of Université Laval.
 
-<a href="https://www.linkedin.com/in/olivier-cote-act/recent-activity/all/" class="btn btn--linkedin"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Follow my posts on LinkedIn</a>
+<a href="https://www.linkedin.com/in/olivier-cote-act/" class="btn btn--linkedin"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Follow my posts on LinkedIn</a>
 
 {% include bio.html %}
 
 Recent highlights
 ======
 * [A scalable toolbox for exposing indirect discrimination in insurance rates](/publication/2025-scalable-toolbox), published by the Casualty Actuarial Society, won the American Academy of Actuaries 2026 Award for Research.
-* [A statistical perspective on fairness in insurance pricing](/publication/2026-statistical-perspective) is forthcoming.
+* [A statistical perspective on fairness in insurance pricing](/publication/2026-statistical-perspective) is in press at *Annual Review of Statistics and Its Application* (2027).
+* [Governing fairness in insurance pricing](/publication/2026-governing-fairness-trilemma) is accepted at the *Journal of Business Ethics* (2026).
 * [Recoverability of market-wide fair insurance premiums under selection bias](/publication/2024-selection) is published in *Insurance: Mathematics and Economics* (2026).
 * I obtained my ACAS designation from the Casualty Actuarial Society in 2025.
 
