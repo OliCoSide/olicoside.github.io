@@ -25,7 +25,7 @@ Content lives in Jekyll **collections**, one markdown file per item, rendered by
 Other key pieces:
 
 - `_pages/about.md` is the homepage; `_pages/cv.md` is the online CV.
-- `_data/navigation.yml` controls the top navbar (order and entries). The "CV" navbar entry links directly to the PDF, not to `/cv/`. Talks are in the navbar.
+- `_data/navigation.yml` controls the top navbar (order and entries). The "CV" navbar entry links directly to the PDF, not to `/cv/`. Talks are not in the navbar for now (`/talks/` still exists).
 - `_config.yml` holds site-wide identity (name, bio, social links → sidebar via `_includes/author-profile.html`).
 - `_includes/footer/custom.html` holds the site's custom footer: Sitemap/Stats links, the GoatCounter analytics snippet (privacy-friendly, cookie-free; site code `olicoside`), and the scroll-reveal script for list cards.
 - `markdown_generator/` contains optional Jupyter/Python tooling that generates publication/talk markdown files from TSVs — not part of the build.
@@ -42,6 +42,8 @@ When these working papers get a page in `_publications/`, add the matching talk 
 - **"Confounding bias" paper**: STATQAM (`2026-05-26-STATQAM`) — that seminar covered both working papers.
 
 Extensionless files in `_talks/` are **published** by Jekyll — use `published: false` to hide a talk. `2023-10-25-intact` stays hidden on purpose (`published: false`): private company talks have no public talk page; they are listed by company name in the `industry_talks` front-matter list on publications (see `_includes/archive-single.html`).
+
+Temporarily unpublished (`published: false` on the markdown, and commented out of the LaTeX CV) until they can be announced: *A Statistical Perspective on Fairness in Insurance Pricing* (`2026-statistical-perspective`) and *Governing Fairness in Insurance Pricing* (`2026-governing-fairness-trilemma`). To restore: remove `published: false`, uncomment the `\bibentry` lines in `files/cv-src/CV_latex_OC_20210914.tex`, recompile the production PDF, and put the two highlights back on `_pages/about.md`.
 
 ## Updating the CV — keep three places in sync
 

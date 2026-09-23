@@ -2,6 +2,7 @@
 title: "A Statistical Perspective on Fairness in Insurance Pricing"
 collection: publications
 category: manuscripts
+published: false
 permalink: /publication/2026-statistical-perspective
 date: 2027-01-15
 venue: 'Annual Review of Statistics and Its Application'
