@@ -7,3 +7,5 @@ venue: "Quantact SummerDay"
 date: 2022-08-01
 location: "Montréal, QC, Canada"
 ---
+
+Overview of discrimination-free insurance pricing models, at the Quantact SummerDay.

@@ -32,7 +32,7 @@ author:
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=mq5Isr4AAAAJ&hl=fr"
+  googlescholar    : "https://scholar.google.com/citations?user=mq5Isr4AAAAJ&hl=en"
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0000-5632-3472"
   semantic         : # URL
@@ -135,7 +135,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : profile_picture.jpg  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -237,7 +237,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
   # _pages
@@ -255,7 +255,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: true
+      comments: false
   # _publications
   - scope:
       path: ""
@@ -264,7 +264,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: true
+      comments: false
   # _portfolio
   - scope:
       path: ""
@@ -273,7 +273,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comment: true
+      comments: false
   # _talks
   - scope:
       path: ""

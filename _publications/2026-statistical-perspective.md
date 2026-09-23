@@ -3,11 +3,11 @@ title: "A Statistical Perspective on Fairness in Insurance Pricing"
 collection: publications
 category: manuscripts
 permalink: /publication/2026-statistical-perspective
-date: 2026-07-15
-venue: 'Forthcoming'
-venue_prefix: none
+date: 2027-01-15
+venue: 'Annual Review of Statistics and Its Application'
+venue_prefix: In press at
 authors: 'Olivier Côté, Marie-Pier Côté, and Arthur Charpentier'
-citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2026). A statistical perspective on fairness in insurance pricing. Forthcoming.'
+citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2027). A statistical perspective on fairness in insurance pricing. Annual Review of Statistics and Its Application. In press.'
 talks:
   - url: /talks/2026-07-30-CAS-webinar
     label: "CAS (webinar), 2026"
@@ -18,11 +18,12 @@ talks:
 industry_talks:
   - "Promutuel Assurance"
 bibtex: |
-  @unpublished{Cote/etal:2026statistical,
+  @article{Cote/etal:2027statistical,
   author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
   title = {A statistical perspective on fairness in insurance pricing},
-  year = {2026},
-  note = {Forthcoming}
+  journal = {Annual Review of Statistics and Its Application},
+  year = {2027},
+  note = {In press}
   }
 ---
 
