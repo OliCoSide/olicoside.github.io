@@ -2,6 +2,7 @@
 title: "Governing Fairness in Insurance Pricing: the Trilemma of Actuarial Adequacy, Solidarity and Causal Legitimacy"
 collection: publications
 category: manuscripts
+published: false
 permalink: /publication/2026-governing-fairness-trilemma
 date: 2026-02-12
 venue: 'Journal of Business Ethics'
