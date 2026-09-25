@@ -25,7 +25,7 @@ Content lives in Jekyll **collections**, one markdown file per item, rendered by
 Other key pieces:
 
 - `_pages/about.md` is the homepage; `_pages/cv.md` is the online CV.
-- `_data/navigation.yml` controls the top navbar (order and entries). The "CV" navbar entry links directly to the PDF, not to `/cv/`. Talks are in the navbar.
+- `_data/navigation.yml` controls the top navbar (order and entries). The "CV" navbar entry links directly to the PDF, not to `/cv/`. Talks and Coursework are commented out of the navbar: talks are reached through the pills on each publication, and the coursework list (`_includes/coursework-list.html`) is shown on the Teaching page. `/talks/` and `/Coursework/` still build.
 - `_config.yml` holds site-wide identity (name, bio, social links → sidebar via `_includes/author-profile.html`).
 - `_includes/footer/custom.html` holds the site's custom footer: Sitemap/Stats links, the GoatCounter analytics snippet (privacy-friendly, cookie-free; site code `olicoside`), and the scroll-reveal script for list cards.
 - `markdown_generator/` contains optional Jupyter/Python tooling that generates publication/talk markdown files from TSVs — not part of the build.

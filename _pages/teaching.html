@@ -1,12 +1,16 @@
 ---
 layout: archive
-title: "Teaching"
+title: "Teaching and Coursework"
 permalink: /teaching/
 author_profile: true
 ---
 
 {% include base_path %}
 
+<h2>Courses taught</h2><hr />
 {% for post in site.teaching reversed %}
   {% include archive-single.html %}
 {% endfor %}
+
+<h2>Graduate coursework</h2><hr />
+{% include coursework-list.html %}
