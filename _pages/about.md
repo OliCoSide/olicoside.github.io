@@ -24,4 +24,4 @@ Recent highlights
 * [Recoverability of market-wide fair insurance premiums under selection bias](/publication/2024-selection) is published in *Insurance: Mathematics and Economics* (2026).
 * I obtained my ACAS designation from the Casualty Actuarial Society in 2025.
 
-You can find all my papers on the [Publications](/publications/) page, and my recent presentations on the [Talks](/talks/) page.
+You can find all my papers, with the talks that presented them, on the [Publications](/publications/) page.
