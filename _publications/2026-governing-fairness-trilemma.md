@@ -1,13 +1,13 @@
 ---
-title: "Governing Fairness in Insurance Pricing: the Trilemma of Actuarial Adequacy, Solidarity and Causal Legitimacy"
+title: "Governing Fairness in Insurance Pricing: The Trilemma of Actuarial Adequacy, Solidarity, and Causal Legitimacy"
 collection: publications
 category: manuscripts
 permalink: /publication/2026-governing-fairness-trilemma
-date: 2026-02-12
+date: 2026-09-25
 venue: 'Journal of Business Ethics'
-venue_prefix: Accepted at
+paperurl: 'https://doi.org/10.1007/s10551-026-06479-2'
 authors: 'Arthur Charpentier, Olivier Côté, and Marie-Pier Côté'
-citation: 'Charpentier, A., Côté, O., & Côté, M.-P. (2026). Governing fairness in insurance pricing: the trilemma of actuarial adequacy, solidarity and causal legitimacy. Journal of Business Ethics. Accepted.'
+citation: 'Charpentier, A., Côté, O., & Côté, M.-P. (2026). Governing fairness in insurance pricing: The trilemma of actuarial adequacy, solidarity, and causal legitimacy. Journal of Business Ethics. https://doi.org/10.1007/s10551-026-06479-2'
 talks:
   - url: /talks/2026-07-30-CAS-webinar
     label: "CAS (webinar), 2026"
@@ -20,10 +20,11 @@ industry_talks:
 bibtex: |
   @article{Charpentier/etal:2026governance,
   author = {Charpentier, Arthur and Côté, Olivier and Côté, Marie-Pier},
-  title = {Governing fairness in insurance pricing: the trilemma of actuarial adequacy, solidarity and causal legitimacy},
+  title = {Governing fairness in insurance pricing: the trilemma of actuarial adequacy, solidarity, and causal legitimacy},
   journal = {Journal of Business Ethics},
   year = {2026},
-  note = {Accepted}
+  doi = {10.1007/s10551-026-06479-2},
+  url = {https://link.springer.com/article/10.1007/s10551-026-06479-2}
   }
 ---
 
