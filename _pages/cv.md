@@ -96,4 +96,4 @@ Research affiliations
 
 Languages
 ======
-* French (mother tongue), English (advanced)
+* French (mother tongue), English (advanced), Swedish (beginner, < 1 year)
