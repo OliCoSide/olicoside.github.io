@@ -13,7 +13,7 @@ A PDF version is available [here]({{ base_path }}/files/CV_OlivierCote_ENG_prod.
 
 Education
 ======
-* Ph.D. in Actuarial Science, Université Laval, 2023 – exp. 2027
+* Ph.D. in Actuarial Science, Université Laval, 2023 – expected 2027
   * Fairness in insurance pricing, supervised by Prof. Marie-Pier Côté (Université Laval) and Prof. Arthur Charpentier (UQÀM)
 * M.Sc. in Actuarial Science (research-based), Université Laval, 2021 – 2023
 * B.Sc. in Actuarial Science, Université Laval, 2018 – 2021
