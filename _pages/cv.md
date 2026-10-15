@@ -62,11 +62,10 @@ Experience
   * Tight ends and fullbacks coach, responsible for the development of 10 athletes, volunteer mathematics tutor for student-athletes
   * Coaching Staff of the Year 2023 and 2024, RSEQ
 
-Supervision and mentorship
+Supervision
 ======
-* Mentor of a University of Texas master's student, essay on an insurance regulatory issue, 2025 – 2026
+* Co-supervisor, with Prof. Marie-Pier Côté, of a PhD student in the Mitacs Accelerate partnership (negotiated the student's Mitacs funding with the industrial partner), 2025 – present
 * Co-supervisor, with Prof. Marie-Pier Côté, of a master's student on a one-year fairness project, 2023
-* Supervisor of the PhD student who continues the Mitacs Accelerate partnership, 2025 – present
 
 Selected scholarships and awards
 ======
