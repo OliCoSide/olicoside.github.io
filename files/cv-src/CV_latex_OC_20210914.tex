@@ -323,8 +323,8 @@
  % we wrap this part in a parbox, so title and description are not separated on a pagebreak
  % if you need more control on page breaks, remove the parbox
  \parbox{\mpwidth}{
-  \begin{tabular*}{1\mpwidth}{p{0.78\mpwidth}  r}
-    \textcolor{black}{\textbf{#2}} & \textcolor{maincol}{#1} \\
+  \begin{tabular*}{1\mpwidth}{@{}p{0.84\mpwidth}@{\hspace{0.01\mpwidth}}r@{}}
+    \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \cvdate{#1} \\
    \textcolor{maincol}{\textbf{#3}} & \\
   \end{tabular*}\\[-2pt]
   \ifthenelse{\isempty{#4}}{}{
@@ -349,14 +349,17 @@
  \vspace{2pt}
 }
 
+% time-frame of an entry: pale grey box flush with the right margin
+\newcommand{\cvdate}[1]{\colorbox{lightcol}{\makebox[0.15\mpwidth]{\textcolor{darkcol}{#1}}}}
+
 % audience tag of a talk, one wording for all
 \newcommand{\aud}[1]{\textcolor{darkcol!75}{\textit{Audience: #1.}}}
 
 %----------------------------------------------------------------------------------------
 %  CV SHORT EVENT: one line, title and time-frame only
 \newcommand{\cvshort}[2] {
- \begin{tabular*}{1\mpwidth}{p{0.78\mpwidth}  r}
-   \textcolor{black}{\textbf{#2}} & \textcolor{maincol}{#1} \\
+ \begin{tabular*}{1\mpwidth}{@{}p{0.84\mpwidth}@{\hspace{0.01\mpwidth}}r@{}}
+   \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \cvdate{#1} \\
  \end{tabular*}\\[1pt]
 }
 
@@ -441,10 +444,19 @@
 \vspace*{-1.25cm} % 1cm of white above the title band, matching the side margins
  
  \section{Header}
-{\sffamily\HUGE\textbf{\textcolor{darkcol}{Olivier Côté}}\hspace{8pt}{\LARGE\textcolor{darkcol!70}{ACAS}}}\\[6pt]
-{\large\textcolor{darkcol}{PhD Candidate in Actuarial Science, Université Laval}}\\[8pt]
-{\small Québec, Canada \enspace\textbar\enspace \href{mailto:olivier.cote.12@ulaval.ca}{olivier.cote.12@ulaval.ca} \enspace\textbar\enspace \href{https://olicoside.github.io/}{olicoside.github.io} \enspace\textbar\enspace \href{https://www.linkedin.com/in/olivier-cote-act/}{linkedin.com/in/olivier-cote-act}}\\[3pt]
-{\small Languages: Français (native), English (C1), Svenska (A1) \enspace\textbar\enspace Programming: R, Python, LaTeX}
+% HEADER-BEGIN
+{\sffamily\fcolorbox{white}{lightcol!50}{\begin{minipage}[c][3cm][c]{1\mpwidth}
+ \begin {center}
+  \HUGE{ \textbf{ \textcolor{darkcol}{ \uppercase{ Olivier Côté, }}}}\LARGE{\textbf{\textcolor{darkcol!80}{\uppercase{ACAS } } } }  \\[-4pt]
+  \textcolor{darkcol}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
+  \large{ \textcolor{darkcol} {PhD Candidate in Actuarial Science, Université Laval} }
+ \end {center}
+\end{minipage}}}\\[8pt]
+\begin{center}\small
+Québec, Canada \enspace\textbar\enspace \href{mailto:olivier.cote.12@ulaval.ca}{olivier.cote.12@ulaval.ca} \enspace\textbar\enspace \href{https://olicoside.github.io/}{olicoside.github.io} \enspace\textbar\enspace \href{https://www.linkedin.com/in/olivier-cote-act/}{linkedin.com/in/olivier-cote-act}\\[3pt]
+Languages: Français (native), English (C1), Svenska (A1) \enspace\textbar\enspace Programming: R, Python, LaTeX
+\end{center}
+% HEADER-END
  
 
 
