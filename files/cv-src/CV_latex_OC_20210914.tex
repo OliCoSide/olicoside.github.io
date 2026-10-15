@@ -324,7 +324,7 @@
  % if you need more control on page breaks, remove the parbox
  \parbox{\mpwidth}{
   \begin{tabular*}{1\mpwidth}{@{}p{0.84\mpwidth}@{\hspace{0.01\mpwidth}}r@{}}
-    \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \cvdate{#1} \\
+    \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{1.6pt}[rulecol] & \cvdate{#1} \\
    \textcolor{maincol}{\textbf{#3}} & \\
   \end{tabular*}\\[-2pt]
   \ifthenelse{\isempty{#4}}{}{
@@ -349,9 +349,12 @@
  \vspace{0pt}
 }
 
+% pale grey shared by the fill lines and the date boxes
+\colorlet{rulecol}{black!14}
+
 % time-frame of an entry: pale grey box flush with the right margin
 \newcommand{\cvdate}[1]{\tikz[baseline=(d.base)]{\node[inner sep=2pt, minimum width=0.15\mpwidth](d){\textcolor{darkcol}{#1}};
- \draw[black!25, line width=1pt] (d.north west) -- (d.south west) -- (d.south east);}}
+ \draw[rulecol, line width=1.6pt] (d.north west) -- (d.south west) -- (d.south east);}}
 
 % audience tag of a talk, one wording for all
 \newcommand{\aud}[1]{\mbox{\textcolor{darkcol!75}{\textit{Audience: #1.}}}}
@@ -360,7 +363,7 @@
 %  CV SHORT EVENT: one line, title and time-frame only
 \newcommand{\cvshort}[2] {
  \par\noindent\parbox{\mpwidth}{\begin{tabular*}{1\mpwidth}{@{}p{0.84\mpwidth}@{\hspace{0.01\mpwidth}}r@{}}
-   \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \cvdate{#1} \\
+   \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{1.6pt}[rulecol] & \cvdate{#1} \\
  \end{tabular*}}\par\vspace{1pt}
 }
 
