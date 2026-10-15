@@ -269,7 +269,9 @@
 \subsection{CV section}
 % Renders a a CV section headline with a nice underline in main color.
 % param 1: section title
+\usepackage{needspace} % keeps a section title with its first entry
 \newcommand{\cvsection}[1] {
+ \needspace{8\baselineskip}
  \vspace{14pt}
  \cvtext{
   \textbf{\LARGE{\textcolor{darkcol}{\uppercase{#1}}}}\\[-4pt]
@@ -543,16 +545,28 @@
 % }{}{}{}
 
 \cvevent
-{2023 - }
+{2023 - 2027}
 {PhD in Actuarial Science (GPA  : 4.17/4.33)}
 {Université Laval}
-{My thesis is on fairness in insurance in collaboration with one of the largest P\&C insurer in Canada. I am supervised by Prof. Marie-Pier Côté (Université Laval) and Prof. Arthur Charpentier (Université du Québec à Montréal).}{}{}{}
+{Thesis: \textit{A causal perspective on direct and indirect discrimination based on sensitive characteristics in insurance predictive models}. Supervised by Prof. Marie-Pier Côté (Université Laval) and Prof. Arthur Charpentier (Université du Québec à Montréal), in a Mitacs Accelerate partnership with one of the largest P\&C insurers in Canada. Initial thesis deposit planned for March 2027; defence expected in summer 2027.}{}{}{}
 
 \cvevent
-{2018 - 2023}
-{Bachelor's (GPA  : 4.17/4.33) and Master's degree (GPA  : 4.24/4.33) in Actuarial Science }
+{2021 - 2023}
+{Master's degree in Actuarial Science, research-based (GPA  : 4.24/4.33)}
+{Université Laval}
+{Supervised by Prof. Marie-Pier Côté and Prof. Arthur Charpentier.}{}{}{}
+
+\cvevent
+{2018 - 2021}
+{Bachelor's degree in Actuarial Science (GPA  : 4.17/4.33)}
 {Université Laval}
 {}{}{}{}
+
+\cvevent
+{2023 - 2026}
+{Research visits}
+{Stockholm University, University of Toronto, Bayes Business School}
+{\cvlist{\item Department of Mathematics, Stockholm University (two weeks, January 2026): invited seminar and research discussions with Prof. Mathias Millberg Lindholm. \item Department of Statistics, University of Toronto (2025): invited seminar. \item Bayes Business School, London (one week, 2023): research discussions with Prof. Andreas Tsanakas.}}{}{}{}
 
 
 
@@ -580,7 +594,7 @@
 
  \vspace*{-0.25cm}
 
- \cvlist{ \item Winner of the \href{https://actuary.org/ph-d-candidate-olivier-cote-receives-2026-american-academy-of-actuaries-research-award/}{ American Academy of Actuaries Award for Research 2026}}
+ \cvlist{ \item Winner of the \href{https://actuary.org/ph-d-candidate-olivier-cote-receives-2026-american-academy-of-actuaries-research-award/}{ American Academy of Actuaries Award for Research 2026} \item Selected by the National Association of Insurance Commissioners (NAIC) for its 2026 webinar series for U.S. insurance regulators and their actuarial staff}
 
  \vspace*{-0.25cm}
 
@@ -598,6 +612,15 @@
  \cvlist{ \item Finalist for the \href{https://actuary.org/publication-issue/blog-academy-recognizes-anti-discrimination-paper-with-research-award/}{ American Academy of Actuaries Award for Research 2025}}
 
  \vspace*{-0.25cm}
+
+\section{Work in progress}
+\cvsection{Work in progress}
+
+\cvtext{\textbf{Côté, Olivier}, Charpentier, A., Côté, M.-P., and Il Idrissi, M. A definition of confounding bias for arbitrary statistical functionals. Working paper, in preparation.}
+
+\vspace*{0.25cm}
+
+\cvtext{\textbf{Côté, Olivier}, Côté, M.-P., Charpentier, A., and Il Idrissi, M. Profiling actuarial discrimination via causal decomposition. Working paper, presented at the 29th International Congress on Insurance: Mathematics and Economics, Seoul (2026).}
 
 
 
@@ -637,7 +660,6 @@
 %---------------------------------------------------------------------------------------
 % WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
-\newpage 
 
 \section{Professional designations}
 \cvsection{Professional Designations}
@@ -705,16 +727,16 @@
     \item Winter 2023, 54 students enrolled
 \end{itemize}
  \end{itemize}
- }{}{}{Faculty of Science and Engineering Teaching Star (2022-2023).}
+ }{}{}{Faculty of Science and Engineering Teaching Star, one per course (fall 2022 and winter 2023).}
 %Students left over 93\% positive feedbacks about course planning, pedagogy, teacher and evaluation.
 
 \cvevent
- {2019 - 2026}
+ {2019 - 2025}
  {American football coach}
  {Falcons of Cégep de Lévis}
- {American football coach for different teams since 2012 (10 years). I am coaching collegiate D2 for Cégep de Lévis since 2019 : 
- \cvlist{\item Tight ends and Fullbacks coach (2019-2026)  \item Supervisor for a bachelor's degree intern in sports intervention (2023)
- }}{}{}{Coaching Staff of the year 2023 and 2024. Coaching Staff Sportsmanship Award 2022 (D1) and 2023 (D2).}
+ {American football coach for different teams for more than ten years (2012--2025), including seven years in collegiate football at the Cégep de Lévis (2019--2025): 
+ \cvlist{\item Tight ends and Fullbacks coach (2019-2025), responsible for the development of 10 athletes \item Supervisor for a bachelor's degree intern in sports intervention (2023) \item Volunteer mathematics tutor for student-athletes
+ }}{}{}{RSEQ Coaching Staff of the Year 2023, 2024; Sportsmanship Award 2022 (D1), 2023 (D2).}
 
 % \item Assistant offensive line coach (2019-2021)
 %  \item Assistant offensive coordinator (2022-present)
@@ -722,7 +744,7 @@
  {2019 - 2024}
  {Teaching assistant}
  {Université Laval}
- {Teaching assistants on several occasions : \cvlist{
+ {Teaching assistant on several occasions: \cvlist{
  \item Evaluator for actuarial student internships (1 time)
  \item Probabilistic Analysis of Actuarial Risks (3 times) 
  \item Statistical Learning in Actuarial Science (5 times)
@@ -734,7 +756,43 @@
  {2019 - 2021}
  {Actuarial intern}
  {Desjardins General Insurance Group}
- {Intern for Property Ratemaking (2019), Business analysis (2020 and 2021), and Research (2021).}{}{}{}
+ {Four internships, May 2019 to August 2021: Property Ratemaking (2019), Business analysis (2020 and 2021), and Research (2021).}{}{}{}
+
+\section{Supervision and mentoring}
+\cvsection{Supervision and mentoring}
+
+\cvevent
+ {2025 - 2026}
+ {Mentor of a master's student, University of Texas}
+ {On the recommendation of a Hickman Scholars Program colleague}
+ {Advised the student's essay on an insurance regulatory issue, and connected the student with a Texas insurance regulator.}{}{}{}
+
+\cvevent
+ {2023}
+ {Co-supervisor of a master's student, Université Laval}
+ {With Prof. Marie-Pier Côté}
+ {One-year project on fairness in insurance; the student now works as an actuary in the insurance industry.}{}{}{}
+
+\cvevent
+ {Ongoing}
+ {Mentor of a doctoral student, Université Laval}
+ {Mitacs Accelerate partnership}
+ {Mentored the doctoral student who continues the industrial partnership, and helped design the student's thesis project.}{}{}{}
+
+\section{Engagement with practice and policy}
+\cvsection{Engagement with practice and policy}
+
+\cvevent
+ {2025 - 2026}
+ {Online course on fair insurance pricing, English and French versions}
+ {Casualty Actuarial Society (in post-production)}
+ {Commissioned by the CAS; with Marie-Pier Côté and Arthur Charpentier. We defined the learning objectives and recorded 50 minutes of two-minute videos; with interactive activities and quizzes, the course lasts two hours. Co-author and co-presenter, with equal screen time.}{}{}{}
+
+\cvevent
+ {2023 - 2026}
+ {Regulators, insurers and public bodies}
+ {Canada, United States, Switzerland}
+ {\cvlist{\item Met insurance regulators in person in Canada, the United States and Switzerland to present the state of the research. \item Provided input, in person, to the Swiss Federal Statistical Office and the ETH Zurich AI Policy Lab on a governmental framework for fair predictive models in employment. \item Presented at the internal annual actuarial conferences of three insurers. \item Three companies contacted me for technical details on implementing the toolbox with their own data.}}{}{}{}
 % Four internships in different teams for Desjardins General Insurance Group. I developed business knowledge, communication skills and data science expertise : 
 
 
@@ -760,10 +818,16 @@
  {}{}{}{}
 
 
-\newpage
+
 
 \section{Scholarships and Awards}
 \cvsection{Scholarships and Awards}
+
+\cvevent
+ {2025, 2026}
+ {Award for Research}
+ {American Academy of Actuaries}
+ {Winner in 2026 (US\$7~500 honorarium) for \textit{A scalable toolbox for exposing indirect discrimination in insurance rates}; finalist in 2025 for \textit{A fair price to pay: Exploiting causal graphs for fairness in insurance}. Annual international competition for papers by early-career scholars.}{}{}{}
 
 \cvevent
  {2026}
@@ -789,28 +853,28 @@
  {2025}
  {Canada Graduate Research Scholarship -- Doctoral}
  {Natural Sciences and Engineering Research Council of Canada}
- {This competitive scholarship that amounts to \$ 120~000 CAD on three years.}{}{}{}
+ {National competition, \$120~000 CAD over three years (\$40~000 per year), held from May 2025.}{}{}{}
 
 \cvevent
  {2024, 2025, 2026}
  {Hickman Scholars Program}
  {Society of Actuaries}
- {A competitive international scholarship that amounts to 20~000 USD per year. Every renewal is competitive.}{}{}{}
+ {International competition, US\$20~000 per year for three years (US\$60~000 in total). Every annual renewal is competitive.}{}{}{}
 
 
 \cvevent
  {2024}
  {Doctoral Training Scholarships}
- {Fonds de recherche du Québec (Nature et techologies)}
- {This competitive scholarship that amounts to \$ 100~000 CAD on four years.}{}{}{}
+ {Fonds de recherche du Québec -- Nature et technologies}
+ {Provincial competition, \$100~000 CAD offered over four years; held from May 2024 to May 2025, when the NSERC doctoral scholarship began.}{}{}{}
 
 
 
 \cvevent
  {2024}
- {Project partnership fund}
- {MITACS}
- {This fund was negotiated with an industrial partner that amounts to \$ 84~000 CAD on three years.}{}{}{}
+ {Mitacs Accelerate}
+ {Mitacs}
+ {Research partnership with a large Canadian P\&C insurer, \$84~000 CAD over three years (2024--2027), in which I am the lead student researcher. Selected after a scientific peer review and an internal Mitacs review.}{}{}{}
 
 
 
@@ -833,16 +897,16 @@
 \cvevent
  {2023}
  {Charles Brindamour Graduate Scholarship for Excellence}
- {Charles Brindamour (Intact CEO)}
- {Competitive scholarship based on excellence amounts to \$10~000 CAD.}{}{}{}
+ {Université Laval, funded by Charles Brindamour (CEO of Intact Financial Corporation)}
+ {Institutional competition based on excellence, one award a year, \$10~000 CAD.}{}{}{}
 
 
 
 \cvevent
  {2022}
  {François-Laviolette Scholarship}
- {François-Laviolette Scholarship fund}
- {Competitive scholarship to promoting the development of responsible AI. This award amounts to \$7~500 CAD.}{}{}{}
+ {Université Laval}
+ {Institutional competition aimed at the development of responsible artificial intelligence, \$7~500 CAD.}{}{}{}
  
 
 
@@ -858,23 +922,23 @@
  {2021}
  {CAS Trust Scholarship}
  {Casualty Actuarial Society}
- {A highly competitive international scholarship competition that amounts to \$2~500 USD.}{}{}{}
+ {International competition, US\$2~500.}{}{}{}
 
 
 
 \cvevent
  {2021}
- {Alexander-Graham-Bell Scholarship}
- {Natural Sciences and Engineering Research Council}
- {Competition for the 2021-2022 cohort of graduate scholarships that amounts to \$17~500 CAD.}{}{}{}
+ {Alexander Graham Bell Canada Graduate Scholarship -- Master's}
+ {Natural Sciences and Engineering Research Council of Canada}
+ {National competition, \$17~500 CAD.}{}{}{}
 
 
 
 \cvevent
  {2018}
- {Lieutenant-Governor's Medal}
+ {Lieutenant Governor's Youth Medal}
  {Cégep de Lévis}
- {Awarded to a student whose involvement and academic results are distinguishable.}{}{}{}
+ {Awarded to a student whose involvement and academic results stand out; nominated by the Cégep's teaching staff.}{}{}{}
 
 
 
@@ -941,7 +1005,7 @@
 \vspace*{-0.05cm}
 
 
-\cvevent{2026}{A Scalable Toolbox for Exposing Indirect Discrimination In Insurance Rates}{ASTIN Bulletin Conference, Zurich (Switzerland)}{Speaker at one of the fairness session at the ASTIN Bulletin conference \textbf{(Audience: academics).}}{}{}{}
+\cvevent{2026}{A Scalable Toolbox for Exposing Indirect Discrimination In Insurance Rates}{ASTIN Bulletin Conference, Zurich (Switzerland)}{Speaker at one of the fairness sessions of the first ASTIN Bulletin Conference \textbf{(Audience: academics).}}{}{}{}
 
 
 \vspace*{-0.05cm}
@@ -958,8 +1022,8 @@
 \cvevent
  {2025}
  {Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}
- {Casualty Actuarial Society Canada Connect Day, Toronto (Canada) \& Annual Meeting, Austin (United States)}
- {Presenter to over 120 actuaries and policymakers at each event. \textbf{(Audience: end-users)}}{}{}{}
+ {Casualty Actuarial Society Annual Meeting, Austin (United States) \& Canada Connect Day, Toronto (Canada)}
+ {Invited presenter to over 150 (Austin) and over 100 (Toronto) actuaries and policymakers. \textbf{(Audience: end-users)}}{}{}{}
 
 
 \vspace*{-0.05cm}
@@ -974,7 +1038,7 @@
 
 \vspace*{-0.05cm}
 
-\cvevent{2025}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), Liverpool (U.K.)}{Presenter to over 60 young researchers from academia. \textbf{(Audience: academics)}}{}{}{}
+\cvevent{2025}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), Liverpool (U.K.)}{Presenter to 60 doctoral students from 29 countries. \textbf{(Audience: academics)}}{}{}{}
 
 
 \vspace*{-0.05cm}
@@ -983,7 +1047,7 @@
  {2025}
  {Une boîte à outils pour dévoiler la discrimination indirecte dans les tarifs d'assurance}
  {Chaire ACTIONS \& Milliman R\&D, Paris (France)}
- {Guest co-presenter (with Arthur) to audiences from academia and industry. \textbf{(Audience: general)}}{}{}{}
+ {Guest co-presenter (with Arthur) to audiences from academia and industry (80 participants at the Chaire ACTIONS). \textbf{(Audience: general)}}{}{}{}
 
 
 \vspace*{-0.05cm}
@@ -1003,7 +1067,7 @@
 
 \vspace*{-0.05cm}
 
-\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Autorité des marchés financiers}{Presentation to decision-makers at Québec's financial autority. \textbf{(Audience: decision-makers)}}{}{}{}
+\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Autorité des marchés financiers}{Presentation to decision-makers at Québec's financial authority, followed by interviews with ten regulators on their needs. \textbf{(Audience: decision-makers)}}{}{}{}
 
 
 
@@ -1027,7 +1091,7 @@
 
 
 
-\newpage
+
 
 \section{Public Outreach}
 \cvsection{Public Outreach}
@@ -1072,13 +1136,30 @@
 
 \vspace*{-0.35cm}
 
+\section{Organizing}
+\cvsection{Organizing}
+
+ \cvevent
+ {2026}
+ {Workshop on fairness and discrimination in insurance}
+ {Université Laval, 6--7 October 2026}
+ {Member of the organizing committee.}{}{}{}
+
+ \cvevent
+ {2025}
+ {Quantact Student Day}
+ {Province-wide event, 3 October 2025}
+ {Organizer: recruited a five-member committee, coordinated seven presenters and hosted sixty students.}{}{}{}
+
+\vspace*{-0.35cm}
+
 \section{Committees}
 \cvsection{Committees}
 
  \cvevent
  {2025 - present}
  {Institut Intelligence et Données, Université Laval}
- {Voting member of the Committee}
+ {Voting member of the board}
  {}{}{}{}
 
  \cvevent
