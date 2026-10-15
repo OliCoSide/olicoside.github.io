@@ -329,9 +329,9 @@
  % we wrap this part in a parbox, so title and description are not separated on a pagebreak
  % if you need more control on page breaks, remove the parbox
  \parbox{\textwidth}{
-  \begin{tabular*}{\textwidth}{@{}p{\dimexpr\textwidth-\cvdatew+1.2pt\relax}@{}r@{}}
-    \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{1.6pt}[rulecol] & \cvdate{#1} \\
-   \textcolor{maincol}{\textbf{#3}} & \\
+  \begin{tabular*}{\textwidth}{@{}p{\textwidth}@{}}
+    \textcolor{black}{\textbf{#2}}\cvleader\makebox[\cvdatew][r]{\textcolor{darkcol}{#1}} \\
+   \textcolor{maincol}{\textbf{#3}} \\
   \end{tabular*}\\[-2pt]
   \ifthenelse{\isempty{#4}}{}{
    \cvtext{#4}\\
@@ -356,10 +356,14 @@
 }
 
 % width of the date boxes; the title column takes the rest of the text width
-\newlength{\cvdatew}\AtBeginDocument{\setlength{\cvdatew}{0.15\textwidth}}
+\newlength{\cvdatew}\AtBeginDocument{\settowidth{\cvdatew}{2025--present}}
 
 % pale grey shared by the fill lines and the date boxes
 \colorlet{rulecol}{black!14}
+
+% leader from the title to the date: centred dots (as \cdots) on a fixed
+% 0.5em grid, so the dots line up vertically from one entry to the next
+\newcommand{\cvleader}{\textcolor{black!40}{\leaders\hbox to 0.5em{\hss\raisebox{0.5ex}{\scalebox{0.8}{.}}\hss}\hfill}\hspace{0.5em}}
 
 % time-frame of an entry: pale grey box flush with the right margin
 % the left rule rises to the fill line, so line and box form one stroke
@@ -372,8 +376,8 @@
 %----------------------------------------------------------------------------------------
 %  CV SHORT EVENT: one line, title and time-frame only
 \newcommand{\cvshort}[2] {
- \par\noindent\parbox{\textwidth}{\begin{tabular*}{\textwidth}{@{}p{\dimexpr\textwidth-\cvdatew+1.2pt\relax}@{}r@{}}
-   \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{1.6pt}[rulecol] & \cvdate{#1} \\
+ \par\noindent\parbox{\textwidth}{\begin{tabular*}{\textwidth}{@{}p{\textwidth}@{}}
+   \textcolor{black}{\textbf{#2}}\cvleader\makebox[\cvdatew][r]{\textcolor{darkcol}{#1}} \\
  \end{tabular*}}\par\vspace{1pt}
 }
 
