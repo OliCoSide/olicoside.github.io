@@ -14,15 +14,14 @@ A PDF version is available [here]({{ base_path }}/files/CV_OlivierCote_ENG_prod.
 Education
 ======
 * Ph.D. in Actuarial Science, Université Laval, 2023 – 2027 (defence expected in summer 2027)
-  * Thesis: *A causal perspective on direct and indirect discrimination based on sensitive characteristics in insurance predictive models*
-  * Supervised by Prof. Marie-Pier Côté (Université Laval) and Prof. Arthur Charpentier (UQÀM), in a Mitacs Accelerate partnership with one of the largest P&C insurers in Canada
+  * Fairness in insurance pricing, supervised by Prof. Marie-Pier Côté (Université Laval) and Prof. Arthur Charpentier (UQÀM)
 * M.Sc. in Actuarial Science (research-based), Université Laval, 2021 – 2023
 * B.Sc. in Actuarial Science, Université Laval, 2018 – 2021
 
 Research visits
 ======
 * Department of Mathematics, Stockholm University (two weeks, January 2026): invited seminar and research discussions with Prof. Mathias Millberg Lindholm
-* Department of Statistics, University of Toronto (2025): invited seminar
+* Department of Statistics, University of Toronto (2025): invited seminar and research discussions with Prof. Christopher Blier-Wong
 * Bayes Business School, London (one week, 2023): research discussions with Prof. Andreas Tsanakas
 
 Professional designations
@@ -58,27 +57,25 @@ Experience
 * **Actuarial Intern**, Desjardins General Insurance Group, 2019 – 2021
   * Four internships: property ratemaking (2019), business analysis (2020, 2021), and research (2021)
 * **American Football Coach**, Falcons of Cégep de Lévis (collegiate D2), 2019 – 2025
-  * Tight ends and fullbacks coach, responsible for the development of 10 athletes; volunteer mathematics tutor for student-athletes
+  * Tight ends and fullbacks coach, responsible for the development of 10 athletes, volunteer mathematics tutor for student-athletes
   * Coaching Staff of the Year 2023 and 2024, RSEQ
 
 Supervision and mentoring
 ======
-* Mentor of a University of Texas master's student on an essay addressing an insurance regulatory issue, 2025 – 2026
+* Mentor of a University of Texas master's student, essay on an insurance regulatory issue, 2025 – 2026
 * Co-supervisor, with Prof. Marie-Pier Côté, of a master's student on a one-year fairness project, 2023
 * Supervisor of the PhD student who continues the Mitacs Accelerate partnership
 
 Engagement with practice and policy
 ======
-* Online course on fair insurance pricing, commissioned by the Casualty Actuarial Society, English and French versions (in post-production), 2025 – 2026
+* Online course on fair insurance pricing, commissioned by the Casualty Actuarial Society, English and French versions (in post-production), 2025 – 2026: project lead and script writer, coordinating a research assistant, the CAS task force on biases, the CAS educational development team and a production company
 * In-person input to the Swiss Federal Statistical Office and the ETH Zurich AI Policy Lab on a governmental framework for fair predictive models in employment
 * Interviews with ten regulators at the Autorité des marchés financiers, 2024
 * *A scalable toolbox for exposing indirect discrimination in insurance rates* selected by the NAIC for its 2026 webinar series for U.S. insurance regulators
 
 Selected scholarships and awards
 ======
-SEK equivalents at the European Central Bank reference rates of 14 October 2026 (1 CAD ≈ 7.01 SEK; 1 USD ≈ 9.97 SEK).
-
-* Award for Research, American Academy of Actuaries: winner, 2026 (US$7,500 ≈ 75,000 SEK honorarium); finalist, 2025
+* Award for Research, American Academy of Actuaries: winner, 2026 (US$7,500 ≈ 75,000 SEK honorarium)
 * Travel grant, NSERC General Fund ($1,300 CAD ≈ 9,100 SEK), 2026
 * Actuarial Research Conference 2026 Travel Grant, American Academy of Actuaries ($1,500 USD ≈ 15,000 SEK), 2026
 * Student travel grant, Big Data Research Center ($2,000 CAD ≈ 14,000 SEK), 2026
@@ -109,7 +106,7 @@ Teaching
 
 Service
 ======
-* Organizing committee, Workshop on fairness and discrimination in insurance, Université Laval, October 2026
+* Organizing committee, Workshop on fairness and discrimination in insurance (90 participants), Université Laval, October 2026: host of the second day, panel moderator and presenter
 * Organizer, Quantact Student Day (five-member committee, seven presenters, sixty students), October 2025
 * Referee, *Journal of Risk and Insurance* (2024 – present), *Annals of Actuarial Science* (2026 – present), and *European Actuarial Journal* (2026 – present)
 * Voting member, board of the Institut intelligence et données, Université Laval, 2025 – present
@@ -119,7 +116,8 @@ Service
 
 Research affiliations
 ======
-* Institut intelligence et données and Big Data Research Center (Université Laval); Quantact research laboratory and Centre de recherches mathématiques (Montréal), 2021 – present
+* Institut intelligence et données and Big Data Research Center, Université Laval, 2021 – present
+* Quantact research laboratory and Centre de recherches mathématiques, Montréal, 2021 – present
 
 Languages
 ======
