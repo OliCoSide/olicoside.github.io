@@ -328,15 +328,13 @@
  
  % we wrap this part in a parbox, so title and description are not separated on a pagebreak
  % if you need more control on page breaks, remove the parbox
- \parbox{\textwidth}{
-  \begin{tabular*}{\textwidth}{@{}p{\textwidth}@{}}
-    \textcolor{black}{\textbf{#2}}\cvleader\makebox[\cvdatew][r]{\textcolor{darkcol}{#1}} \\
-   \textcolor{maincol}{\textbf{#3}} \\
-  \end{tabular*}\\[-2pt]
-  \ifthenelse{\isempty{#4}}{}{
-   \cvtext{#4}\\
-  }
- }
+ % title line, subtitle and description stacked as plain paragraphs: the gap
+ % after an entry is the same whatever the length of its description
+ \par\noindent\parbox[t]{\textwidth}{%
+  \noindent\textcolor{black}{\textbf{#2}}\cvleader\textcolor{darkcol}{#1}\par
+  \ifthenelse{\isempty{#3}}{}{\noindent\textcolor{maincol}{\textbf{#3}}\par}%
+  \ifthenelse{\isempty{#4}}{}{\vspace{1pt}\noindent #4\par}%
+ }\par\vspace{8pt}
  
  \ifthenelse{\isempty{#5}}{}{
   \vspace{3pt}
@@ -363,7 +361,7 @@
 
 % leader from the title to the date: centred dots (as \cdots) on a fixed
 % 0.5em grid, so the dots line up vertically from one entry to the next
-\newcommand{\cvleader}{\textcolor{black!40}{\leaders\hbox to 0.5em{\hss\raisebox{0.5ex}{\scalebox{0.8}{.}}\hss}\hfill}\hspace{0.5em}}
+\newcommand{\cvleader}{\textcolor{black!40}{\leaders\hbox to 0.5em{\hss\raisebox{0.5ex}{\scalebox{0.8}{.}}\hss}\hfill}\hspace{0.15em}}
 
 % time-frame of an entry: pale grey box flush with the right margin
 % the left rule rises to the fill line, so line and box form one stroke
@@ -377,7 +375,7 @@
 %  CV SHORT EVENT: one line, title and time-frame only
 \newcommand{\cvshort}[2] {
  \par\noindent\parbox{\textwidth}{\begin{tabular*}{\textwidth}{@{}p{\textwidth}@{}}
-   \textcolor{black}{\textbf{#2}}\cvleader\makebox[\cvdatew][r]{\textcolor{darkcol}{#1}} \\
+   \textcolor{black}{\textbf{#2}}\cvleader\textcolor{darkcol}{#1} \\
  \end{tabular*}}\par\vspace{1pt}
 }
 
@@ -505,7 +503,7 @@
 {2023--2026}
 {Research visits}
 {Stockholm University, University of Toronto, Bayes Business School}
-{\cvlist{\item Department of Mathematics, Stockholm University (two weeks, January 2026): invited seminar and research discussions with Prof. Mathias Millberg Lindholm. \item Department of Statistics, University of Toronto (2025): invited seminar and research discussions with Prof. Christopher Blier-Wong. \item Bayes Business School, London (one week, 2023): research discussions with Prof. Andreas Tsanakas.}}{}{}{}
+{\cvlist{\item Department of Mathematics, Stockholm University (two weeks, January 2026): seminar and research discussions with Prof. Mathias Millberg Lindholm. \item Department of Statistics, University of Toronto (2025): seminar and research discussions with Prof. Christopher Blier-Wong. \item Bayes Business School, London (one week, 2023): research discussions with Prof. Andreas Tsanakas.}}{}{}{}
 
 
 
@@ -795,17 +793,17 @@
 \section{Academic Communications}
 \cvsection{Academic communications}
 
-\cvevent{2025--2026}{Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}{Casualty Actuarial Society and University of Toronto}{Sole presenter at a 90-minute CAS webinar (2026, 950 registrants). Presented at the CAS Annual Meeting in Austin (2025, over 150 participants) and at the CAS Canada Connect Day in Toronto (2025, over 100). Invited seminar at the Department of Statistics, University of Toronto (2025). \aud{practitioners and academics}}{}{}{}
+\cvevent{2025--2026}{Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}{Casualty Actuarial Society and University of Toronto}{Sole presenter at a 90-minute CAS webinar (2026, 950 registrants). Presented at the CAS Annual Meeting in Austin (2025, over 150 participants) and at the CAS Canada Connect Day in Toronto (2025, over 100). Seminar at the Department of Statistics, University of Toronto (2025). \aud{practitioners and academics}}{}{}{}
 
 \cvevent{2025--2026}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{International conferences and invited talks}{Presented at the first ASTIN Bulletin Conference in Zurich (2026) and at PARTY in Liverpool (2025, 60 doctoral students from 29 countries). Presented in French with Arthur Charpentier at the Chaire ACTIONS and Milliman R\&D in Paris (2025, 80 participants). \aud{academics and practitioners}}{}{}{}
 
-\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{Conferences and seminars}{Talk at the 29th International Congress on Insurance: Mathematics and Economics in Seoul and poster at the Actuarial and Financial Mathematics Conference in Brussels. Invited seminar at STATQAM, UQÀM, also covering confounding bias, and research talk at the Big Data Research Center, Université Laval. \aud{academics}}{}{}{}
+\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{Conferences and seminars}{Talk at the 29th International Congress on Insurance: Mathematics and Economics in Seoul and poster at the Actuarial and Financial Mathematics Conference in Brussels. Seminar at STATQAM, UQÀM, also covering confounding bias, and research talk at the Big Data Research Center, Université Laval. \aud{academics}}{}{}{}
 
 \cvevent{2026}{The Trilemma of Fairness in P\&C Pricing}{American Academy of Actuaries and AAIARD}{Invited session of the American Academy of Actuaries at the 61st Actuarial Research Conference. Presented in French to the Association des actuaires en IARD du Québec as \textit{Le trilemme de l'équité en tarification IARD}. \aud{decision-makers and practitioners}}{}{}{}
 
 \cvevent{2026}{Bias in Assessing Financial Risk: Insights from the 2025 Research Award}{\href{https://www.actuary.org/event/bias-assessing-financial-risk-insights-2025-research-award}{American Academy of Actuaries}}{Invited panelist as a 2025 finalist. Webinar to 445 actuaries and practitioners. \aud{practitioners}}{}{}{}
 
-\cvevent{2026}{A Causal Perspective on Fairness in Insurance Pricing}{Department of Mathematics, Stockholm University}{Invited seminar during research stay. \aud{academics}}{}{}{}
+\cvevent{2026}{A Causal Perspective on Fairness in Insurance Pricing}{Department of Mathematics, Stockholm University}{Seminar during research stay. \aud{academics}}{}{}{}
 
 \cvevent{2025}{Two invited presentations at the 60th Actuarial Research Conference}{American Academy of Actuaries panel \& Casualty Actuarial Society session, Toronto}{Guest panelist and presenter with Marie-Pier Côté and Arthur Charpentier. \aud{decision-makers}}{}{}{}
 
