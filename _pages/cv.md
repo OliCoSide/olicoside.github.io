@@ -64,7 +64,7 @@ Experience
 
 Supervision
 ======
-* Co-supervisor, with Prof. Marie-Pier Côté, of a PhD student in the Mitacs Accelerate partnership (negotiated the student's Mitacs funding with the industrial partner), 2025 – present
+* Co-supervisor, with Prof. Marie-Pier Côté, of a PhD student in the Mitacs Accelerate partnership (participated in negotiating the student's Mitacs funding with the industrial partner), 2025 – present
 * Co-supervisor, with Prof. Marie-Pier Côté, of a master's student on a one-year fairness project, 2023
 
 Selected scholarships and awards
