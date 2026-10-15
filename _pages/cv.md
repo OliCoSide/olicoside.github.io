@@ -65,7 +65,7 @@ Supervision and mentoring
 ======
 * Mentor of a University of Texas master's student on an essay addressing an insurance regulatory issue, 2025 – 2026
 * Co-supervisor, with Prof. Marie-Pier Côté, of a master's student on a one-year fairness project, 2023
-* Mentor of the doctoral student who continues the Mitacs Accelerate partnership
+* Supervisor of the PhD student who continues the Mitacs Accelerate partnership
 
 Engagement with practice and policy
 ======
@@ -76,21 +76,23 @@ Engagement with practice and policy
 
 Selected scholarships and awards
 ======
-* Award for Research, American Academy of Actuaries: winner, 2026 (US$7,500 honorarium); finalist, 2025
-* Travel grant, NSERC General Fund ($1,300 CAD), 2026
-* Actuarial Research Conference 2026 Travel Grant, American Academy of Actuaries ($1,500 USD), 2026
-* Student travel grant, Big Data Research Center ($2,000 CAD), 2026
-* NSERC Canada Graduate Research Scholarship – Doctoral ($120,000 CAD), 2025
-* Hickman Scholars Program, Society of Actuaries (US$20,000/year, three competitive years), 2024 – 2026
-* FRQNT Doctoral Training Scholarship ($100,000 CAD), 2024
-* Mitacs Accelerate, research partnership with a large Canadian P&C insurer, lead student researcher ($84,000 CAD), 2024 – 2027
-* Doctorate attraction grant Florent Toureille, Chaire d'actuariat de l'Université Laval ($30,000 CAD), 2023
-* Leadership and Engagement Scholarship, Université Laval ($30,000 CAD), 2023
-* Charles Brindamour Graduate Scholarship for Excellence ($10,000 CAD), 2023
-* François-Laviolette Scholarship for responsible AI ($7,500 CAD), 2022
-* CAS Trust Scholarship, Casualty Actuarial Society (2,500 USD), 2021
-* Grant of attraction to the Master's, Chaire d'actuariat de l'Université Laval ($15,000 CAD), 2021
-* NSERC Alexander Graham Bell Canada Graduate Scholarship – Master's ($17,500 CAD), 2021
+SEK equivalents at the European Central Bank reference rates of 14 October 2026 (1 CAD ≈ 7.01 SEK; 1 USD ≈ 9.97 SEK).
+
+* Award for Research, American Academy of Actuaries: winner, 2026 (US$7,500 ≈ 75,000 SEK honorarium); finalist, 2025
+* Travel grant, NSERC General Fund ($1,300 CAD ≈ 9,100 SEK), 2026
+* Actuarial Research Conference 2026 Travel Grant, American Academy of Actuaries ($1,500 USD ≈ 15,000 SEK), 2026
+* Student travel grant, Big Data Research Center ($2,000 CAD ≈ 14,000 SEK), 2026
+* NSERC Canada Graduate Research Scholarship – Doctoral ($120,000 CAD ≈ 841,000 SEK), 2025
+* Hickman Scholars Program, Society of Actuaries (US$20,000 ≈ 199,000 SEK/year, three competitive years), 2024 – 2026
+* FRQNT Doctoral Training Scholarship ($100,000 CAD ≈ 701,000 SEK), 2024
+* Mitacs Accelerate, research partnership with a large Canadian P&C insurer, lead student researcher ($84,000 CAD ≈ 589,000 SEK), 2024 – 2027
+* Doctorate attraction grant Florent Toureille, Chaire d'actuariat de l'Université Laval ($30,000 CAD ≈ 210,000 SEK), 2023
+* Leadership and Engagement Scholarship, Université Laval ($30,000 CAD ≈ 210,000 SEK), 2023
+* Charles Brindamour Graduate Scholarship for Excellence ($10,000 CAD ≈ 70,000 SEK), 2023
+* François-Laviolette Scholarship for responsible AI ($7,500 CAD ≈ 53,000 SEK), 2022
+* CAS Trust Scholarship, Casualty Actuarial Society (2,500 USD ≈ 25,000 SEK), 2021
+* Grant of attraction to the Master's, Chaire d'actuariat de l'Université Laval ($15,000 CAD ≈ 105,000 SEK), 2021
+* NSERC Alexander Graham Bell Canada Graduate Scholarship – Master's ($17,500 CAD ≈ 123,000 SEK), 2021
 * Lieutenant Governor's Youth Medal, Cégep de Lévis, 2018
 
 Talks
@@ -117,11 +119,8 @@ Service
 
 Research affiliations
 ======
-* Institut intelligence et données, Université Laval, 2021 – present
-* Big Data Research Center, Université Laval, 2021 – present
-* Quantact research laboratory, 2021 – present
-* Centre de recherches mathématiques, 2021 – present
+* Institut intelligence et données and Big Data Research Center (Université Laval); Quantact research laboratory and Centre de recherches mathématiques (Montréal), 2021 – present
 
 Languages
 ======
-* French (mother tongue), English (advanced), Swedish (beginner, < 1 year)
+* Français (mother tongue), English (advanced), Svenska (beginner, < 1 year)
