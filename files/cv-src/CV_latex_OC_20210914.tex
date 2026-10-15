@@ -279,15 +279,15 @@
 % air above the title, the title close to its content
 \newif\ifcvafterevent
 \newcommand{\cvsection}[1] {
- \par\addvspace{12pt} % same gap above every section title, whatever ends the previous one
+ \par\addvspace{12pt plus 14pt} % same gap above every section title; it stretches so that a page ends at the bottom margin, whatever ends the previous one
  \ifcvafterevent\vspace{-3.3pt}\fi % an entry box sits lower than a one-line entry
  \global\cvaftereventfalse
- \needspace{5\baselineskip}
+ \Needspace*{5\baselineskip}
  \cvtext{
   {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-5pt]
   \textcolor{maincol}{\rule{0.15\textwidth}{2pt}}
     }
- \par\nointerlineskip\vspace{-1pt} % same gap under every section rule
+ \par\nointerlineskip\vspace{-3pt} % same gap under every section rule
  \global\cvfirsttrue
     % \xrfill[0ex]{2pt}[lightcol] %to add at 250
 }
@@ -342,7 +342,7 @@
   \ifthenelse{\isempty{#5}}{}{\vspace{1pt}\noindent #5\par}%
   \ifthenelse{\isempty{#6}}{}{\vspace{1pt}\noindent\textbf{Technologies include:} #6\par}%
   \ifthenelse{\isempty{#7}}{}{\vspace{2pt}\noindent{\small\textit{Awards:} #7}\par}%
- }\par\vspace{6pt} % same gap after every entry, awards line included
+ }\par\vspace{6pt plus 1.5pt} % same gap after every entry, awards line included
  \global\cvaftereventtrue
 }
 
@@ -432,6 +432,8 @@
 %
 %
 %============================================================================%
+\flushbottom
+\setlength{\parskip}{0pt}
 \begin{document}
 
 
@@ -951,5 +953,6 @@
 % \cvpaper{\textbf{Côté, O.}, Charpentier, A., Côté, M.-P., and Il Idrissi, M. A definition of confounding bias for arbitrary statistical functionals. Working paper, in preparation.}
 % \cvpaper{\textbf{Côté, O.}, Côté, M.-P., Charpentier, A., and Il Idrissi, M. Profiling actuarial discrimination via causal decomposition. Working paper, presented at the 29th International Congress on Insurance: Mathematics and Economics, Seoul.}
 
+\vspace{0pt plus -1fil} % fill the last page too
 \end{document}
 
