@@ -53,7 +53,7 @@ Experience
   * Statistical Learning in Actuarial Science (Winter 2023, 54 students)
   * Faculty of Science and Engineering Teaching Star, one per course
 * **Online course on fair insurance pricing, project lead and script writer**, Casualty Actuarial Society, 2025 – 2026
-  * Commissioned by the CAS, English and French versions (in post-production), coordinating a research assistant, the CAS task force on biases, the CAS educational development team and a production company
+  * Commissioned by the CAS, English and French versions (in post-production), coordinating the university team (authors and research assistants), the CAS task force on biases, the CAS educational development team and a production company
 * **Teaching Assistant**, Université Laval, 2019 – 2024
   * Statistical Learning in Actuarial Science (5 times), Probabilistic Analysis of Actuarial Risks (3 times), Linear Models in Actuarial Science, internship evaluation
 * **Actuarial Intern**, Desjardins General Insurance Group, 2019 – 2021
