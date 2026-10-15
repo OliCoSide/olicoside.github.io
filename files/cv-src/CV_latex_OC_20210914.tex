@@ -283,7 +283,7 @@
   {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-5pt]
   \textcolor{maincol}{\rule{0.15\textwidth}{2pt}}
     }
- \par\vspace{-2pt}
+ \par\nointerlineskip\vspace{5pt} % same gap under every section rule
     % \xrfill[0ex]{2pt}[lightcol] %to add at 250
 }
 
@@ -370,6 +370,9 @@
 
 % audience tag of a talk, one wording for all
 \newcommand{\aud}[1]{\mbox{\textcolor{darkcol!75}{\textit{Audience: #1.}}}}
+
+% a reference or working paper: plain paragraph, same gap before each
+\newcommand{\cvpaper}[1]{\par\addvspace{6pt}\noindent #1\par}
 
 %----------------------------------------------------------------------------------------
 %  CV SHORT EVENT: one line, title and time-frame only
@@ -503,7 +506,7 @@
 {2023--2026}
 {Research visits}
 {Stockholm University, University of Toronto, Bayes Business School}
-{\cvlist{\item Department of Mathematics, Stockholm University (two weeks, January 2026): seminar and research discussions with Prof. Mathias Millberg Lindholm. \item Department of Statistics, University of Toronto (2025): seminar and research discussions with Prof. Christopher Blier-Wong. \item Bayes Business School, London (one week, 2023): research discussions with Prof. Andreas Tsanakas.}}{}{}{}
+{\cvlist{\item Department of Mathematics, Stockholm University (2026): seminar and discussions with Prof. Mathias Millberg Lindholm. \item Department of Statistics, University of Toronto (2025): seminar and discussions with Prof. Christopher Blier-Wong. \item Bayes Business School, London (2023): discussions with Prof. Andreas Tsanakas.}}{}{}{}
 
 
 
@@ -515,54 +518,30 @@
 \cvsection{Research papers}
 
 
-\cvtext{\bibentry{Annual_rev}}
-
-\vspace*{0.25cm}
-
-\cvtext{\bibentry{Charpentier/al:2025_three}}
-
-\vspace*{0.25cm}
-
-\cvtext{\bibentry{SelectionBias_2024}} 
-
-\vspace*{0.25cm}
-
-\cvtext{\bibentry{A_scalable_toolbox}}
-
- \cvlist{ \item Winner of the \href{https://actuary.org/ph-d-candidate-olivier-cote-receives-2026-american-academy-of-actuaries-research-award/}{ American Academy of Actuaries Award for Research 2026} \item Selected by the National Association of Insurance Commissioners (NAIC) for its 2026 webinar series for U.S. insurance regulators and their actuarial staff}
-
-\vspace*{0.25cm}
-
-\cvtext{\bibentry{Charpentier/al:2026}} 
-
-
-\vspace*{0.25cm}
-
-\cvtext{\bibentry{Cote/etal:2024}} 
-
- \cvlist{ \item Finalist for the \href{https://actuary.org/publication-issue/blog-academy-recognizes-anti-discrimination-paper-with-research-award/}{ American Academy of Actuaries Award for Research 2025}}
-
- \vspace*{-0.25cm}
-
+\cvpaper{\bibentry{Annual_rev}}
+\cvpaper{\bibentry{Charpentier/al:2025_three}}
+\cvpaper{\bibentry{SelectionBias_2024}}
+\cvpaper{\bibentry{A_scalable_toolbox}}
+\vspace{-3pt}\cvlist{ \item Winner of the \href{https://actuary.org/ph-d-candidate-olivier-cote-receives-2026-american-academy-of-actuaries-research-award/}{ American Academy of Actuaries Award for Research 2026} \item Selected by the National Association of Insurance Commissioners (NAIC) for its webinar series for U.S. regulators}
+\cvpaper{\bibentry{Charpentier/al:2026}}
+\cvpaper{\bibentry{Cote/etal:2024}}
+\vspace{-3pt}\cvlist{ \item Finalist for the \href{https://actuary.org/publication-issue/blog-academy-recognizes-anti-discrimination-paper-with-research-award/}{ American Academy of Actuaries Award for Research 2025}}
 \section{Work in progress}
 \cvsection{Work in progress}
 
-\cvtext{\textbf{Côté, O.}, Charpentier, A., Côté, M.-P., and Il Idrissi, M. A definition of confounding bias for arbitrary statistical functionals. Working paper, in preparation.}
-
-\vspace*{0.25cm}
-
-\cvtext{\textbf{Côté, O.}, Côté, M.-P., Charpentier, A., and Il Idrissi, M. Profiling actuarial discrimination via causal decomposition. Working paper, presented at the 29th International Congress on Insurance: Mathematics and Economics, Seoul.}
+\cvpaper{\textbf{Côté, O.}, Charpentier, A., Côté, M.-P., and Il Idrissi, M. A definition of confounding bias for arbitrary statistical functionals. Working paper, in preparation.}
+\cvpaper{\textbf{Côté, O.}, Côté, M.-P., Charpentier, A., and Il Idrissi, M. Profiling actuarial discrimination via causal decomposition. Working paper, presented at the 29th International Congress on Insurance: Mathematics and Economics, Seoul.}
 
 
 
   
+\needspace{8\baselineskip} % keep the four workshops together
 \section{Diversity, Equity, and Inclusion Education}
 \cvsection{Diversity, equity and inclusion education}
 
 %\vfill\null
 
 
- \vspace*{-0.25cm}
 
  \cvline{2025}{Get Comfortable Being Uncomfortable: Dialogue About Favoritism and Fairness}{CANSSI}
 
