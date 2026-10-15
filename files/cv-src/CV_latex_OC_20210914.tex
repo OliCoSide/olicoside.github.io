@@ -278,12 +278,12 @@
 % air above the title, the title close to its content
 \newcommand{\cvsection}[1] {
  \needspace{5\baselineskip}
- \vspace{14pt}
+ \vspace{12pt}
  \cvtext{
   {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-5pt]
   \textcolor{maincol}{\rule{0.15\textwidth}{2pt}}
     }
- \par\nointerlineskip\vspace{3pt} % same gap under every section rule
+ \par\nointerlineskip\vspace{2pt} % same gap under every section rule
  \global\cvfirsttrue
     % \xrfill[0ex]{2pt}[lightcol] %to add at 250
 }
@@ -363,7 +363,7 @@
 % a reference or working paper: plain paragraph, same gap before each
 % a paper: 6pt above, except right under a section rule
 \newif\ifcvfirst
-\newcommand{\cvpaper}[1]{\par\ifcvfirst\global\cvfirstfalse\else\addvspace{5pt}\fi\noindent #1\par}
+\newcommand{\cvpaper}[1]{\par\ifcvfirst\global\cvfirstfalse\else\addvspace{4pt}\fi\noindent #1\par}
 
 %----------------------------------------------------------------------------------------
 %  CV SHORT EVENT: one line, title and time-frame only
@@ -561,6 +561,12 @@
 
 % \item Offensive lineman of the year for Pointe-Lévy high school (2012) \item All-star team as an offensive lineman in Cadet D2 (2012)
 
+\section{Refereeing}
+\cvsection{Journal refereeing}
+
+\cvshort{2026--present}{\textit{European Actuarial Journal} and \textit{Annals of Actuarial Science}}
+\cvshort{2024--present}{\textit{Journal of Risk and Insurance}}
+
 \section{Scholarships and Awards}
 \cvsection{Scholarships and awards}
 
@@ -647,13 +653,6 @@
  {Lieutenant Governor's Youth Medal}
  {Cégep de Lévis}
  {Awarded for outstanding involvement and academic results, on nomination by the teaching staff.}{}{}{}
-
-\section{Refereeing}
-\cvsection{Journal refereeing}
-
-\cvshort{2026--present}{\textit{European Actuarial Journal}}
-\cvshort{2026--present}{\textit{Annals of Actuarial Science}}
-\cvshort{2024--present}{\textit{Journal of Risk and Insurance}}
 
 \section{Supervision and mentoring}
 \cvsection{Supervision}
