@@ -20,8 +20,8 @@ Education
 
 Research visits
 ======
-* Department of Mathematics, Stockholm University (two weeks, January 2026): invited seminar and research discussions with Prof. Mathias Millberg Lindholm
-* Department of Statistics, University of Toronto (2025): invited seminar and research discussions with Prof. Christopher Blier-Wong
+* Department of Mathematics, Stockholm University (two weeks, January 2026): seminar and research discussions with Prof. Mathias Millberg Lindholm
+* Department of Statistics, University of Toronto (2025): seminar and research discussions with Prof. Christopher Blier-Wong
 * Bayes Business School, London (one week, 2023): research discussions with Prof. Andreas Tsanakas
 
 Professional designations
