@@ -346,11 +346,12 @@
   \vspace{-6pt}
   \cvtext{\small\textit{Awards:} #7}\\[2pt]
  }
- \vspace{2pt}
+ \vspace{0pt}
 }
 
 % time-frame of an entry: pale grey box flush with the right margin
-\newcommand{\cvdate}[1]{\colorbox{lightcol}{\makebox[0.15\mpwidth]{\textcolor{darkcol}{#1}}}}
+\newcommand{\cvdate}[1]{\tikz[baseline=(d.base)]{\node[inner sep=2pt, minimum width=0.15\mpwidth](d){\textcolor{darkcol}{#1}};
+ \draw[black!25, line width=1pt] (d.north west) -- (d.south west) -- (d.south east);}}
 
 % audience tag of a talk, one wording for all
 \newcommand{\aud}[1]{\mbox{\textcolor{darkcol!75}{\textit{Audience: #1.}}}}
@@ -358,10 +359,13 @@
 %----------------------------------------------------------------------------------------
 %  CV SHORT EVENT: one line, title and time-frame only
 \newcommand{\cvshort}[2] {
- \parbox{\mpwidth}{\begin{tabular*}{1\mpwidth}{@{}p{0.84\mpwidth}@{\hspace{0.01\mpwidth}}r@{}}
+ \par\noindent\parbox{\mpwidth}{\begin{tabular*}{1\mpwidth}{@{}p{0.84\mpwidth}@{\hspace{0.01\mpwidth}}r@{}}
    \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \cvdate{#1} \\
- \end{tabular*}}\\[1pt]
+ \end{tabular*}}\par\vspace{1pt}
 }
+
+% one-line entry with the organization after the title
+\newcommand{\cvline}[3]{\cvshort{#1}{#2\textmd{\textcolor{maincol}{, #3}}}}
 
 %----------------------------------------------------------------------------------------
 %  CV META EVENT
@@ -550,29 +554,13 @@
 
  \vspace*{-0.25cm}
 
- \cvevent
- {2025}
- {Get Comfortable Being Uncomfortable: Dialogue About Favoritism and Fairness}
- {Canadian Statistical Sciences Institute}
- {}{}{}{}
+ \cvline{2025}{Get Comfortable Being Uncomfortable: Dialogue About Favoritism and Fairness}{CANSSI}
 
- \cvevent
- {2024}
- {Let's talk about race and collective responsibility}
- {Canadian Statistical Sciences Institute}
- {}{}{}{}
+ \cvline{2024}{Let's talk about race and collective responsibility}{CANSSI}
 
- \cvevent
- {2023}
- {Acting as a sentinel for the prevention of suicide}
- {Centre de prévention du suicide du Québec workshop}
- {}{}{}{}
+ \cvline{2023}{Acting as a sentinel for the prevention of suicide}{Centre de prévention du suicide du Québec}
 
-\cvevent
- {2022}
- {Addressing Conflicts Related to Bias, Privilege, and Identity in the STEM Fields}
- {CANSSI and Academic Impressions workshop}
- {}{}{}{}
+\cvline{2022}{Addressing Conflicts Related to Bias, Privilege, and Identity in the STEM Fields}{CANSSI}
 
 %---------------------------------------------------------------------------------------
 % WORK EXPERIENCE
@@ -654,23 +642,9 @@
 
 \cvevent
  {2026}
- {Travel Grant}
- {NSERC General Fund}
- {Travel grant to support conference participation and dissemination of research (\$1~300 CAD, $\approx$ 9~100 SEK).}{}{}{}
-
-\vspace*{-0.05cm}
-
-\cvevent
- {2026}
- {Actuarial Research Conference 2026 Travel Grant}
- {American Academy of Actuaries}
- {Travel grant to support conference participation and dissemination of research (US\$1~500, $\approx$ 15~000 SEK).}{}{}{}
-
-\cvevent
- {2026}
- {Student travel grant}
- {\href{https://crdm.ulaval.ca/2025/10/09/bourse-de-mobilite-etudiante-du-crdm/}{Big Data Research Center}}
- {Travel grant to support conference participation and dissemination of research (\$2~000 CAD, $\approx$ 14~000 SEK).}{}{}{}
+ {Travel grants}
+ {NSERC, American Academy of Actuaries, Big Data Research Center}
+ {Three competitive grants for conference travel: NSERC General Graduate Studies Fund (\$1~300 CAD, $\approx$ 9~100 SEK), American Academy of Actuaries for the 61st Actuarial Research Conference (US\$1~500, $\approx$ 15~000 SEK) and Big Data Research Center (\$2~000 CAD, $\approx$ 14~000 SEK).}{}{}{}
 
 \cvevent
  {2025}
@@ -779,30 +753,14 @@
 
 %\vfill\null
 
-\cvevent
- {2025}
- {Associate of the Casualty Actuarial Society (ACAS)}
- {Casualty Actuarial Society}
- {}{}{}{}
+\cvline{2025}{Associate of the Casualty Actuarial Society (ACAS)}{Casualty Actuarial Society}
 
-\cvevent
- {2025}
- {Professionalism Workshop}
- {Canadian Institute of Actuaries}
- {}{}{}{}
+\cvline{2025}{Professionalism Workshop}{Canadian Institute of Actuaries}
 
-\cvevent
- {2020--2025}
- {MAS-I, MAS-II, Exam 5, Exam 6C, Online Courses 1 and 2}
- {Casualty Actuarial Society}
- {}{}{}{}
+\cvline{2020--2025}{MAS-I, MAS-II, Exams 5 and 6C, Online Courses 1 and 2}{CAS}
  
 
- \cvevent
- {2019--2020}
- {Exam P, FM and IFM }
- {Society of Actuaries and Canadian Institute of Actuaries (credits)}
- {}{}{}{}
+ \cvline{2019--2020}{Exams P, FM and IFM}{Society of Actuaries}
 % \vfill\null
 %
 %\vfill
@@ -823,13 +781,13 @@
 \section{Academic Communications}
 \cvsection{Academic communications}
 
-\cvevent{2025--2026}{Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}{Casualty Actuarial Society and University of Toronto}{\textcolor{maincol}{\textbullet}~CAS webinar (2026), sole presenter, 90 minutes, 950 registrants \enspace\textcolor{maincol}{\textbullet}~CAS Annual Meeting, Austin (2025, over 150) and CAS Canada Connect Day, Toronto (2025, over 100) \enspace\textcolor{maincol}{\textbullet}~Department of Statistics, University of Toronto (2025), invited seminar during research visit. \aud{practitioners and academics}}{}{}{}
+\cvevent{2025--2026}{Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}{Casualty Actuarial Society and University of Toronto}{Sole presenter at a 90-minute CAS webinar (2026, 950 registrants). Presented at the CAS Annual Meeting in Austin (2025, over 150 participants) and at the CAS Canada Connect Day in Toronto (2025, over 100). Invited seminar at the Department of Statistics, University of Toronto (2025). \aud{practitioners and academics}}{}{}{}
 
-\cvevent{2025--2026}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{International conferences and invited talks}{\textcolor{maincol}{\textbullet}~First ASTIN Bulletin Conference, Zurich (2026), fairness session \enspace\textcolor{maincol}{\textbullet}~Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), Liverpool (2025), 60 doctoral students from 29 countries \enspace\textcolor{maincol}{\textbullet}~Chaire ACTIONS \& Milliman R\&D, Paris (2025), in French with Arthur Charpentier, 80 participants. \aud{academics and practitioners}}{}{}{}
+\cvevent{2025--2026}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{International conferences and invited talks}{Presented at the first ASTIN Bulletin Conference in Zurich (2026) and at PARTY in Liverpool (2025, 60 doctoral students from 29 countries). Presented in French with Arthur Charpentier at the Chaire ACTIONS and Milliman R\&D in Paris (2025, 80 participants). \aud{academics and practitioners}}{}{}{}
 
-\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{Conferences and seminars}{\textcolor{maincol}{\textbullet}~29th International Congress on Insurance: Mathematics and Economics, Seoul, talk \enspace\textcolor{maincol}{\textbullet}~Actuarial and Financial Mathematics Conference, Brussels, poster \enspace\textcolor{maincol}{\textbullet}~STATQAM seminar, UQÀM, invited seminar also covering confounding bias \enspace\textcolor{maincol}{\textbullet}~Centre de recherche en données massives, Université Laval, research talk. \aud{academics}}{}{}{}
+\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{Conferences and seminars}{Talk at the 29th International Congress on Insurance: Mathematics and Economics in Seoul and poster at the Actuarial and Financial Mathematics Conference in Brussels. Invited seminar at STATQAM, UQÀM, also covering confounding bias, and research talk at the Big Data Research Center, Université Laval. \aud{academics}}{}{}{}
 
-\cvevent{2026}{The Trilemma of Fairness in P\&C Pricing}{American Academy of Actuaries and AAIARD}{\textcolor{maincol}{\textbullet}~61st Actuarial Research Conference, AAA invited session \enspace\textcolor{maincol}{\textbullet}~Association des actuaires en IARD du Québec, in French (\textit{Le trilemme de l'équité en tarification IARD}). \aud{decision-makers and practitioners}}{}{}{}
+\cvevent{2026}{The Trilemma of Fairness in P\&C Pricing}{American Academy of Actuaries and AAIARD}{Invited session of the American Academy of Actuaries at the 61st Actuarial Research Conference. Presented in French to the Association des actuaires en IARD du Québec as \textit{Le trilemme de l'équité en tarification IARD}. \aud{decision-makers and practitioners}}{}{}{}
 
 \cvevent{2026}{Bias in Assessing Financial Risk: Insights from the 2025 Research Award}{\href{https://www.actuary.org/event/bias-assessing-financial-risk-insights-2025-research-award}{American Academy of Actuaries}}{Invited panelist as a 2025 finalist. Webinar to 445 actuaries and practitioners. \aud{practitioners}}{}{}{}
 
@@ -837,7 +795,7 @@
 
 \cvevent{2025}{Two invited presentations at the 60th Actuarial Research Conference}{American Academy of Actuaries panel \& Casualty Actuarial Society session, Toronto}{Guest panelist and presenter with Marie-Pier Côté and Arthur Charpentier. \aud{decision-makers}}{}{}{}
 
-\cvevent{2024}{A Fair Price to Pay: Exploiting Causal Graphs for Fairness in Insurance}{Conference and workshop}{\textcolor{maincol}{\textbullet}~27th International Congress on Insurance: Mathematics and Economics, Chicago \enspace\textcolor{maincol}{\textbullet}~Workshop on fairness and discrimination in insurance, over 60 academics, practitioners and regulators. \aud{academics}}{}{}{}
+\cvevent{2024}{A Fair Price to Pay: Exploiting Causal Graphs for Fairness in Insurance}{Conference and workshop}{Talk at the 27th International Congress on Insurance: Mathematics and Economics in Chicago. Presented to over 60 academics, practitioners and regulators at the Workshop on fairness and discrimination in insurance. \aud{academics}}{}{}{}
 
 \cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Autorité des marchés financiers}{Presentation to decision-makers at Québec's financial authority, followed by interviews with ten regulators on their needs. \aud{decision-makers}}{}{}{}
 
@@ -1034,32 +992,15 @@
 
 \vspace*{-0.35cm}
 
-\newpage % service sections together on the last page
 \section{Committees}
 \cvsection{Committees}
 
- \cvevent
- {2025--present}
- {Institut Intelligence et Données, Université Laval}
- {Voting member of the board}
- {}{}{}{}
+ \cvline{2025--present}{Institut intelligence et données, Université Laval}{board member}
 
- \cvevent
- {2022--present}
- {Actuarial Science Graduate Program Committee of Université Laval}
- {Voting member of the Committee}
- {}{}{}{}
- \cvevent
- {2022--2025}
- {Big Data Research Center of Université Laval}
- {Student voting member of the Committee}
- {}{}{}{}
+ \cvline{2022--present}{Graduate Program Committee in Actuarial Science, Université Laval}{voting member}
+ \cvline{2022--2025}{Big Data Research Center, Université Laval}{student voting member}
 
- \cvevent
- {2021--2024}
- {Actuarial Science Student Investment Fund of Université Laval}
- {Voting member of the committee}
- {}{}{}{}
+ \cvline{2021--2024}{Actuarial Science Student Investment Fund, Université Laval}{voting member}
 
  
 
@@ -1072,17 +1013,9 @@
 
 \section{Research affiliations}
 \cvsection{Research affiliations}
-\cvevent
- {2021--present}
- {Institut Intelligence et Données, Big Data Research Center}
- {Université Laval}
- {}{}{}{}
+\cvline{2021--present}{Institut Intelligence et Données, Big Data Research Center}{Université Laval}
 
-\cvevent
- {2021--present}
- {Quantact research laboratory, Centre de recherches mathématiques}
- {Montréal}
- {}{}{}{}
+\cvline{2021--present}{Quantact research laboratory, Centre de recherches mathématiques}{Montréal}
 
 
 %---------------------------------------------------------------------------------------
