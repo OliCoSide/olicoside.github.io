@@ -278,7 +278,7 @@
 % air above the title, the title close to its content
 \newif\ifcvafterevent
 \newcommand{\cvsection}[1] {
- \par\addvspace{9pt} % same gap above every section title, whatever ends the previous one
+ \par\addvspace{12pt} % same gap above every section title, whatever ends the previous one
  \ifcvafterevent\vspace{-3.3pt}\fi % an entry box sits lower than a one-line entry
  \global\cvaftereventfalse
  \needspace{5\baselineskip}
@@ -286,7 +286,7 @@
   {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-5pt]
   \textcolor{maincol}{\rule{0.15\textwidth}{2pt}}
     }
- \par\nointerlineskip\vspace{2pt} % same gap under every section rule
+ \par\nointerlineskip\vspace{-1pt} % same gap under every section rule
  \global\cvfirsttrue
     % \xrfill[0ex]{2pt}[lightcol] %to add at 250
 }
