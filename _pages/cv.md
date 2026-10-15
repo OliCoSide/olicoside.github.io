@@ -121,4 +121,4 @@ Research affiliations
 
 Languages
 ======
-* Français (mother tongue), English (advanced), Svenska (beginner, < 1 year)
+* Français (native), English (C1), Svenska (A1)

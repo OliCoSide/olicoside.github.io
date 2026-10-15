@@ -70,14 +70,15 @@
 %\usepackage[defaultsans]{droidsans}
 %\usepackage[default]{comfortaa}
 %\usepackage{cmbright}
-\usepackage[default]{raleway}
+\usepackage{raleway}      % headings
+\usepackage{XCharter}     % body, as in the Sverker proposal
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
 %\usepackage[thin]{roboto} 
 
 % set font default
-\renewcommand*\familydefault{\sfdefault}  
+% body in serif (XCharter)  
 \usepackage[T1]{fontenc}
 
 % more font size definitions
@@ -274,7 +275,7 @@
  \needspace{8\baselineskip}
  \vspace{14pt}
  \cvtext{
-  \textbf{\LARGE{\textcolor{darkcol}{\uppercase{#1}}}}\\[-4pt]
+  {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-4pt]
   \textcolor{maincol}{ \rule{0.15\textwidth}{2pt}}  \\
     }
     % \xrfill[0ex]{2pt}[lightcol] %to add at 250
@@ -323,7 +324,7 @@
  % if you need more control on page breaks, remove the parbox
  \parbox{\mpwidth}{
   \begin{tabular*}{1\mpwidth}{p{0.78\mpwidth}  r}
-    \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \colorbox{maincol}{\makebox[0.20\mpwidth]{\textcolor{white}{#1}}} \\
+    \textcolor{black}{\textbf{#2}} & \textcolor{maincol}{#1} \\
    \textcolor{maincol}{\textbf{#3}} & \\
   \end{tabular*}\\[-2pt]
   \ifthenelse{\isempty{#4}}{}{
@@ -342,17 +343,20 @@
   \cvtext{#6}
  }
  \ifthenelse{\isempty{#7}}{}{
-  \vspace{-10pt}
-  \cvtext{ \hspace*{0.5cm}\footnotesize \textbf{*Awards included: }#7}
+  \vspace{-6pt}
+  \cvtext{\small\textit{Awards:} #7}\\[2pt]
  }
  \vspace{2pt}
 }
+
+% audience tag of a talk, one wording for all
+\newcommand{\aud}[1]{\textcolor{darkcol!75}{\textit{Audience: #1.}}}
 
 %----------------------------------------------------------------------------------------
 %  CV SHORT EVENT: one line, title and time-frame only
 \newcommand{\cvshort}[2] {
  \begin{tabular*}{1\mpwidth}{p{0.78\mpwidth}  r}
-   \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \colorbox{maincol}{\makebox[0.20\mpwidth]{\textcolor{white}{#1}}} \\
+   \textcolor{black}{\textbf{#2}} & \textcolor{maincol}{#1} \\
  \end{tabular*}\\[1pt]
 }
 
@@ -421,8 +425,9 @@
 \subsection{Settings}
 %%% Footer
 \pagestyle{fancy}
-\fancyfoot[L]{\small \textcolor{black!20!lightcol}{Compilation : \today}}
-\fancyfoot[C]{\small  \textcolor{black!20!lightcol}{\thepage \hspace{1pt} of  \pageref*{LastPage}}}
+\fancyfoot[L]{\small \textcolor{black!35!lightcol}{Olivier Côté, curriculum vitae}}
+\fancyfoot[C]{\small \textcolor{black!35!lightcol}{\thepage\ of \pageref*{LastPage}}}
+\fancyfoot[R]{\small \textcolor{black!35!lightcol}{Updated \today}}
 
 
 \columnratio{0.33, 0.33, 0.33} %0.31
@@ -436,115 +441,11 @@
 \vspace*{-1.25cm} % 1cm of white above the title band, matching the side margins
  
  \section{Header}
-%  \begin {center}
-\fcolorbox{white}{lightcol!50}{\begin{minipage}[c][3cm][c]{1\mpwidth}
- \begin {center}
-  \HUGE{ \textbf{ \textcolor{darkcol}{ \uppercase{ Olivier Côté, }}}}\LARGE{\textbf{\textcolor{darkcol!80}{\uppercase{ACAS } } } }  \\[-4pt]
-  \textcolor{darkcol}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
-  \large{ \textcolor{darkcol} {PhD Candidate in Actuarial Science, Université Laval} }
- \end {center}
-\end{minipage}} \\[14pt]
-%  \end {center}
-
-
-
-
-\section{columns}
-\begin{paracol}{3}
-\begin{column}
-
-\subsection{Contact information}
-\cvsection{Contact \\[2pt] information}
+{\sffamily\HUGE\textbf{\textcolor{darkcol}{Olivier Côté}}\hspace{8pt}{\LARGE\textcolor{darkcol!70}{ACAS}}}\\[6pt]
+{\large\textcolor{darkcol}{PhD Candidate in Actuarial Science, Université Laval}}\\[8pt]
+{\small Québec, Canada \enspace\textbar\enspace \href{mailto:olivier.cote.12@ulaval.ca}{olivier.cote.12@ulaval.ca} \enspace\textbar\enspace \href{https://olicoside.github.io/}{olicoside.github.io} \enspace\textbar\enspace \href{https://www.linkedin.com/in/olivier-cote-act/}{linkedin.com/in/olivier-cote-act}}\\[3pt]
+{\small Languages: Français (native), English (C1), Svenska (A1) \enspace\textbar\enspace Programming: R, Python, LaTeX}
  
-\icontext{map-marker-alt}{12}{Québec, QC, Canada}{black}\\[6pt]
-% \icontext{phone-alt}{12}{+1 (581)~305-6367}{black}\\[6pt]
-\iconemail{envelope}{12}{olivier.cote.12@ulaval.ca}{olivier.cote.12@ulaval.ca}{black}\\[6pt]
-\iconhref{linkedin}{12}{in/olivier-cote-act}{https://www.linkedin.com/in/olivier-cote-act/}{black}\\[6pt]
-% \iconhref{github}{12}{Olicoside}{https://github.com/OliCoSide}{black}\\[6pt]
-% \iconhref{github}{12}{Olicoside}{https://github.com/OliCoSide}{black}\\[6pt]
-\iconhref{globe}{12}{olicoside.github.io}{https://olicoside.github.io/}{black}
-
-% \vfill\null
-
-%Étudiant gradué en actuariat
-%---------------------------------------------------------------------------------------
-% PROFILE
-%----------------------------------------------------------------------------------------
-% \subsection{Bio}
-% \cvsection{Bio}
-
-% \cvtext{I am a graduate student in actuarial science with excellent programming skills and a natural curiosity for theory.\\
-
-% I am doing research as part of my master's thesis in Actuarial Science with a thesis. My project focuses on the responsible use of predictive models in actuarial pricing when a characteristic is deemed sensitive. This project is done in collaboration with one of the largest general insurance companies in Canada. I will pursue at the PhD starting on september 2023. 
-
-% % , dans un monde où les données massives sont omniprésentes et l'apprentissage automatique est toujours plus prédictif. \\
-
-% % Étant un entraîneur passionné de football depuis plusieurs années, je suis très habitué à travailler en équipe et à faire preuve de leadership pour résoudre des problèmes complexes.\\
-
-% }
-
-
-
-
-\end{column}
-\begin{column}
-%---------------------------------------------------------------------------------------
-% META IMAGE
-%----------------------------------------------------------------------------------------
-% \includegraphics[width=\linewidth]{photo_gala2.jpg} %trimming relative to image size
-
-%---------------------------------------------------------------------------------------
-% META SKILLS
-%----------------------------------------------------------------------------------------
-%\cvqrcode{0.5}
-
-\subsection{Skills}
-\cvsection{Skills}
-
-\cvskill{R} {8 years + } {1} \\[-2pt]
-
-% \cvskill{SAS} {plus de 2 ans} {0.8} \\[-2pt]
-
-% \cvskill{GIT} {plus de 3 ans} {0.6} \\[-2pt]
-
-% \cvskill{Emblem} {plus de 2 ans} {0.6} \\[-2pt]
-
-\cvskill{Python} {3 years +} {0.9} \\[-2pt]
-
-\cvskill{\LaTeX} {6 years +} {1} \\[-2pt]
-
-% \cvskill{Leadership} {} {1} \\[-2pt]
-
-
-% \vfill\null
-% \cvsection{Skills}
-
-% \cvskill{R} {5 years + } {1} \\[-2pt]
-
-% % \cvskill{SAS} {plus de 2 ans} {0.8} \\[-2pt]
-
-% % \cvskill{GIT} {plus de 3 ans} {0.6} \\[-2pt]
-
-% % \cvskill{Emblem} {plus de 2 ans} {0.6} \\[-2pt]
-
-% \cvskill{\LaTeX} {4 years +} {0.8} \\[-2pt]
-
-% \cvskill{Teamwork} {} {1} \\[-2pt]
-
-% \cvskill{Leadership} {} {1} \\[-2pt]
-
-\end{column}
-\begin{column}
-\subsection{Languages}
-\cvsection{Languages}
-
-\cvskill{Français} {Mother tongue} {1} \\[-2pt]
-
-\cvskill{English} {Advanced} {0.9} \\[-2pt]
-
-\cvskill{Svenska} {Beginner, $<$1 yr} {0.05} \\[-2pt]
-\end{column}
-\end{paracol} 
 
 
  \vspace*{-0.2cm}
@@ -553,25 +454,25 @@
 % }{}{}{}
 
 \cvevent
-{2023 - 2027}
-{PhD in Actuarial Science (GPA  : 4.17/4.33)}
+{2023--2027}
+{PhD in Actuarial Science (GPA 4.17/4.33)}
 {Université Laval}
 {Fairness in insurance pricing, supervised by Prof. Marie-Pier Côté (Université Laval) and Prof. Arthur Charpentier (UQÀM). Defence expected in summer 2027.}{}{}{}
 
 \cvevent
-{2021 - 2023}
-{Master's degree in Actuarial Science, research-based (GPA  : 4.24/4.33)}
+{2021--2023}
+{Master's degree in Actuarial Science, research-based (GPA 4.24/4.33)}
 {Université Laval}
 {Supervised by Prof. Marie-Pier Côté and Prof. Arthur Charpentier.}{}{}{}
 
 \cvevent
-{2018 - 2021}
-{Bachelor's degree in Actuarial Science (GPA  : 4.17/4.33)}
+{2018--2021}
+{Bachelor's degree in Actuarial Science (GPA 4.17/4.33)}
 {Université Laval}
 {}{}{}{}
 
 \cvevent
-{2023 - 2026}
+{2023--2026}
 {Research visits}
 {Stockholm University, University of Toronto, Bayes Business School}
 {\cvlist{\item Department of Mathematics, Stockholm University (two weeks, January 2026): invited seminar and research discussions with Prof. Mathias Millberg Lindholm. \item Department of Statistics, University of Toronto (2025): invited seminar and research discussions with Prof. Christopher Blier-Wong. \item Bayes Business School, London (one week, 2023): research discussions with Prof. Andreas Tsanakas.}}{}{}{}
@@ -583,7 +484,7 @@
 
 
 \section{Research Papers}
-\cvsection{Research Papers}
+\cvsection{Research papers}
 
 
 \cvtext{\bibentry{Annual_rev}}
@@ -624,17 +525,17 @@
 \section{Work in progress}
 \cvsection{Work in progress}
 
-\cvtext{\textbf{Côté, Olivier}, Charpentier, A., Côté, M.-P., and Il Idrissi, M. A definition of confounding bias for arbitrary statistical functionals. Working paper, in preparation.}
+\cvtext{\textbf{Côté, O.}, Charpentier, A., Côté, M.-P., and Il Idrissi, M. A definition of confounding bias for arbitrary statistical functionals. Working paper, in preparation.}
 
 \vspace*{0.25cm}
 
-\cvtext{\textbf{Côté, Olivier}, Côté, M.-P., Charpentier, A., and Il Idrissi, M. Profiling actuarial discrimination via causal decomposition. Working paper, presented at the 29th International Congress on Insurance: Mathematics and Economics, Seoul.}
+\cvtext{\textbf{Côté, O.}, Côté, M.-P., Charpentier, A., and Il Idrissi, M. Profiling actuarial discrimination via causal decomposition. Working paper, presented at the 29th International Congress on Insurance: Mathematics and Economics, Seoul.}
 
 
 
   
 \section{Diversity, Equity, and Inclusion Education}
-\cvsection{Diversity, Equity, and Inclusion Education}
+\cvsection{Diversity, equity and inclusion education}
 
 %\vfill\null
 
@@ -669,63 +570,30 @@
 % WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\section{Professional designations}
-\cvsection{Professional Designations}
-
-%\vfill\null
-
-\cvevent
- {2025}
- {Associate of the Casualty Actuarial Society (ACAS)}
- {Casualty Actuarial Society}
- {}{}{}{}
-
-\cvevent
- {2025}
- {Professionalism Workshop}
- {Canadian Institute of Actuaries}
- {}{}{}{}
-
-\cvevent
- {2020 - 2025}
- {MAS-I, MAS-II, Exam 5, Exam 6C, Online Courses 1 and 2}
- {Casualty Actuarial Society}
- {}{}{}{}
- 
-
- \cvevent
- {2019- 2020}
- {Exam P, FM and IFM }
- {Society of Actuaries and Canadian Institute of Actuaries (credits)}
- {}{}{}{}
-% \vfill\null
-%
-%\vfill
-
 % \newpage 
 \section{Work experiences}
-\cvsection{WORK EXPERIENCEs}
+\cvsection{Work experience}
 
 
 \cvevent
- {2022 - 2023}
+ {2022--2023}
  {Course lecturer, two mandatory undergraduate courses (3 credits each)}
  {Université Laval}
  {\cvlist{\item Linear Models in Actuarial Science (fall 2022, 88 students) \item Statistical Learning in Actuarial Science (winter 2023, 54 students)}}{}{}{Faculty of Science and Engineering Teaching Star, one per course (fall 2022 and winter 2023).}
 %Students left over 93\% positive feedbacks about course planning, pedagogy, teacher and evaluation.
 
 \cvevent
- {2019 - 2025}
+ {2019--2025}
  {American football coach}
  {Falcons of Cégep de Lévis}
  {American football coach for different teams for more than ten years (2012--2025), including seven years in collegiate football at the Cégep de Lévis (2019--2025): 
- \cvlist{\item Tight ends and Fullbacks coach (2019-2025), responsible for the development of 10 athletes \item Supervisor for a bachelor's degree intern in sports intervention (2023) \item Volunteer mathematics tutor for student-athletes
+ \cvlist{\item Tight ends and Fullbacks coach (2019--2025), responsible for the development of 10 athletes \item Supervisor for a bachelor's degree intern in sports intervention (2023) \item Volunteer mathematics tutor for student-athletes
  }}{}{}{RSEQ Coaching Staff of the Year 2023 and 2024, Sportsmanship Award 2022 (D1) and 2023 (D2).}
 
-% \item Assistant offensive line coach (2019-2021)
-%  \item Assistant offensive coordinator (2022-present)
+% \item Assistant offensive line coach (2019--2021)
+%  \item Assistant offensive coordinator (2022--present)
  \cvevent
- {2019 - 2024}
+ {2019--2024}
  {Teaching assistant}
  {Université Laval}
  {Statistical Learning in Actuarial Science (5 times), Probabilistic Analysis of Actuarial Risks (3 times), Linear Models in Actuarial Science (once), internship evaluation (once).}{}{}{}
@@ -733,7 +601,7 @@
 
 
 \cvevent
- {2019 - 2021}
+ {2019--2021}
  {Actuarial intern}
  {Desjardins General Insurance Group}
  {Four internships: property ratemaking (2019), business analysis (2020 and 2021) and research (2021).}{}{}{}
@@ -742,7 +610,7 @@
 \cvsection{Supervision and mentoring}
 
 \cvevent
- {2025 - 2026}
+ {2025--2026}
  {Mentor of a master's student, University of Texas}
  {Hickman Scholars Program network}
  {Advised an essay on an insurance regulatory issue and connected the student with a Texas regulator.}{}{}{}
@@ -763,13 +631,13 @@
 \cvsection{Engagement with practice and policy}
 
 \cvevent
- {2025 - 2026}
+ {2025--2026}
  {Online course on fair insurance pricing, English and French versions}
  {Casualty Actuarial Society (in post-production)}
  {Commissioned by the CAS. Project lead and script writer, coordinating four parties: a research assistant, the CAS task force on biases in insurance pricing, the CAS educational development team and a production company. Two hours of two-minute videos, interactive activities and quizzes, co-presented with M.-P. Côté and A. Charpentier.}{}{}{}
 
 \cvevent
- {2023 - 2026}
+ {2023--2026}
  {Regulators, insurers and public bodies}
  {Canada, United States, Switzerland}
  {\cvlist{\item Met insurance regulators in person in Canada, the United States and Switzerland. \item Provided input, in person, to the Swiss Federal Statistical Office and the ETH Zurich AI Policy Lab on a governmental framework for fair predictive models in employment. \item Presented at the internal annual actuarial conferences of three insurers. \item Three companies contacted me for technical details on implementing the toolbox with their own data.}}{}{}{}
@@ -779,15 +647,15 @@
 \section{Refereeing}
 \cvsection{Refereeing}
 
-\cvshort{2026 - present}{\textit{European Actuarial Journal}}
-\cvshort{2026 - present}{\textit{Annals of Actuarial Science}}
-\cvshort{2024 - present}{\textit{Journal of Risk and Insurance}}
+\cvshort{2026--present}{\textit{European Actuarial Journal}}
+\cvshort{2026--present}{\textit{Annals of Actuarial Science}}
+\cvshort{2024--present}{\textit{Journal of Risk and Insurance}}
 
 
 
 
 \section{Scholarships and Awards}
-\cvsection{Scholarships and Awards}
+\cvsection{Scholarships and awards}
 
 
 
@@ -919,37 +787,71 @@
 % EDUCATION
 %----------------------------------------------------------------------------------------
 
+\section{Professional designations}
+\cvsection{Professional designations}
+
+%\vfill\null
+
+\cvevent
+ {2025}
+ {Associate of the Casualty Actuarial Society (ACAS)}
+ {Casualty Actuarial Society}
+ {}{}{}{}
+
+\cvevent
+ {2025}
+ {Professionalism Workshop}
+ {Canadian Institute of Actuaries}
+ {}{}{}{}
+
+\cvevent
+ {2020--2025}
+ {MAS-I, MAS-II, Exam 5, Exam 6C, Online Courses 1 and 2}
+ {Casualty Actuarial Society}
+ {}{}{}{}
+ 
+
+ \cvevent
+ {2019--2020}
+ {Exam P, FM and IFM }
+ {Society of Actuaries and Canadian Institute of Actuaries (credits)}
+ {}{}{}{}
+% \vfill\null
+%
+%\vfill
+
+
 \newpage
 
 \section{Academic Communications}
-\cvsection{Academic Communications}
+\cvsection{Academic communications}
 
 
-\cvevent{2026}{Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}{Casualty Actuarial Society webinar}{Sole presenter for a 90-minute webinar to 950 registrants \textbf{(Audience: end-users).}}{}{}{}
-
-\vspace*{-0.05cm}
-
-\cvevent{2026}{The Trilemma of Fairness in P\&C Pricing}{61st Actuarial Research Conference (AAA invited session)}{Invited presentation \textbf{(Audience: decision-makers).}}{}{}{}
+\cvevent{2026}{Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}{Casualty Actuarial Society webinar}{Sole presenter for a 90-minute webinar to 950 registrants. \aud{practitioners}}{}{}{}
 
 \vspace*{-0.05cm}
 
-\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{29th International Congress on Insurance: Mathematics and Economics, Sungkyunkwan University, Seoul (South Korea)}{Academic presentation \textbf{(Audience: academics).}}{}{}{}
+\cvevent{2026}{The Trilemma of Fairness in P\&C Pricing}{61st Actuarial Research Conference (AAA invited session)}{Invited presentation. \aud{decision-makers}}{}{}{}
 
 \vspace*{-0.05cm}
 
-\cvevent{2026}{Le trilemme de l'équité en tarification IARD}{Association des actuaires en IARD du Québec (AAIARD)}{Presentation to P\&C actuaries \textbf{(Audience: end-users).}}{}{}{}
+\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{29th International Congress on Insurance: Mathematics and Economics, Sungkyunkwan University, Seoul (South Korea)}{Academic presentation. \aud{academics}}{}{}{}
 
 \vspace*{-0.05cm}
 
-\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{STATQAM seminar, Université du Québec à Montréal}{Invited seminar covering causal decomposition and confounding bias \textbf{(Audience: academics).}}{}{}{}
+\cvevent{2026}{Le trilemme de l'équité en tarification IARD}{Association des actuaires en IARD du Québec (AAIARD)}{Presentation to P\&C actuaries. \aud{practitioners}}{}{}{}
 
 \vspace*{-0.05cm}
 
-\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{Centre de recherche en données massives, Université Laval}{Research talk \textbf{(Audience: academics).}}{}{}{}
+\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{STATQAM seminar, Université du Québec à Montréal}{Invited seminar covering causal decomposition and confounding bias. \aud{academics}}{}{}{}
 
 \vspace*{-0.05cm}
 
-\cvevent{2026}{Profiling Actuarial Discrimination via causal decomposition}{Actuarial and Financial Mathematics Conference, Brussels (Belgium)}{Poster presenter \textbf{(Audience: academics).}}{}{}{}
+\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{Centre de recherche en données massives, Université Laval}{Research talk. \aud{academics}}{}{}{}
+
+\vspace*{-0.05cm}
+
+\cvevent{2026}{Profiling Actuarial Discrimination via causal decomposition}{Actuarial and Financial Mathematics Conference, Brussels (Belgium)}{Poster presenter. \aud{academics}}{}{}{}
 
 \vspace*{-0.05cm}
 
@@ -957,7 +859,7 @@
  {2026}
  {Bias in Assessing Financial Risk: Insights from the 2025 Research Award}
 {\href{https://www.actuary.org/event/bias-assessing-financial-risk-insights-2025-research-award}{American Academy of Actuaries}}
- {Invited panelist as finalist for the 2025 Award for Research on Bias in Assessing Financial Risk. Webinar to 445 actuaries and practitioners. \textbf{(Audience: end-users)}}{}{}{}
+ {Invited panelist as finalist for the 2025 Award for Research on Bias in Assessing Financial Risk. Webinar to 445 actuaries and practitioners. \aud{practitioners}}{}{}{}
 
 
 \vspace*{-0.05cm}
@@ -966,14 +868,14 @@
  {2026}
  {A Causal Perspective on Fairness in Insurance Pricing}
  {Department of Mathematics, Stockholm University}
- {Invited seminar talk during research stay \textbf{(Audience: academics)}.}{}{}{}
+ {Invited seminar talk during research stay. \aud{academics}}{}{}{}
 
 
 
 \vspace*{-0.05cm}
 
 
-\cvevent{2026}{A Scalable Toolbox for Exposing Indirect Discrimination In Insurance Rates}{ASTIN Bulletin Conference, Zurich (Switzerland)}{Speaker at one of the fairness sessions of the first ASTIN Bulletin Conference \textbf{(Audience: academics).}}{}{}{}
+\cvevent{2026}{A Scalable Toolbox for Exposing Indirect Discrimination In Insurance Rates}{ASTIN Bulletin Conference, Zurich (Switzerland)}{Speaker at one of the fairness sessions of the first ASTIN Bulletin Conference. \aud{academics}}{}{}{}
 
 
 \vspace*{-0.05cm}
@@ -982,7 +884,7 @@
  {2025}
  {Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}
  {Department of Statistics, University of Toronto}
- {Invited seminar during research visit. \textbf{(Audience: academics)}}{}{}{}
+ {Invited seminar during research visit. \aud{academics}}{}{}{}
 
 
 \vspace*{-0.05cm}
@@ -991,7 +893,7 @@
  {2025}
  {Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}
  {Casualty Actuarial Society Annual Meeting, Austin (United States) \& Canada Connect Day, Toronto (Canada)}
- {Invited presenter to over 150 (Austin) and over 100 (Toronto) actuaries and policymakers. \textbf{(Audience: end-users)}}{}{}{}
+ {Invited presenter to over 150 (Austin) and over 100 (Toronto) actuaries and policymakers. \aud{practitioners}}{}{}{}
 
 
 \vspace*{-0.05cm}
@@ -1000,13 +902,13 @@
  {2025}
  {Two invited presentations at the 60th Actuarial Research Conference}
  {American Academy of Actuaries panel \& Casualty Actuarial Society session, Toronto (Canada)}
- {Guest panelist and presenter (with Marie-Pier and Arthur) to audiences from actuarial organizations, academia, industry, and policymakers. \textbf{(Audience: decision-makers)}}{}{}{}
+ {Guest panelist and presenter (with Marie-Pier and Arthur) to audiences from actuarial organizations, academia, industry, and policymakers. \aud{decision-makers}}{}{}{}
 
 
 
 \vspace*{-0.05cm}
 
-\cvevent{2025}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), Liverpool (U.K.)}{Presenter to 60 doctoral students from 29 countries. \textbf{(Audience: academics)}}{}{}{}
+\cvevent{2025}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), Liverpool (U.K.)}{Presenter to 60 doctoral students from 29 countries. \aud{academics}}{}{}{}
 
 
 \vspace*{-0.05cm}
@@ -1015,27 +917,27 @@
  {2025}
  {Une boîte à outils pour dévoiler la discrimination indirecte dans les tarifs d'assurance}
  {Chaire ACTIONS \& Milliman R\&D, Paris (France)}
- {Guest co-presenter (with Arthur) to audiences from academia and industry (80 participants at the Chaire ACTIONS). \textbf{(Audience: general)}}{}{}{}
+ {Guest co-presenter (with Arthur) to audiences from academia and industry (80 participants at the Chaire ACTIONS). \aud{academics and practitioners}}{}{}{}
 
 
 \vspace*{-0.05cm}
 
-\cvevent{2024}{Perspective causale sur les discriminations dans les modèles prédictifs en assurance}{Institut intelligence et données}{Guest presenter to over 100 people from academia. \textbf{(Audience: academics)}}{}{}{}
+\cvevent{2024}{Perspective causale sur les discriminations dans les modèles prédictifs en assurance}{Institut intelligence et données}{Guest presenter to over 100 people from academia. \aud{academics}}{}{}{}
 
 
 \vspace*{-0.05cm}
 
-\cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{27th International Congress on Insurance: Mathematics and Economics}{Academic presentation in Chicago, IL, United States \textbf{(Audience: academics)}}{}{}{}
+\cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{27th International Congress on Insurance: Mathematics and Economics}{Academic presentation in Chicago, IL, United States. \aud{academics}}{}{}{}
 
 
 \vspace*{-0.05cm}
 
-\cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{Workshop on fairness and discrimination in insurance}{Guest presenter to over 60 people from academia, practitioners and regulators. \textbf{(Audience: general)}}{}{}{}
+\cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{Workshop on fairness and discrimination in insurance}{Guest presenter to over 60 people. \aud{academics, practitioners and regulators}}{}{}{}
 
 
 \vspace*{-0.05cm}
 
-\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Autorité des marchés financiers}{Presentation to decision-makers at Québec's financial authority, followed by interviews with ten regulators on their needs. \textbf{(Audience: decision-makers)}}{}{}{}
+\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Autorité des marchés financiers}{Presentation to decision-makers at Québec's financial authority, followed by interviews with ten regulators on their needs. \aud{decision-makers}}{}{}{}
 
 
 
@@ -1044,12 +946,12 @@
 
 \vspace*{-0.05cm}
 
-\cvevent{2023}{Équité et discrimination en assurance générales}{Intact Financial Corporation}{Presentation to CEO, CLO and CDO of Intact Financial Corporation. \textbf{(Audience: decision-makers)}}{}{}{}
+\cvevent{2023}{Équité et discrimination en assurance générales}{Intact Financial Corporation}{Presentation to CEO, CLO and CDO of Intact Financial Corporation. \aud{decision-makers}}{}{}{}
 
 
 \vspace*{-0.05cm}
 
-\cvevent{2023}{Causal inference and Fairness in Insurance Pricing}{Insurance Data Science Conference}{Presenter for \href{https://insurancedatascience.org/}{Insurance Data Science Conference \faExternalLink*} in London (UK). \textbf{(Audience: Academics)}}{}{}{}
+\cvevent{2023}{Causal inference and Fairness in Insurance Pricing}{Insurance Data Science Conference}{Presenter for \href{https://insurancedatascience.org/}{Insurance Data Science Conference \faExternalLink*} in London (UK). \aud{academics}}{}{}{}
 
 
 
@@ -1062,26 +964,26 @@
 
 
 \section{Public Outreach}
-\cvsection{Public Outreach}
+\cvsection{Public outreach}
 
-\cvevent{2023-2026}{L'avenir à travers une boule de cristal mathématique : Le travail d'un actuaire}{Cégep de Lévis}{Guest presenter for CEGEP students. \textbf{(Audience: Students)}}{}{}{}
+\cvevent{2023--2026}{L'avenir à travers une boule de cristal mathématique : Le travail d'un actuaire}{Cégep de Lévis}{Guest presenter for CEGEP students. \aud{students}}{}{}{}
 
-\cvevent{2024}{Pour une intelligence artificielle équitable en assurance}{Université Laval News}{I collaborated for a  \href{https://nouvelles.ulaval.ca/2024/05/17/pour-une-intelligence-artificielle-equitable-en-assurance-a:0fa1aae9-47cd-478a-a61e-4ea4d441533f}{scientific communication article \faExternalLink*}. \textbf{(Audience: General Public)}}{}{}{}
+\cvevent{2024}{Pour une intelligence artificielle équitable en assurance}{Université Laval News}{I collaborated for a  \href{https://nouvelles.ulaval.ca/2024/05/17/pour-une-intelligence-artificielle-equitable-en-assurance-a:0fa1aae9-47cd-478a-a61e-4ea4d441533f}{scientific communication article \faExternalLink*}. \aud{general public}}{}{}{}
 
-\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Institut Intelligence et données}{4th research competition on data intelligence. $\approx$ 50 graduate students \textbf{(Audience: general)}}{}{}{}
+\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Institut Intelligence et données}{4th research competition on data intelligence. $\approx$ 50 graduate students. \aud{general public}}{}{}{}
 
-\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Institut de valorisation des données}{\href{https://www.youtube.com/watch?v=MSz1W8Ri_y4&list=PLnI094tgrXpwdY1U0eYSuRv3-IzdtnG0C&index=7}{I presented my research \faExternalLink*} during IVADO Digital Future Day 2024. Over 250 people. \textbf{(Audience: general)}}{}{}{}
-
-
+\cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Institut de valorisation des données}{\href{https://www.youtube.com/watch?v=MSz1W8Ri_y4&list=PLnI094tgrXpwdY1U0eYSuRv3-IzdtnG0C&index=7}{I presented my research \faExternalLink*} during IVADO Digital Future Day 2024. Over 250 people. \aud{general public}}{}{}{}
 
 
 
 
-\cvevent{2023}{L'IA pour calculer le prix de votre assurance auto: poétique ou pas éthique?}{Big Data Research Center}{Presentation during the event \textit{lightning talks 180} \textbf{(Audience: General)}}{}{}{Public's choice award}
+
+
+\cvevent{2023}{L'IA pour calculer le prix de votre assurance auto: poétique ou pas éthique?}{Big Data Research Center}{Presentation during the event \textit{lightning talks 180}. \aud{general public}}{}{}{Public's choice award}
 
 
 
-\cvevent{2023}{Artificial intelligence to prevent unfair discrimination in auto insurance}{IVADO}{I authored an 800-word  \href{https://ivado.ca/en/research-projects/prevent-unfair-discrimination-in-auto-insurance/}{scientific communication article \faExternalLink*}. \textbf{(Audience: General)}}{}{}{}
+\cvevent{2023}{Artificial intelligence to prevent unfair discrimination in auto insurance}{IVADO}{I authored an 800-word  \href{https://ivado.ca/en/research-projects/prevent-unfair-discrimination-in-auto-insurance/}{scientific communication article \faExternalLink*}. \aud{general public}}{}{}{}
 
 
 
@@ -1125,24 +1027,24 @@
 \cvsection{Committees}
 
  \cvevent
- {2025 - present}
+ {2025--present}
  {Institut Intelligence et Données, Université Laval}
  {Voting member of the board}
  {}{}{}{}
 
  \cvevent
- {2022 - present}
+ {2022--present}
  {Actuarial Science Graduate Program Committee of Université Laval}
  {Voting member of the Committee}
  {}{}{}{}
  \cvevent
- {2022 - 2025}
+ {2022--2025}
  {Big Data Research Center of Université Laval}
  {Student voting member of the Committee}
  {}{}{}{}
 
  \cvevent
- {2021 - 2024}
+ {2021--2024}
  {Actuarial Science Student Investment Fund of Université Laval}
  {Voting member of the committee}
  {}{}{}{}
@@ -1159,13 +1061,13 @@
 \section{Research affiliations}
 \cvsection{Research affiliations}
 \cvevent
- {2021 - present}
+ {2021--present}
  {Institut Intelligence et Données, Big Data Research Center}
  {Université Laval}
  {}{}{}{}
 
 \cvevent
- {2021 - present}
+ {2021--present}
  {Quantact research laboratory, Centre de recherches mathématiques}
  {Montréal}
  {}{}{}{}
@@ -1183,7 +1085,7 @@
 
  \cvevent{2025}{Roundtable on raising awareness about youth bullying}{\href{https://www.youtube.com/watch?v=PsvMgb9Yje8}{Mammouth hebdo - Téléquébec \faExternalLink* }}{}{}{}{}
 
- \cvevent{2022 - 2023}{Actuarial School representative at the open house}{Faculty of Science and Engineering}{\cvlist{\item Winter 2023 ( $\approx$ 30 visits from students accompanied by their parents) \item Fall 2022 ( $\approx$ 50 visits from students accompanied by their parents) }}{}{}{}
+ \cvevent{2022--2023}{Actuarial School representative at the open house}{Faculty of Science and Engineering}{\cvlist{\item Winter 2023 ( $\approx$ 30 visits from students accompanied by their parents) \item Fall 2022 ( $\approx$ 50 visits from students accompanied by their parents) }}{}{}{}
 
 % \item Clean and jerk : 275 pounds for 1 rep (2023), 245 for 3 reps (2023) \item Running : half marathon in 109 minutes (2024), 10K in 46 minutes (2025), 5K in 22 minutes (2025)}}{}{}
 
