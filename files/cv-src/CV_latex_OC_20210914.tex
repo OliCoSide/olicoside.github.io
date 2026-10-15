@@ -272,8 +272,8 @@
 % param 1: section title
 \usepackage{needspace} % keeps a section title with its first entry
 \newcommand{\cvsection}[1] {
- \needspace{8\baselineskip}
- \vspace{14pt}
+ \needspace{5\baselineskip}
+ \vspace{10pt}
  \cvtext{
   {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-4pt]
   \textcolor{maincol}{ \rule{0.15\textwidth}{2pt}}  \\
@@ -353,14 +353,14 @@
 \newcommand{\cvdate}[1]{\colorbox{lightcol}{\makebox[0.15\mpwidth]{\textcolor{darkcol}{#1}}}}
 
 % audience tag of a talk, one wording for all
-\newcommand{\aud}[1]{\textcolor{darkcol!75}{\textit{Audience: #1.}}}
+\newcommand{\aud}[1]{\mbox{\textcolor{darkcol!75}{\textit{Audience: #1.}}}}
 
 %----------------------------------------------------------------------------------------
 %  CV SHORT EVENT: one line, title and time-frame only
 \newcommand{\cvshort}[2] {
- \begin{tabular*}{1\mpwidth}{@{}p{0.84\mpwidth}@{\hspace{0.01\mpwidth}}r@{}}
+ \parbox{\mpwidth}{\begin{tabular*}{1\mpwidth}{@{}p{0.84\mpwidth}@{\hspace{0.01\mpwidth}}r@{}}
    \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \cvdate{#1} \\
- \end{tabular*}\\[1pt]
+ \end{tabular*}}\\[1pt]
 }
 
 %----------------------------------------------------------------------------------------
@@ -591,6 +591,12 @@
 %Students left over 93\% positive feedbacks about course planning, pedagogy, teacher and evaluation.
 
 \cvevent
+ {2025--2026}
+ {Online course on fair insurance pricing, project lead and script writer}
+ {Casualty Actuarial Society (English and French versions, in post-production)}
+ {Commissioned by the CAS. Coordinated four parties: a research assistant, the CAS task force on biases in insurance pricing, the CAS educational development team and a production company. Two hours of two-minute videos, activities and quizzes, co-presented with M.-P. Côté and A. Charpentier.}{}{}{}
+
+\cvevent
  {2019--2025}
  {American football coach}
  {Falcons of Cégep de Lévis}
@@ -635,33 +641,6 @@
  {Mitacs Accelerate partnership}
  {Helped design the thesis project of the student who continues the industrial partnership.}{}{}{}
 
-\section{Engagement with practice and policy}
-\cvsection{Engagement with practice and policy}
-
-\cvevent
- {2025--2026}
- {Online course on fair insurance pricing, English and French versions}
- {Casualty Actuarial Society (in post-production)}
- {Commissioned by the CAS. Project lead and script writer, coordinating four parties: a research assistant, the CAS task force on biases in insurance pricing, the CAS educational development team and a production company. Two hours of two-minute videos, interactive activities and quizzes, co-presented with M.-P. Côté and A. Charpentier.}{}{}{}
-
-\cvevent
- {2023--2026}
- {Regulators, insurers and public bodies}
- {Canada, United States, Switzerland}
- {\cvlist{\item Met insurance regulators in person in Canada, the United States and Switzerland. \item Provided input, in person, to the Swiss Federal Statistical Office and the ETH Zurich AI Policy Lab on a governmental framework for fair predictive models in employment. \item Presented at the internal annual actuarial conferences of three insurers. \item Three companies contacted me for technical details on implementing the toolbox with their own data.}}{}{}{}
-% Four internships in different teams for Desjardins General Insurance Group. I developed business knowledge, communication skills and data science expertise : 
-
-
-\section{Refereeing}
-\cvsection{Refereeing}
-
-\cvshort{2026--present}{\textit{European Actuarial Journal}}
-\cvshort{2026--present}{\textit{Annals of Actuarial Science}}
-\cvshort{2024--present}{\textit{Journal of Risk and Insurance}}
-
-
-
-
 \section{Scholarships and Awards}
 \cvsection{Scholarships and awards}
 
@@ -700,7 +679,7 @@
  {National competition, \$120~000 CAD ($\approx$ 841~000 SEK) over three years, held from May 2025.}{}{}{}
 
 \cvevent
- {2024, 2025, 2026}
+ {2024--2026}
  {Hickman Scholars Program}
  {Society of Actuaries}
  {International competition, US\$20~000 ($\approx$ 199~000 SEK) per year for three years (US\$60~000 in total, $\approx$ 598~000 SEK). Every annual renewal is competitive.}{}{}{}
@@ -829,147 +808,171 @@
 %\vfill
 
 
-\newpage
+
+\section{Refereeing}
+\cvsection{Refereeing}
+
+\cvshort{2026--present}{\textit{European Actuarial Journal}}
+\cvshort{2026--present}{\textit{Annals of Actuarial Science}}
+\cvshort{2024--present}{\textit{Journal of Risk and Insurance}}
+
+
+
+
 
 \section{Academic Communications}
 \cvsection{Academic communications}
 
+\cvevent{2025--2026}{Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}{Casualty Actuarial Society and University of Toronto}{\textcolor{maincol}{\textbullet}~CAS webinar (2026), sole presenter, 90 minutes, 950 registrants \enspace\textcolor{maincol}{\textbullet}~CAS Annual Meeting, Austin (2025, over 150) and CAS Canada Connect Day, Toronto (2025, over 100) \enspace\textcolor{maincol}{\textbullet}~Department of Statistics, University of Toronto (2025), invited seminar during research visit. \aud{practitioners and academics}}{}{}{}
 
-\cvevent{2026}{Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}{Casualty Actuarial Society webinar}{Sole presenter for a 90-minute webinar to 950 registrants. \aud{practitioners}}{}{}{}
+\cvevent{2025--2026}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{International conferences and invited talks}{\textcolor{maincol}{\textbullet}~First ASTIN Bulletin Conference, Zurich (2026), fairness session \enspace\textcolor{maincol}{\textbullet}~Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), Liverpool (2025), 60 doctoral students from 29 countries \enspace\textcolor{maincol}{\textbullet}~Chaire ACTIONS \& Milliman R\&D, Paris (2025), in French with Arthur Charpentier, 80 participants. \aud{academics and practitioners}}{}{}{}
 
-\vspace*{-0.05cm}
+\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{Conferences and seminars}{\textcolor{maincol}{\textbullet}~29th International Congress on Insurance: Mathematics and Economics, Seoul, talk \enspace\textcolor{maincol}{\textbullet}~Actuarial and Financial Mathematics Conference, Brussels, poster \enspace\textcolor{maincol}{\textbullet}~STATQAM seminar, UQÀM, invited seminar also covering confounding bias \enspace\textcolor{maincol}{\textbullet}~Centre de recherche en données massives, Université Laval, research talk. \aud{academics}}{}{}{}
 
-\cvevent{2026}{The Trilemma of Fairness in P\&C Pricing}{61st Actuarial Research Conference (AAA invited session)}{Invited presentation. \aud{decision-makers}}{}{}{}
+\cvevent{2026}{The Trilemma of Fairness in P\&C Pricing}{American Academy of Actuaries and AAIARD}{\textcolor{maincol}{\textbullet}~61st Actuarial Research Conference, AAA invited session \enspace\textcolor{maincol}{\textbullet}~Association des actuaires en IARD du Québec, in French (\textit{Le trilemme de l'équité en tarification IARD}). \aud{decision-makers and practitioners}}{}{}{}
 
-\vspace*{-0.05cm}
+\cvevent{2026}{Bias in Assessing Financial Risk: Insights from the 2025 Research Award}{\href{https://www.actuary.org/event/bias-assessing-financial-risk-insights-2025-research-award}{American Academy of Actuaries}}{Invited panelist as a 2025 finalist. Webinar to 445 actuaries and practitioners. \aud{practitioners}}{}{}{}
 
-\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{29th International Congress on Insurance: Mathematics and Economics, Sungkyunkwan University, Seoul (South Korea)}{Academic presentation. \aud{academics}}{}{}{}
+\cvevent{2026}{A Causal Perspective on Fairness in Insurance Pricing}{Department of Mathematics, Stockholm University}{Invited seminar during research stay. \aud{academics}}{}{}{}
 
-\vspace*{-0.05cm}
+\cvevent{2025}{Two invited presentations at the 60th Actuarial Research Conference}{American Academy of Actuaries panel \& Casualty Actuarial Society session, Toronto}{Guest panelist and presenter with Marie-Pier Côté and Arthur Charpentier. \aud{decision-makers}}{}{}{}
 
-\cvevent{2026}{Le trilemme de l'équité en tarification IARD}{Association des actuaires en IARD du Québec (AAIARD)}{Presentation to P\&C actuaries. \aud{practitioners}}{}{}{}
-
-\vspace*{-0.05cm}
-
-\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{STATQAM seminar, Université du Québec à Montréal}{Invited seminar covering causal decomposition and confounding bias. \aud{academics}}{}{}{}
-
-\vspace*{-0.05cm}
-
-\cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{Centre de recherche en données massives, Université Laval}{Research talk. \aud{academics}}{}{}{}
-
-\vspace*{-0.05cm}
-
-\cvevent{2026}{Profiling Actuarial Discrimination via causal decomposition}{Actuarial and Financial Mathematics Conference, Brussels (Belgium)}{Poster presenter. \aud{academics}}{}{}{}
-
-\vspace*{-0.05cm}
-
-\cvevent
- {2026}
- {Bias in Assessing Financial Risk: Insights from the 2025 Research Award}
-{\href{https://www.actuary.org/event/bias-assessing-financial-risk-insights-2025-research-award}{American Academy of Actuaries}}
- {Invited panelist as finalist for the 2025 Award for Research on Bias in Assessing Financial Risk. Webinar to 445 actuaries and practitioners. \aud{practitioners}}{}{}{}
-
-
-\vspace*{-0.05cm}
-
-\cvevent
- {2026}
- {A Causal Perspective on Fairness in Insurance Pricing}
- {Department of Mathematics, Stockholm University}
- {Invited seminar talk during research stay. \aud{academics}}{}{}{}
-
-
-
-\vspace*{-0.05cm}
-
-
-\cvevent{2026}{A Scalable Toolbox for Exposing Indirect Discrimination In Insurance Rates}{ASTIN Bulletin Conference, Zurich (Switzerland)}{Speaker at one of the fairness sessions of the first ASTIN Bulletin Conference. \aud{academics}}{}{}{}
-
-
-\vspace*{-0.05cm}
-
-\cvevent
- {2025}
- {Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}
- {Department of Statistics, University of Toronto}
- {Invited seminar during research visit. \aud{academics}}{}{}{}
-
-
-\vspace*{-0.05cm}
-
-\cvevent
- {2025}
- {Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}
- {Casualty Actuarial Society Annual Meeting, Austin (United States) \& Canada Connect Day, Toronto (Canada)}
- {Invited presenter to over 150 (Austin) and over 100 (Toronto) actuaries and policymakers. \aud{practitioners}}{}{}{}
-
-
-\vspace*{-0.05cm}
-
-\cvevent
- {2025}
- {Two invited presentations at the 60th Actuarial Research Conference}
- {American Academy of Actuaries panel \& Casualty Actuarial Society session, Toronto (Canada)}
- {Guest panelist and presenter (with Marie-Pier and Arthur) to audiences from actuarial organizations, academia, industry, and policymakers. \aud{decision-makers}}{}{}{}
-
-
-
-\vspace*{-0.05cm}
-
-\cvevent{2025}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), Liverpool (U.K.)}{Presenter to 60 doctoral students from 29 countries. \aud{academics}}{}{}{}
-
-
-\vspace*{-0.05cm}
-
-\cvevent
- {2025}
- {Une boîte à outils pour dévoiler la discrimination indirecte dans les tarifs d'assurance}
- {Chaire ACTIONS \& Milliman R\&D, Paris (France)}
- {Guest co-presenter (with Arthur) to audiences from academia and industry (80 participants at the Chaire ACTIONS). \aud{academics and practitioners}}{}{}{}
-
-
-\vspace*{-0.05cm}
-
-\cvevent{2024}{Perspective causale sur les discriminations dans les modèles prédictifs en assurance}{Institut intelligence et données}{Guest presenter to over 100 people from academia. \aud{academics}}{}{}{}
-
-
-\vspace*{-0.05cm}
-
-\cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{27th International Congress on Insurance: Mathematics and Economics}{Academic presentation in Chicago, IL, United States. \aud{academics}}{}{}{}
-
-
-\vspace*{-0.05cm}
-
-\cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{Workshop on fairness and discrimination in insurance}{Guest presenter to over 60 people. \aud{academics, practitioners and regulators}}{}{}{}
-
-
-\vspace*{-0.05cm}
+\cvevent{2024}{A Fair Price to Pay: Exploiting Causal Graphs for Fairness in Insurance}{Conference and workshop}{\textcolor{maincol}{\textbullet}~27th International Congress on Insurance: Mathematics and Economics, Chicago \enspace\textcolor{maincol}{\textbullet}~Workshop on fairness and discrimination in insurance, over 60 academics, practitioners and regulators. \aud{academics}}{}{}{}
 
 \cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Autorité des marchés financiers}{Presentation to decision-makers at Québec's financial authority, followed by interviews with ten regulators on their needs. \aud{decision-makers}}{}{}{}
 
+\cvevent{2024}{Perspective causale sur les discriminations dans les modèles prédictifs en assurance}{Institut intelligence et données}{Guest presenter to over 100 people from academia. \aud{academics}}{}{}{}
+
+\cvevent{2023}{Équité et discrimination en assurance générale}{Intact Financial Corporation}{Presentation to the CEO, CLO and CDO. \aud{decision-makers}}{}{}{}
+
+\cvevent{2023}{Causal Inference and Fairness in Insurance Pricing}{\href{https://insurancedatascience.org/}{Insurance Data Science Conference}, London}{Conference presentation. \aud{academics}}{}{}{}
+
+% --- Entries before consolidation (15 October 2026), kept for the record ---
+% \cvevent{2026}{Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}{Casualty Actuarial Society webinar}{Sole presenter for a 90-minute webinar to 950 registrants. \aud{practitioners}}{}{}{}
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2026}{The Trilemma of Fairness in P\&C Pricing}{61st Actuarial Research Conference (AAA invited session)}{Invited presentation. \aud{decision-makers}}{}{}{}
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{29th International Congress on Insurance: Mathematics and Economics, Sungkyunkwan University, Seoul (South Korea)}{Academic presentation. \aud{academics}}{}{}{}
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2026}{Le trilemme de l'équité en tarification IARD}{Association des actuaires en IARD du Québec (AAIARD)}{Presentation to P\&C actuaries. \aud{practitioners}}{}{}{}
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{STATQAM seminar, Université du Québec à Montréal}{Invited seminar covering causal decomposition and confounding bias. \aud{academics}}{}{}{}
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2026}{Profiling Actuarial Discrimination via Causal Decomposition}{Centre de recherche en données massives, Université Laval}{Research talk. \aud{academics}}{}{}{}
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2026}{Profiling Actuarial Discrimination via causal decomposition}{Actuarial and Financial Mathematics Conference, Brussels (Belgium)}{Poster presenter. \aud{academics}}{}{}{}
+
+% \vspace*{-0.05cm}
+
+% \cvevent
+%  {2026}
+%  {Bias in Assessing Financial Risk: Insights from the 2025 Research Award}
+% {\href{https://www.actuary.org/event/bias-assessing-financial-risk-insights-2025-research-award}{American Academy of Actuaries}}
+%  {Invited panelist as finalist for the 2025 Award for Research on Bias in Assessing Financial Risk. Webinar to 445 actuaries and practitioners. \aud{practitioners}}{}{}{}
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent
+%  {2026}
+%  {A Causal Perspective on Fairness in Insurance Pricing}
+%  {Department of Mathematics, Stockholm University}
+%  {Invited seminar talk during research stay. \aud{academics}}{}{}{}
+
+
+
+% \vspace*{-0.05cm}
+
+
+% \cvevent{2026}{A Scalable Toolbox for Exposing Indirect Discrimination In Insurance Rates}{ASTIN Bulletin Conference, Zurich (Switzerland)}{Speaker at one of the fairness sessions of the first ASTIN Bulletin Conference. \aud{academics}}{}{}{}
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent
+%  {2025}
+%  {Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}
+%  {Department of Statistics, University of Toronto}
+%  {Invited seminar during research visit. \aud{academics}}{}{}{}
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent
+%  {2025}
+%  {Operationalizing Fairness in Actuarial Pricing: From Principle to Practice}
+%  {Casualty Actuarial Society Annual Meeting, Austin (United States) \& Canada Connect Day, Toronto (Canada)}
+%  {Invited presenter to over 150 (Austin) and over 100 (Toronto) actuaries and policymakers. \aud{practitioners}}{}{}{}
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent
+%  {2025}
+%  {Two invited presentations at the 60th Actuarial Research Conference}
+%  {American Academy of Actuaries panel \& Casualty Actuarial Society session, Toronto (Canada)}
+%  {Guest panelist and presenter (with Marie-Pier and Arthur) to audiences from actuarial organizations, academia, industry, and policymakers. \aud{decision-makers}}{}{}{}
+
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2025}{A Scalable Toolbox for Exposing Indirect Discrimination in Insurance Rates}{Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), Liverpool (U.K.)}{Presenter to 60 doctoral students from 29 countries. \aud{academics}}{}{}{}
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent
+%  {2025}
+%  {Une boîte à outils pour dévoiler la discrimination indirecte dans les tarifs d'assurance}
+%  {Chaire ACTIONS \& Milliman R\&D, Paris (France)}
+%  {Guest co-presenter (with Arthur) to audiences from academia and industry (80 participants at the Chaire ACTIONS). \aud{academics and practitioners}}{}{}{}
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2024}{Perspective causale sur les discriminations dans les modèles prédictifs en assurance}{Institut intelligence et données}{Guest presenter to over 100 people from academia. \aud{academics}}{}{}{}
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{27th International Congress on Insurance: Mathematics and Economics}{Academic presentation in Chicago, IL, United States. \aud{academics}}{}{}{}
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2024}{A Fair price to pay: exploiting causal graphs for fairness in insurance}{Workshop on fairness and discrimination in insurance}{Guest presenter to over 60 people. \aud{academics, practitioners and regulators}}{}{}{}
+
+
+% \vspace*{-0.05cm}
+
+% \cvevent{2024}{Perspective causale sur la discrimination indirecte en assurance générale}{Autorité des marchés financiers}{Presentation to decision-makers at Québec's financial authority, followed by interviews with ten regulators on their needs. \aud{decision-makers}}{}{}{}
 
 
 
 
 
-\vspace*{-0.05cm}
 
-\cvevent{2023}{Équité et discrimination en assurance générales}{Intact Financial Corporation}{Presentation to CEO, CLO and CDO of Intact Financial Corporation. \aud{decision-makers}}{}{}{}
+% \vspace*{-0.05cm}
 
-
-\vspace*{-0.05cm}
-
-\cvevent{2023}{Causal inference and Fairness in Insurance Pricing}{Insurance Data Science Conference}{Presenter for \href{https://insurancedatascience.org/}{Insurance Data Science Conference \faExternalLink*} in London (UK). \aud{academics}}{}{}{}
+% \cvevent{2023}{Équité et discrimination en assurance générales}{Intact Financial Corporation}{Presentation to CEO, CLO and CDO of Intact Financial Corporation. \aud{decision-makers}}{}{}{}
 
 
+% \vspace*{-0.05cm}
 
-
-
-
-
-
-
-
+% \cvevent{2023}{Causal inference and Fairness in Insurance Pricing}{Insurance Data Science Conference}{Presenter for \href{https://insurancedatascience.org/}{Insurance Data Science Conference \faExternalLink*} in London (UK). \aud{academics}}{}{}{}
 
 \section{Public Outreach}
 \cvsection{Public outreach}
@@ -1031,6 +1034,7 @@
 
 \vspace*{-0.35cm}
 
+\newpage % service sections together on the last page
 \section{Committees}
 \cvsection{Committees}
 
@@ -1093,7 +1097,7 @@
 
  \cvevent{2025}{Roundtable on raising awareness about youth bullying}{\href{https://www.youtube.com/watch?v=PsvMgb9Yje8}{Mammouth hebdo - Téléquébec \faExternalLink* }}{}{}{}{}
 
- \cvevent{2022--2023}{Actuarial School representative at the open house}{Faculty of Science and Engineering}{\cvlist{\item Winter 2023 ( $\approx$ 30 visits from students accompanied by their parents) \item Fall 2022 ( $\approx$ 50 visits from students accompanied by their parents) }}{}{}{}
+ \cvevent{2022--2023}{Actuarial School representative at the open house}{Faculty of Science and Engineering}{About 50 visits from students and their parents in fall 2022, about 30 in winter 2023.}{}{}{}
 
 % \item Clean and jerk : 275 pounds for 1 rep (2023), 245 for 3 reps (2023) \item Running : half marathon in 109 minutes (2024), 10K in 46 minutes (2025), 5K in 22 minutes (2025)}}{}{}
 
