@@ -64,7 +64,7 @@ Experience
 
 Supervision
 ======
-* Co-supervisor, with Prof. Marie-Pier Côté, of a PhD student in the Mitacs Accelerate partnership (participated in negotiating the student's Mitacs funding with the industrial partner), 2025 – present
+* Co-supervisor, with Prof. Marie-Pier Côté, of a master's student in the Mitacs Accelerate partnership (participated in negotiating the student's Mitacs funding with the industrial partner); the student continued to the PhD through the fast track, 2025 – 2026
 * Co-supervisor, with Prof. Marie-Pier Côté, of a master's student on a one-year fairness project, 2023
 
 Selected scholarships and awards
@@ -101,7 +101,7 @@ Teaching
 Service
 ======
 * Organizing committee, Workshop on fairness and discrimination in insurance (90 participants), Université Laval, October 2026: host of the second day, panel moderator and presenter
-* Organizer, Quantact Student Day (five-member committee, seven presenters, sixty students), October 2025
+* Organizer, Quantact Student Day (five-member committee, seven presenters, forty students), October 2025
 * Referee, *Journal of Risk and Insurance* (2024 – present), *Annals of Actuarial Science* (2026 – present), and *European Actuarial Journal* (2026 – present)
 * Voting member, board of the Institut intelligence et données, Université Laval, 2025 – present
 * Voting member, Actuarial Science Graduate Program Committee, Université Laval, 2022 – present
