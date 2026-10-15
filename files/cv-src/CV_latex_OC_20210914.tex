@@ -284,6 +284,7 @@
   \textcolor{maincol}{\rule{0.15\textwidth}{2pt}}
     }
  \par\nointerlineskip\vspace{5pt} % same gap under every section rule
+ \global\cvfirsttrue
     % \xrfill[0ex]{2pt}[lightcol] %to add at 250
 }
 
@@ -334,22 +335,10 @@
   \noindent\textcolor{black}{\textbf{#2}}\cvleader\textcolor{darkcol}{#1}\par
   \ifthenelse{\isempty{#3}}{}{\noindent\textcolor{maincol}{\textbf{#3}}\par}%
   \ifthenelse{\isempty{#4}}{}{\vspace{1pt}\noindent #4\par}%
- }\par\vspace{8pt}
- 
- \ifthenelse{\isempty{#5}}{}{
-  \vspace{3pt}
-  \cvtext{#5}
- }
- 
- \ifthenelse{\isempty{#6}}{}{
-  \vspace{3pt}
-  \cvtext{\textbf{Technologies include:}}\\
-  \cvtext{#6}
- }
- \ifthenelse{\isempty{#7}}{}{
-  \vspace{-2pt}
-  \cvtext{\small\textit{Awards:} #7}\\[2pt]
- }
+  \ifthenelse{\isempty{#5}}{}{\vspace{1pt}\noindent #5\par}%
+  \ifthenelse{\isempty{#6}}{}{\vspace{1pt}\noindent\textbf{Technologies include:} #6\par}%
+  \ifthenelse{\isempty{#7}}{}{\vspace{2pt}\noindent{\small\textit{Awards:} #7}\par}%
+ }\par\vspace{8pt} % same gap after every entry, awards line included
  \vspace{0pt}
 }
 
@@ -372,7 +361,9 @@
 \newcommand{\aud}[1]{\mbox{\textcolor{darkcol!75}{\textit{Audience: #1.}}}}
 
 % a reference or working paper: plain paragraph, same gap before each
-\newcommand{\cvpaper}[1]{\par\addvspace{6pt}\noindent #1\par}
+% a paper: 6pt above, except right under a section rule
+\newif\ifcvfirst
+\newcommand{\cvpaper}[1]{\par\ifcvfirst\global\cvfirstfalse\else\addvspace{6pt}\fi\noindent #1\par}
 
 %----------------------------------------------------------------------------------------
 %  CV SHORT EVENT: one line, title and time-frame only
@@ -598,7 +589,7 @@
  {Four internships: property ratemaking (2019), business analysis (2020 and 2021) and research (2021).}{}{}{}
 
 \section{Supervision and mentoring}
-\cvsection{Supervision and mentoring}
+\cvsection{Supervision and mentorship}
 
 \cvevent
  {2025--2026}
@@ -759,7 +750,7 @@
 
 \newpage % refereeing opens page 4 with the talks
 \section{Refereeing}
-\cvsection{Refereeing}
+\cvsection{Peer review}
 
 \cvshort{2026--present}{\textit{European Actuarial Journal}}
 \cvshort{2026--present}{\textit{Annals of Actuarial Science}}
@@ -967,7 +958,7 @@
 \vspace*{-0.35cm}
 
 \section{Organizing}
-\cvsection{Organizing}
+\cvsection{Event organization}
 
  \cvevent
  {2026}
