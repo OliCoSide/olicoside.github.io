@@ -276,9 +276,12 @@
 % param 1: section title
 \usepackage{needspace} % keeps a section title with its first entry
 % air above the title, the title close to its content
+\newif\ifcvafterevent
 \newcommand{\cvsection}[1] {
+ \par\addvspace{9pt} % same gap above every section title, whatever ends the previous one
+ \ifcvafterevent\vspace{-3.3pt}\fi % an entry box sits lower than a one-line entry
+ \global\cvaftereventfalse
  \needspace{5\baselineskip}
- \vspace{12pt}
  \cvtext{
   {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-5pt]
   \textcolor{maincol}{\rule{0.15\textwidth}{2pt}}
@@ -339,7 +342,7 @@
   \ifthenelse{\isempty{#6}}{}{\vspace{1pt}\noindent\textbf{Technologies include:} #6\par}%
   \ifthenelse{\isempty{#7}}{}{\vspace{2pt}\noindent{\small\textit{Awards:} #7}\par}%
  }\par\vspace{6pt} % same gap after every entry, awards line included
- \vspace{0pt}
+ \global\cvaftereventtrue
 }
 
 % width of the date boxes; the title column takes the rest of the text width
@@ -490,6 +493,7 @@
 {Research visits}
 {}
 {\cvlist{\item Department of Mathematics, Stockholm University (2026): seminar and discussions with Prof. Mathias Millberg Lindholm. \item Department of Statistics, University of Toronto (2025): seminar and discussions with Prof. Christopher Blier-Wong. \item Bayes Business School, London (2023): discussions with Prof. Andreas Tsanakas.}}{}{}{}
+\vspace{-1pt} % a bullet list ends the box 1pt lower
 
 \section{Research Papers}
 \cvsection{Research papers}
@@ -503,6 +507,7 @@
 \cvpaper{\bibentry{Charpentier/al:2026}}
 \cvpaper{\bibentry{Cote/etal:2024}}
 \vspace{-1pt}\cvlist{\itemsep2pt \item Finalist for the \href{https://actuary.org/publication-issue/blog-academy-recognizes-anti-discrimination-paper-with-research-award/}{ American Academy of Actuaries Award for Research 2025}}
+\vspace{1.6pt} % match the gap above the next section title
 
 \section{Diversity, Equity, and Inclusion Education}
 \cvsection{Diversity, equity and inclusion education}
@@ -554,7 +559,6 @@
 %----------------------------------------------------------------------------------------
 
 
-\vspace*{-0.35cm}
 
 % \item Clean and jerk : 275 pounds for 1 rep (2023), 245 for 3 reps (2023) \item Running : half marathon in 109 minutes (2024), 10K in 46 minutes (2025), 5K in 22 minutes (2025)}}{}{}
 
@@ -669,6 +673,22 @@
  {With Prof. Marie-Pier Côté}
  {One-year project on fairness in insurance. The student now works as an actuary.}{}{}{}
 
+\section{Committees}
+\cvsection{Committees}
+
+ \cvline{2025--present}{Institut intelligence et données, Université Laval}{board member}
+
+ \cvline{2022--present}{Graduate Program Committee in Actuarial Science, Université Laval}{voting member}
+ \cvline{2022--2025}{Big Data Research Center, Université Laval}{student voting member}
+
+ \cvline{2021--2024}{Actuarial Science Student Investment Fund, Université Laval}{voting member}
+
+ 
+
+%---------------------------------------------------------------------------------------
+% Research afiliation
+%----------------------------------------------------------------------------------------
+
 \section{Organizing}
 \cvsection{Event organization}
 
@@ -684,7 +704,6 @@
  {Province-wide event, 3 October 2025}
  {Organizer: recruited a five-member committee, coordinated seven presenters and hosted sixty students.}{}{}{}
 
-\vspace*{-0.35cm}
 
 \section{Work experiences}
 \cvsection{Work experience}
@@ -726,22 +745,6 @@
  {Actuarial intern}
  {Desjardins General Insurance Group}
  {Four internships: property ratemaking (2019), business analysis (2020 and 2021) and research (2021).}{}{}{}
-
-\section{Committees}
-\cvsection{Committees}
-
- \cvline{2025--present}{Institut intelligence et données, Université Laval}{board member}
-
- \cvline{2022--present}{Graduate Program Committee in Actuarial Science, Université Laval}{voting member}
- \cvline{2022--2025}{Big Data Research Center, Université Laval}{student voting member}
-
- \cvline{2021--2024}{Actuarial Science Student Investment Fund, Université Laval}{voting member}
-
- 
-
-%---------------------------------------------------------------------------------------
-% Research afiliation
-%----------------------------------------------------------------------------------------
 
 \section{Academic Communications}
 \cvsection{Academic communications}
