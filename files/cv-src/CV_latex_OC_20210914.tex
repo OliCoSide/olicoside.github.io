@@ -275,13 +275,15 @@
 % Renders a a CV section headline with a nice underline in main color.
 % param 1: section title
 \usepackage{needspace} % keeps a section title with its first entry
+% air above the title, the title close to its content
 \newcommand{\cvsection}[1] {
- \needspace{4\baselineskip}
- \vspace{10pt}
+ \needspace{5\baselineskip}
+ \vspace{16pt}
  \cvtext{
-  {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-4pt]
-  \textcolor{maincol}{ \rule{0.15\textwidth}{2pt}}  \\
+  {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-5pt]
+  \textcolor{maincol}{\rule{0.15\textwidth}{2pt}}
     }
+ \par\vspace{-2pt}
     % \xrfill[0ex]{2pt}[lightcol] %to add at 250
 }
 
@@ -465,7 +467,8 @@
 {\sffamily\noindent\begin{minipage}[c]{5pt}\textcolor{maincol}{\rule{5pt}{1.9cm}}\end{minipage}\hspace{12pt}\begin{minipage}[c]{0.52\linewidth}
 {\HUGE\bfseries\textcolor{darkcol}{Olivier Côté}}\hspace{8pt}{\LARGE\textcolor{darkcol!70}{ACAS}}\\[6pt]
 {\large\textcolor{darkcol}{PhD Candidate in Actuarial Science}}\\[1pt]{\large\textcolor{darkcol}{Université Laval}}
-\end{minipage}\hfill\begin{minipage}[c]{0.40\linewidth}\small\raggedleft \textcolor{darkcol!60}{\sffamily\footnotesize EMAIL}\enspace \href{mailto:olivier.cote.12@ulaval.ca}{olivier.cote.12@ulaval.ca}\\\textcolor{darkcol!60}{\sffamily\footnotesize WEB}\enspace \href{https://olicoside.github.io/}{olicoside.github.io}\\\textcolor{darkcol!60}{\sffamily\footnotesize LINKEDIN}\enspace \href{https://www.linkedin.com/in/olivier-cote-act/}{in/olivier-cote-act}\\\textcolor{darkcol!60}{\sffamily\footnotesize LANGUAGES}\enspace Français, English (C1), Svenska (A1)\end{minipage}\par}\vspace{10pt}
+\end{minipage}\hfill\begin{minipage}[c]{0.40\linewidth}\small\raggedleft\rmfamily % values in XCharter: Raleway's lining digits (one.lnum) show as boxes in some PDF viewers
+\textcolor{darkcol!60}{\sffamily\footnotesize EMAIL}\enspace \href{mailto:olivier.cote.12@ulaval.ca}{olivier.cote.12@ulaval.ca}\\\textcolor{darkcol!60}{\sffamily\footnotesize WEB}\enspace \href{https://olicoside.github.io/}{olicoside.github.io}\\\textcolor{darkcol!60}{\sffamily\footnotesize LINKEDIN}\enspace \href{https://www.linkedin.com/in/olivier-cote-act/}{in/olivier-cote-act}\\\textcolor{darkcol!60}{\sffamily\footnotesize LANGUAGES}\enspace Français, English (C1), Svenska (A1)\end{minipage}\par}\vspace{10pt}
 
 % HEADER-END
  
