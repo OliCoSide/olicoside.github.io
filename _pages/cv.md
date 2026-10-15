@@ -52,6 +52,8 @@ Experience
   * Linear Models in Actuarial Science (Fall 2022, 88 students)
   * Statistical Learning in Actuarial Science (Winter 2023, 54 students)
   * Faculty of Science and Engineering Teaching Star, one per course
+* **Online course on fair insurance pricing, project lead and script writer**, Casualty Actuarial Society, 2025 – 2026
+  * Commissioned by the CAS, English and French versions (in post-production), coordinating a research assistant, the CAS task force on biases, the CAS educational development team and a production company
 * **Teaching Assistant**, Université Laval, 2019 – 2024
   * Statistical Learning in Actuarial Science (5 times), Probabilistic Analysis of Actuarial Risks (3 times), Linear Models in Actuarial Science, internship evaluation
 * **Actuarial Intern**, Desjardins General Insurance Group, 2019 – 2021
@@ -65,13 +67,6 @@ Supervision and mentoring
 * Mentor of a University of Texas master's student, essay on an insurance regulatory issue, 2025 – 2026
 * Co-supervisor, with Prof. Marie-Pier Côté, of a master's student on a one-year fairness project, 2023
 * Supervisor of the PhD student who continues the Mitacs Accelerate partnership
-
-Engagement with practice and policy
-======
-* Online course on fair insurance pricing, commissioned by the Casualty Actuarial Society, English and French versions (in post-production), 2025 – 2026: project lead and script writer, coordinating a research assistant, the CAS task force on biases, the CAS educational development team and a production company
-* In-person input to the Swiss Federal Statistical Office and the ETH Zurich AI Policy Lab on a governmental framework for fair predictive models in employment
-* Interviews with ten regulators at the Autorité des marchés financiers, 2024
-* *A scalable toolbox for exposing indirect discrimination in insurance rates* selected by the NAIC for its 2026 webinar series for U.S. insurance regulators
 
 Selected scholarships and awards
 ======
