@@ -278,7 +278,7 @@
 % air above the title, the title close to its content
 \newif\ifcvafterevent
 \newcommand{\cvsection}[1] {
- \par\addvspace{12pt plus 14pt} % same gap above every section title; it stretches so that a page ends at the bottom margin, whatever ends the previous one
+ \par\addvspace{12pt plus 14pt minus 3pt} % same gap above every section title; it stretches so that a page ends at the bottom margin, whatever ends the previous one
  \ifcvafterevent\vspace{-3.3pt}\fi % an entry box sits lower than a one-line entry
  \global\cvaftereventfalse
  \Needspace*{5\baselineskip}
@@ -570,7 +570,8 @@
 \section{Refereeing}
 \cvsection{Journal refereeing}
 
-\cvshort{2026--present}{\textit{European Actuarial Journal} and \textit{Annals of Actuarial Science}}
+\cvshort{2026--present}{\textit{European Actuarial Journal}}
+\cvshort{2026--present}{\textit{Annals of Actuarial Science}}
 \cvshort{2024--present}{\textit{Journal of Risk and Insurance}}
 
 \section{Scholarships and Awards}
