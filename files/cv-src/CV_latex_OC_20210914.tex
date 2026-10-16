@@ -278,10 +278,10 @@
 % air above the title, the title close to its content
 \newif\ifcvafterevent
 \newcommand{\cvsection}[1] {
- \par\addvspace{12pt plus 14pt minus 3pt} % same gap above every section title; it stretches so that a page ends at the bottom margin, whatever ends the previous one
+ \par\Needspace*{\dimexpr5\baselineskip+12pt\relax} % page break before the gap, so the gap never stays at the bottom of the previous page
+ \addvspace{12pt plus 14pt minus 3pt} % same gap above every section title; it stretches so that a page ends at the bottom margin, whatever ends the previous one
  \ifcvafterevent\vspace{-3.3pt}\fi % an entry box sits lower than a one-line entry
  \global\cvaftereventfalse
- \Needspace*{5\baselineskip}
  \cvtext{
   {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-5pt]
   \textcolor{maincol}{\rule{0.15\textwidth}{2pt}}
