@@ -191,7 +191,8 @@
 % primary color
 
 %% Bleu sobre (photo fin)
-\definecolor{maincol}{RGB}{63, 107, 90} % pine, as on the website
+\definecolor{maincol}{RGB}{96, 140, 118} % sage: bar, rules, bold subtitles
+\definecolor{textcol}{RGB}{72, 110, 92} % deep sage: links and plain-weight text, readable on white
 \definecolor{darkcol}{RGB}{51, 51, 51} % charcoal
 \definecolor{lightcol}{RGB}{236,238,239}
 
@@ -223,7 +224,7 @@
 % bypasses bibentry's neutralized \item -> "Lonely \item" errors); this CV
 % never typesets a bibliography, so opt out of that patch (no-op on old hyperref)
 \makeatletter\def\hyper@nopatch@bib{}\makeatother
-\usepackage[colorlinks=true,urlcolor=maincol,linkcolor=maincol,citecolor=maincol]{hyperref}
+\usepackage[colorlinks=true,urlcolor=textcol,linkcolor=textcol,citecolor=textcol]{hyperref}
 
 % returns minipage width minus two times \fboxsep
 % to keep padding included in width calculations
@@ -377,7 +378,7 @@
 }
 
 % one-line entry with the organization after the title
-\newcommand{\cvline}[3]{\cvshort{#1}{#2\textmd{\textcolor{maincol}{, #3}}}}
+\newcommand{\cvline}[3]{\cvshort{#1}{#2\textmd{\textcolor{textcol}{, #3}}}}
 
 %----------------------------------------------------------------------------------------
 %  CV META EVENT
