@@ -192,6 +192,7 @@
 
 %% Bleu sobre (photo fin)
 \definecolor{maincol}{RGB}{96, 140, 118} % sage: bar, rules, bold subtitles
+\definecolor{barcol}{RGB}{140, 178, 158} % pale sage: name bar and section rules
 \definecolor{textcol}{RGB}{72, 110, 92} % deep sage: links and plain-weight text, readable on white
 \definecolor{darkcol}{RGB}{51, 51, 51} % charcoal
 \definecolor{lightcol}{RGB}{236,238,239}
@@ -285,7 +286,7 @@
  \global\cvaftereventfalse
  \cvtext{
   {\Large\sffamily\bfseries\textcolor{darkcol}{#1}}\\[-5pt]
-  \textcolor{maincol}{\rule{0.15\textwidth}{2pt}}
+  \textcolor{barcol}{\rule{0.15\textwidth}{2pt}}
     }
  \par\nointerlineskip\vspace{-1pt} % same gap under every section rule (equal to the gap above it)
  \global\cvfirsttrue
@@ -466,7 +467,7 @@
 % HEADER-BEGIN
 % blue bar beside the name, contact labelled on the right
 \vspace*{1.3cm}
-{\sffamily\noindent\begin{minipage}[c]{5pt}\textcolor{maincol}{\rule{5pt}{1.9cm}}\end{minipage}\hspace{12pt}\begin{minipage}[c]{0.50\linewidth}
+{\sffamily\noindent\begin{minipage}[c]{5pt}\textcolor{barcol}{\rule{5pt}{1.9cm}}\end{minipage}\hspace{12pt}\begin{minipage}[c]{0.50\linewidth}
 {\HUGE\bfseries\textcolor{darkcol}{Olivier Côté}}\hspace{8pt}{\LARGE\textcolor{darkcol!70}{ACAS}}\\[6pt]
 {\large\textcolor{darkcol}{PhD Candidate in Actuarial Science}}\\[1pt]{\large\textcolor{darkcol}{Université Laval}}
 \end{minipage}\hfill\begin{minipage}[c]{0.46\linewidth}\small\raggedleft\rmfamily % values in XCharter: Raleway's lining digits (one.lnum) show as boxes in some PDF viewers
