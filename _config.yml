@@ -139,9 +139,13 @@ og_image                 : profile_picture.jpg  # Open Graph/Twitter default sit
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : Olivier Côté
+  links:
+    - https://scholar.google.com/citations?user=mq5Isr4AAAAJ&hl=en
+    - https://orcid.org/0009-0000-5632-3472
+    - https://github.com/olicoside
+    - https://www.linkedin.com/in/olivier-cote-act
 
 
 # Analytics
