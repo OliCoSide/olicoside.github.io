@@ -24,8 +24,8 @@ Content lives in Jekyll **collections**, one markdown file per item, rendered by
 
 Other key pieces:
 
-- `_pages/about.md` is the homepage; `_pages/cv.md` is the online CV.
-- `_data/navigation.yml` controls the top navbar (order and entries). The "CV" navbar entry links directly to the PDF, not to `/cv/`. Talks and Coursework are commented out of the navbar: talks are reached through the pills on each publication, and the coursework list (`_includes/coursework-list.html`) is shown on the Teaching page. `/talks/` and `/Coursework/` still build.
+- `_pages/about.md` is the homepage. There is no online CV page: the CV is only the PDF.
+- `_data/navigation.yml` controls the top navbar (order and entries). The "CV" navbar entry links directly to the PDF. Talks and Coursework are commented out of the navbar: talks are reached through the pills on each publication, and the coursework list (`_includes/coursework-list.html`) is shown on the Teaching page. `/talks/` and `/Coursework/` still build.
 - `_config.yml` holds site-wide identity (name, bio, social links → sidebar via `_includes/author-profile.html`).
 - `_includes/footer/custom.html` holds the site's custom footer: Sitemap/Stats links, the GoatCounter analytics snippet (privacy-friendly, cookie-free; site code `olicoside`), and the scroll-reveal script for list cards.
 - `markdown_generator/` contains optional Jupyter/Python tooling that generates publication/talk markdown files from TSVs — not part of the build.
@@ -43,8 +43,7 @@ When these working papers get a page in `_publications/`, add the matching talk 
 
 Extensionless files in `_talks/` are **published** by Jekyll — use `published: false` to hide a talk. `2023-10-25-intact` stays hidden on purpose (`published: false`): private company talks have no public talk page; they are listed by company name in the `industry_talks` front-matter list on publications (see `_includes/archive-single.html`).
 
-## Updating the CV — keep three places in sync
+## Updating the CV — keep two places in sync
 
 1. **LaTeX source**: `files/cv-src/CV_latex_OC_20210914.tex` (+ `biblio.bib` for papers).
 2. **Production PDF**: recompile and replace `files/CV_OlivierCote_ENG_prod.pdf` — **keep this exact filename** so navbar and page links never break. Move the outgoing PDF into `files/archive/` rather than deleting it.
-3. **Online CV**: mirror the changes in `_pages/cv.md`.

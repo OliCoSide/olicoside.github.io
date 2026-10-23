@@ -10,14 +10,14 @@ Personal academic website of **Olivier Côté, ACAS** — Ph.D. candidate in Act
 - **Publications** — papers with links, generated from the files in `_publications/`
 - **Talks** — presentations and seminars, generated from `_talks/`
 - **Teaching** — courses taught, generated from `_teaching/`
-- **CV** — online version at `/cv/` plus a downloadable PDF
+- **CV** — downloadable PDF, linked from the navbar
 
 ## Repository structure
 
 | Path | Purpose |
 |------|---------|
 | `_config.yml` | Site-wide settings (name, bio, social links, sidebar) |
-| `_pages/` | Main pages (`about.md` is the homepage, `cv.md` is the online CV) |
+| `_pages/` | Main pages (`about.md` is the homepage) |
 | `_publications/`, `_talks/`, `_teaching/` | One markdown file per item; they populate the corresponding pages |
 | `_data/navigation.yml` | Order and content of the top navigation bar |
 | `_sass/` | Styling (see `_custom.scss` for the site's custom design layer) |
@@ -28,11 +28,10 @@ Personal academic website of **Olivier Côté, ACAS** — Ph.D. candidate in Act
 
 ## Updating the CV
 
-The CV lives in three places that should stay in sync:
+The CV lives in two places that should stay in sync:
 
 1. **LaTeX source** — edit `files/cv-src/CV_latex_OC_20210914.tex` (and `biblio.bib` for papers)
-2. **Production PDF** — recompile and replace `files/CV_OlivierCote_ENG_prod.pdf` (this is the file linked from the navbar and the CV page; keep the same filename so links never break)
-3. **Online CV** — mirror the changes in `_pages/cv.md`
+2. **Production PDF** — recompile and replace `files/CV_OlivierCote_ENG_prod.pdf` (this is the file linked from the navbar; keep the same filename so links never break)
 
 When replacing the production PDF, move the outgoing version into `files/archive/` rather than deleting it.
 
