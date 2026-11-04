@@ -904,3 +904,108 @@ $award-color-light: #faf4de;
     transform: none;
   }
 }
+
+/*
+   Learning to write page
+   ========================================================================== */
+
+.ltw-lede {
+  font-size: 1.08em;
+  line-height: 1.7;
+  color: $ink;
+}
+
+.ltw-notes {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    padding: 0.55em 0 0.55em 1.1em;
+    border-bottom: 1px solid $card-border;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.15em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $clay;
+    }
+  }
+}
+
+.ltw-resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.ltw-resource {
+  padding: 1em 1.1em;
+  border: 1px solid $card-border;
+  border-radius: $border-radius;
+  background: #fff;
+  transition: border-color 0.25s $ease-out-soft, transform 0.25s $ease-out-soft;
+
+  &:hover {
+    border-color: rgba($accent-color, 0.45);
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    margin: 0.35em 0 0.15em;
+    font-size: 1.02em;
+  }
+
+  p {
+    margin: 0.3em 0 0;
+    font-size: 0.9em;
+  }
+}
+
+.ltw-resource__kind {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $accent-color;
+}
+
+.ltw-resource__by {
+  color: $muted;
+}
+
+.ltw-quote {
+  display: block;
+  margin: 0 0 1.6em;
+
+  blockquote {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.12em;
+    line-height: 1.6;
+    color: $ink;
+  }
+
+  figcaption {
+    float: none;
+    width: auto;
+    margin: 0.4em 0 0;
+    padding-left: 1.25rem;
+    text-align: left;
+    font-size: 0.82em;
+    color: $muted;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ltw-resource,
+  .ltw-resource:hover {
+    transition: none;
+    transform: none;
+  }
+}
