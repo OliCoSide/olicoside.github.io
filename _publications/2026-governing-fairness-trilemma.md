@@ -8,6 +8,9 @@ venue: 'Journal of Business Ethics'
 paperurl: 'https://doi.org/10.1007/s10551-026-06479-2'
 authors: 'Arthur Charpentier, Olivier Côté, and Marie-Pier Côté'
 citation: 'Charpentier, A., Côté, O., & Côté, M.-P. (2026). Governing fairness in insurance pricing: The trilemma of actuarial adequacy, solidarity, and causal legitimacy. Journal of Business Ethics. https://doi.org/10.1007/s10551-026-06479-2'
+supplement:
+  url: https://rdcu.be/G98m8D7rJAwa
+  label: "Free read-only full text"
 talks:
   - url: /talks/2026-11-12-ICA-Tokyo
     label: "33rd International Congress of Actuaries, Tokyo (online), 2026"
