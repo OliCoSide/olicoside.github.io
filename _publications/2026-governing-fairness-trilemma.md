@@ -5,7 +5,7 @@ category: manuscripts
 permalink: /publication/2026-governing-fairness-trilemma
 date: 2026-09-25
 venue: 'Journal of Business Ethics'
-paperurl: 'https://doi.org/10.1007/s10551-026-06479-2'
+paperurl: 'https://rdcu.be/G98m8D7rJAwa'
 authors: 'Arthur Charpentier, Olivier Côté, and Marie-Pier Côté'
 citation: 'Charpentier, A., Côté, O., & Côté, M.-P. (2026). Governing fairness in insurance pricing: The trilemma of actuarial adequacy, solidarity, and causal legitimacy. Journal of Business Ethics. https://doi.org/10.1007/s10551-026-06479-2'
 talks:
