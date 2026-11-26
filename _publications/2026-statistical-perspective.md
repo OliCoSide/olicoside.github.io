@@ -9,6 +9,10 @@ paperurl: 'https://doi.org/10.1146/annurev-statistics-042925-075327'
 authors: 'Olivier Côté, Marie-Pier Côté, and Arthur Charpentier'
 citation: 'Côté, O., Côté, M.-P., & Charpentier, A. (2027). A statistical perspective on fairness in insurance pricing. Annual Review of Statistics and Its Application. https://doi.org/10.1146/annurev-statistics-042925-075327'
 talks:
+  - url: /talks/2026-11-12-ICA-Tokyo
+    label: "33rd International Congress of Actuaries, Tokyo (online), 2026"
+  - url: /talks/2026-10-06-jeda
+    label: "Workshop on fairness and discrimination in insurance, 2026"
   - url: /talks/2026-07-30-CAS-webinar
     label: "CAS (webinar), 2026"
   - url: /talks/2026-07-22-ARC-AAA
