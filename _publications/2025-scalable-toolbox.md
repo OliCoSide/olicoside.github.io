@@ -43,12 +43,11 @@ talks:
     label: "Perspectives on Actuarial Risks in Talks of Young Researchers (PARTY), 2025"
   - url: /talks/2025-05-13-CNAM
     label: "Chaire ACTIONS, 2025"
-  - url: /talks/2025-05-12-Milliman
-    label: "Milliman R&D, 2025"
 industry_talks:
   - "Desjardins Groupe d'assurances générales"
   - "TD Insurance"
   - "Promutuel Assurance"
+  - "Milliman"
 bibtex: |
   @techreport{Cote/etal:2025toolbox,
   author = {Côté, Olivier and Côté, Marie-Pier and Charpentier, Arthur},
