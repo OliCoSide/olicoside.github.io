@@ -12,6 +12,10 @@ award:
   label: "Finalist, AAA 2025 Award for Research"
   url: https://actuary.org/publication-issue/blog-academy-recognizes-anti-discrimination-paper-with-research-award/
 talks:
+  - url: /talks/2026-11-12-ICA-Tokyo
+    label: "33rd International Congress of Actuaries, Tokyo (online), 2026"
+  - url: /talks/2026-10-06-jeda
+    label: "Workshop on fairness and discrimination in insurance, 2026"
   - url: /talks/2026-07-30-CAS-webinar
     label: "CAS (webinar), 2026"
   - url: /talks/2026-01-29-AAA-webinar
